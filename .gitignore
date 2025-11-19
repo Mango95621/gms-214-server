@@ -23,3 +23,5 @@ resourcesSkill.txt
 *.iml
 Exclude/
 hibernate.cfg.xml
+*.log
+ExceptionLog.txt
