@@ -2,7 +2,6 @@
 
 原仓库地址：https://github.com/CoREse/gms214server
 
-
 ## 服务启动步骤：
 1. 获取v214-server源码（本仓库）
 2. 导入sql数据，已修改成mysql8数据库，请提前安装mysql8数据库
@@ -15,9 +14,7 @@
 4. v214.exe 放到客户端目录下
 5. 点击v214.exe启动登陆器，点击注册账号，然后点击登录。注意查看服务端有没有收到发送的包。确认连接是否正常
 
-
 hook和登陆器获取：https://github.com/Toxocious/Moonlight
-
 
 ## 注意事项
 1. 为了更新日志版本。使用了lombok，IDEA安装lombok插件、设置搜索打开 Enable annotation processing
@@ -25,21 +22,14 @@ hook和登陆器获取：https://github.com/Toxocious/Moonlight
 3. v214.exe 每次重启完服务器都要重新启动
 4. resources/clientFile 放了编译好的hook和launcher 以及 简体中文的汉化
 
-
-
 ## GM特权
-1. 刷道具：!item item_id item_num
-999个核心宝石
+1. 刷道具：!item item_id item_num 999个核心宝石
 eg:!item 2435719 999
 2. 开核心：@nodes
 3. 技能5sCD
-
-
-
 
 ---
 ## 当前特性
 1. 更新日志打印，添加查看包处理日志、unknow日志优化打印
 2. 更新汉化
 3. 更新V矩阵
-4. 
