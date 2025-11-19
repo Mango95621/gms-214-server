@@ -407,11 +407,11 @@ public class Mob extends Life {
     public boolean isBuffed() {
         return isBuffed;
     }
-    
+
     public void setBuffed(boolean buff) {
         this.isBuffed = buff;
     }
-    
+
     public void setSealedInsteadDead(boolean sealedInsteadDead) {
         this.sealedInsteadDead = sealedInsteadDead;
     }
@@ -883,14 +883,14 @@ public class Mob extends Life {
     public boolean isInvincible() {
         return invincible;
     }
-    
+
     public int getDropItemPeriod() {
         return dropItemPeriod;
     }
 
     public void setDropItemPeriod(int d) {
         this.dropItemPeriod = d;
-    }    
+    }
 
     public void setHideName(boolean hideName) {
         this.hideName = hideName;
@@ -1351,8 +1351,8 @@ public class Mob extends Life {
         }
      for (ScheduledFuture sf : dropItemTimed) {
 	sf.cancel(true);
-	}    
-     startDropItemSchedule();   
+	}
+     startDropItemSchedule();
     }
 
     public synchronized void heal(int amount) {
@@ -1447,7 +1447,7 @@ public class Mob extends Life {
         reviveMob();
         for (ScheduledFuture sf : dropItemTimed) {
 	sf.cancel(true);
-	}         
+	}
     }
 
     public void dropDrops() {
@@ -2416,8 +2416,8 @@ public class Mob extends Life {
     public boolean canResummon() {
         return nextSummonPossible <= System.currentTimeMillis();
     }
-    
-    
+
+
    public final void cancelDropItem() {
         lastDropTime = 0;
     }
@@ -2438,8 +2438,8 @@ public class Mob extends Life {
             case 9300907:
                 itemId = 4001101;
                 maxDrop = 10;
-                break;                
-            case 9300908:    
+                break;
+            case 9300908:
                 itemId = 4001101;
                 maxDrop = 100;
                 break;
@@ -2452,19 +2452,19 @@ public class Mob extends Life {
                 this.getField().drop(drop, getPosition(), getPosition(), true);
                 lastDropTime++;
                 if (itemId == 4001101) {
-                getField().broadcastPacket(FieldPacket.setAchieveRate(lastDropTime * 10));   
-                
+                getField().broadcastPacket(FieldPacket.setAchieveRate(lastDropTime * 10));
+
                 if (lastDropTime == 10) {
-                getField().setProperty("stage", 2);    
+                getField().setProperty("stage", 2);
                 getField().broadcastPacket(WvsContext.weatherEffectNotice(WeatherEffNoticeType.RiceCakePQ, "You got all 10! Ohh this is the best. Hey, come see me again.", 7000));
-                //showWeatherNotice("6 Primrose Seeds, stolen by the pigs, must be recovered... ", WeatherEffNoticeType.RiceCakePQ)    
+                //showWeatherNotice("6 Primrose Seeds, stolen by the pigs, must be recovered... ", WeatherEffNoticeType.RiceCakePQ)
                 }
                 }
         }
         if (lastDropTime >= maxDrop) {
         for (ScheduledFuture sf : dropItemTimed) {
 	sf.cancel(true);
-	}   
+	}
         }
-    }    
+    }
 }
