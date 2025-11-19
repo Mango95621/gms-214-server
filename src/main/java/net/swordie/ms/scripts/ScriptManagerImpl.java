@@ -272,6 +272,7 @@ public class ScriptManagerImpl implements ScriptManager {
     }
 
     private void startScript(String name, ScriptType scriptType) {
+        System.out.println("startScript:name->" + name);
         String dir = String.format("%s/%s/%s%s", ServerConstants.SCRIPT_DIR,
                 scriptType.getDir().toLowerCase(), name, SCRIPT_ENGINE_EXTENSION);
         boolean exists = new File(dir).exists();
@@ -290,6 +291,23 @@ public class ScriptManagerImpl implements ScriptManager {
         StringBuilder script = new StringBuilder();
         script.append("from __future__ import unicode_literals\n\n");
         script.append("# -*- coding: utf-8 -*-\n");
+        script.append("import sys\n");
+        script.append("import locale\n");
+        script.append("try:\n");
+        script.append("    # 设置默认编码为 UTF-8\n");
+        script.append("    reload(sys)\n");
+        script.append("    sys.setdefaultencoding('utf-8')\n");
+        script.append("except NameError:\n");
+        script.append("    # Python 3 不需要设置默认编码\n");
+        script.append("    pass\n");
+        script.append("# 设置区域设置以支持 Unicode\n");
+        script.append("try:\n");
+        script.append("    locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')\n");
+        script.append("except:\n");
+        script.append("    try:\n");
+        script.append("        locale.setlocale(locale.LC_ALL, 'C.UTF-8')\n");
+        script.append("    except:\n");
+        script.append("        pass\n\n");
 
         ScriptEngine se = scriptEngine;
         Bindings bindings = getBindingsByType(scriptType);
