@@ -4,6 +4,7 @@ import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToByteEncoder;
 import lombok.extern.slf4j.Slf4j;
+
 import net.swordie.ms.client.Client;
 import net.swordie.ms.connection.Packet;
 import net.swordie.ms.connection.crypto.MapleCrypto;
@@ -25,13 +26,13 @@ public class ApiEncoder extends MessageToByteEncoder<Packet> {
         NettyClient c = chc.channel().attr(NettyClient.CLIENT_KEY).get();
 
         if (c != null) {
-            log.debug("[API Out]\t| " + outPacket);
+            log.debug("[API Out]\t| " + outPacket + ",outStr=" + new String(data));
 
             bb.writeInt(data.length);
             bb.writeBytes(data);
 
         } else {
-            log.debug("[PacketEncoder] | Plain sending " + outPacket);
+            log.debug("[PacketEncoder] | Plain sending " + outPacket + ",outStr=" + new String(data));
             bb.writeBytes(data);
         }
     }

@@ -29,8 +29,10 @@ public class ApiHandler extends SimpleChannelInboundHandler<InPacket> {
             handleUnknown(inPacket, op);
             return;
         }
-        if(!InHeader.isSpamHeader(InHeader.getInHeaderByOp(op))) {
-            log.debug(String.format("[API In]\t| %s, %d/0x%s\t| %s", InHeader.getInHeaderByOp(op), op, Integer.toHexString(op).toUpperCase(), inPacket));
+        if (!InHeader.isSpamHeader(InHeader.getInHeaderByOp(op))) {
+            log.debug(String.format("[API In]\t| %s, %d/0x%s\t| %s ,outStr=%s",
+                    InHeader.getInHeaderByOp(op), op, Integer.toHexString(op).toUpperCase(), inPacket,
+                    new String(inPacket.getData())));
         }
         switch (opHeader) {
             case REQUEST_TOKEN:
