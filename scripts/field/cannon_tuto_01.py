@@ -1,7 +1,7 @@
 SKIPPER = 1096000
 REITING = 1096001
 
-if sm.sendAskYesNo("Would you like to skip the intro?"):
+if sm.sendAskYesNo("你想跳过介绍吗?"):
     sm.completeQuestNoRewards(2568)
     if sm.getChr().getLevel() < 10:
         sm.addLevel(10 - sm.getChr().getLevel())

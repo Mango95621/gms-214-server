@@ -16,14 +16,14 @@ sm.setSpeakerID(0)
 sm.removeEscapeButton()
 sm.flipDialoguePlayerAsSpeaker()
 sm.setSpeakerType(3)
-sm.sendNext("I-I stole something! I've never stolen anything. I didn't mean to, I swear!")
+sm.sendNext("我偷了东西! 我从来没有偷过任何东西。我发誓，我不是故意的!")
 
 
 sm.setSpeakerID(0)
 sm.removeEscapeButton()
 sm.flipDialoguePlayerAsSpeaker()
 sm.setSpeakerType(3)
-sm.sendSay("I don't even have any MP... I'm incapable of doing anything... I'm useless.... ")
+sm.sendSay("我甚至没有魔法值……我什么都做不了。..我没用.... ")
 
 
 sm.forcedInput(1)

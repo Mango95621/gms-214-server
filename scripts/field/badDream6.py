@@ -6,21 +6,21 @@ sm.sendDelay(2500)
 sm.setSpeakerType(3)
 sm.setSpeakerID(2142934) # Deet
 sm.setParam(1)
-sm.sendNext("It's always the same for me... Is it for you too?")
+sm.sendNext("对我来说总是一样的...你也是这样吗？")
 sm.setSpeakerID(2142935) # Roa
-sm.sendSay("It's so scary to go to bed at night.")
+sm.sendSay("晚上睡觉太可怕了。")
 sm.setSpeakerID(2142936) # Moonie
-sm.sendSay("Don't cry. It's only a dream.")
+sm.sendSay("别哭了。那只是个梦。")
 sm.setSpeakerID(2142933) # Klas
-sm.sendSay("There's no need to fear. It was just a dream.")
+sm.sendSay("没必要害怕。那只是个梦。")
 sm.moveCamera(False, 150, -110, -210)
 sm.sendDelay(6000)
 sm.setSpeakerID(2142932) # Astilda
-sm.sendNext("I've been alive for hundreds of years, and I've never seen anything like this.")
+sm.sendNext("我已经活了几百年，从未见过这样的事情。")
 sm.setSpeakerID(2142931) # Danika
-sm.sendSay("We've never heard of this sort of thing either... Could it be one of the Black Mage's commanders?")
+sm.sendSay("我们也从未听说过这种事情...会不会是黑魔法师的指挥官之一？")
 sm.setSpeakerID(2142930) # Philius
-sm.sendSay("We don't know the enemy's plans. They could just be trying to scare us, or it could just be distracting us from something bigger...")
+sm.sendSay("我们不知道敌人的计划。他们可能只是想吓唬我们，或者只是在分散我们对更重要事情的注意力...")
 sm.hideUser(False)
 sm.lockInGameUI(False, True)
 sm.warp(913051006)

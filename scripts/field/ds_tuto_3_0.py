@@ -20,22 +20,22 @@ sm.sendNext("........")
 sm.showEffect("Effect/Direction6.img/effect/tuto/balloonMsg0/14", 2000, 130, 50, 10, 0, True, 0)
 sm.sendDelay(2000)
 
-sm.sendNext("(I think I hear something...)")
+sm.sendNext("(我想我听到了什么声音...)")
 
 sm.showEffect("Effect/Direction6.img/effect/tuto/balloonMsg0/15", 2000, -130, 50, 10, 0, True, 0)
 sm.sendDelay(2000)
 
-sm.sendNext("(Where am I? Am I still alive...?)")
+sm.sendNext("(我在哪里？我还活着...？)")
 
 sm.showEffect("Effect/Direction6.img/effect/tuto/balloonMsg0/16", 2000, 130, 50, 10, 0, True, 0)
 sm.sendDelay(2000)
 
-sm.sendNext("(Ugh... My energy... Something is stealing my energy!)")
+sm.sendNext("(呃...我的能量...有什么东西在偷我的能量！)")
 
 sm.showEffect("Effect/Direction6.img/effect/tuto/balloonMsg0/17", 2000, -130, 50, 10, 0, True, 0)
 sm.sendDelay(2000)
 
-sm.sendNext("(I must escape before they drain all my power!)")
+sm.sendNext("(我必须在他们吸干我所有力量之前逃脱！)")
 
 sm.chatScript("Tap the Control Key repeatedly to break the wall.")
 sm.showEffect("Effect/Direction6.img/effect/tuto/guide1/0", 3000, 0, -100, 20, 0, True, 0)

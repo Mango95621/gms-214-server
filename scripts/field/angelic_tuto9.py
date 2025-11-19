@@ -16,14 +16,14 @@ sm.setSpeakerID(0)
 sm.removeEscapeButton()
 sm.flipDialoguePlayerAsSpeaker()
 sm.setSpeakerType(3)
-sm.sendNext("Stupid. You can't just sit here and cry.")
+sm.sendNext("真蠢。你不能只是坐在这里哭。")
 
 
 sm.setSpeakerID(0)
 sm.removeEscapeButton()
 sm.flipDialoguePlayerAsSpeaker()
 sm.setSpeakerType(3)
-sm.sendSay("Maybe I can just put this dumb thing back at the East Sanctum. Then this will all go away!")
+sm.sendSay("也许我可以把这个愚蠢的东西放回东圣殿。然后这一切都会消失！")
 
 
 sm.forcedInput(2)

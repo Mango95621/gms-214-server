@@ -24,22 +24,22 @@ sm.sendDelay(1500)
 sm.forcedInput(0)
 sm.removeEscapeButton()
 sm.setSpeakerID(GUARD1)
-sm.sendNext("W-what is that?")
+sm.sendNext("那-那是什么？")
 
 sm.showBalloonMsg("Effect/Direction6.img/effect/tuto/balloonMsg2/1", 2000)
 sm.sendDelay(900)
 
 sm.setPlayerAsSpeaker()
-sm.sendNext("(What's going on? My Fury is...nearly gone! And what is this thing? Did it take my power...?)")
+sm.sendNext("(发生了什么？我的恶魔之怒...几乎消失了！这个东西是什么？它夺走了我的力量...？)")
 
 sm.setSpeakerID(GUARD2)
-sm.sendSay("T-this can't be happening...!")
+sm.sendSay("这-这不可能发生...！")
 
 sm.setPlayerAsSpeaker()
-sm.sendSay("What did you do to me? This energy...is it the Black Mage's energy?")
+sm.sendSay("你们对我做了什么？这种能量...是黑魔法师的能量吗？")
 
 sm.setSpeakerID(GUARD1)
-sm.sendSay("Need to capture that person to avoid interrogation...")
+sm.sendSay("需要抓住那个人以避免审讯...")
 
 sm.showBalloonMsg("Effect/Direction6.img/effect/tuto/balloonMsg1/16", 2000)
 sm.sendDelay(1500)
@@ -65,12 +65,12 @@ sm.removeNpc(GUARD2)
 sm.showBalloonMsg("Effect/Direction6.img/effect/tuto/balloonMsg0/13", 2000)
 
 sm.setSpeakerID(J_AGENT)
-sm.sendNext("(Who is that? I've never seen such a powerful skill...)")
+sm.sendNext("(那是谁？我从未见过如此强大的技能...)")
 
 sm.sendDelay(1500)
 
 sm.setPlayerAsSpeaker()
-sm.sendNext("(Ugh... I wasted too much power fighting them. Where am I? If nothing else, I know I need to get out of here.)")
+sm.sendNext("(呃...我在和他们战斗时浪费了太多力量。我在哪里？无论如何，我知道我需要离开这里。)")
 
 sm.forcedInput(2)
 sm.sendDelay(990)
@@ -85,30 +85,30 @@ sm.sendDelay(1200)
 
 sm.moveNpcByTemplateId(J_AGENT, True, 150, 100)
 
-sm.sendNext("(No... I'm...losing consciousness. If they find me now...!)")
+sm.sendNext("(不...我...正在失去意识。如果他们现在找到我...！)")
 
 sm.setSpeakerID(J_AGENT)
-sm.sendSay("Wait, calm down. I'm not your enemy. Who are you? And how did you end up in a place like this?")
+sm.sendSay("等等，冷静下来。我不是你的敌人。你是谁？你是怎么来到这种地方的？")
 
 sm.setPlayerAsSpeaker()
-sm.sendSay("(He doesn't feel evil...)\r\nStay back!")
+sm.sendSay("(他感觉不邪恶...)\r\n退后！")
 
 sm.setSpeakerID(J_AGENT)
-sm.sendSay("C'mon... Look at you. You need help, and you need it now. Do you realized what they were doing? That machine next to you is an Energy Conducting Device... The Black Wings were draining your power.")
+sm.sendSay("来吧...看看你自己。你需要帮助，而且现在就需要。你意识到他们在做什么吗？你旁边的那个机器是一个能量传导装置...黑翼正在吸取你的力量。")
 
 sm.setPlayerAsSpeaker()
-sm.sendSay("(An Energy Conducting Device? This machine? And who are the Black Wings? None of this makes any sense...)")
+sm.sendSay("(能量传导装置？这个机器？黑翼是谁？这一切都没有任何意义...)")
 
 sm.showBalloonMsg("Effect/Direction6.img/effect/tuto/balloonMsg0/13", 2000)
 sm.sendDelay(1500)
 
-sm.sendNext("Who are you? And...*cough* How do you know about these things?")
+sm.sendNext("你是谁？而且...*咳嗽* 你怎么知道这些事情？")
 
 sm.setSpeakerID(J_AGENT)
-sm.sendSay("I'm J, an agent in the Resistance. We're working against the Black Wings. I don't know who you are, but I wouldn't take advantage of you in your state. Let me help you.")
+sm.sendSay("我是J，抵抗组织的特工。我们正在对抗黑翼。我不知道你是谁，但我不会在你这种状态下占你便宜。让我帮助你。")
 
 sm.setPlayerAsSpeaker()
-sm.sendSay("No... I have...no energy...")
+sm.sendSay("不...我...没有能量了...")
 
 sm.forcedAction(379, 0)
 sm.showEffect("Effect/Direction6.img/effect/tuto/fallMale", 0, 0, 0, 0, 0, False, 0)

@@ -47,66 +47,66 @@ sm.sendDelay(900)
 sm.setSpeakerID(3000132)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendNext("Mwahahaha, how's THAT for power?!")
+sm.sendNext("哇哈哈哈，这就是力量吗？！")
 
 
 sm.setSpeakerID(3000132)
 sm.removeEscapeButton()
 sm.flipDialoguePlayerAsSpeaker()
 sm.setSpeakerType(3)
-sm.sendSay("That was so much fun! It was all PEW PEW KABLOOOM!!")
+sm.sendSay("太好玩了！全都是砰砰砰轰隆隆！！")
 
 
 sm.setSpeakerID(3000132)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("Uh, yes. Yes it was sort of like that, only a lot less stupid.")
-
-
-sm.setSpeakerID(3000132)
-sm.removeEscapeButton()
-sm.flipDialoguePlayerAsSpeaker()
-sm.setSpeakerType(3)
-sm.sendSay("Hehehe, hahahaha, HAHAHAHAHA!")
-
-
-sm.setSpeakerID(3000132)
-sm.removeEscapeButton()
-sm.setSpeakerType(3)
-sm.sendSay("You didn't hear a single word I said, did you? HEY! Enough with the terrifying laughter. You need some practice to use my powers properly.")
+sm.sendSay("呃，是的。是有点像那样，只是没那么蠢。")
 
 
 sm.setSpeakerID(3000132)
 sm.removeEscapeButton()
 sm.flipDialoguePlayerAsSpeaker()
 sm.setSpeakerType(3)
-sm.sendSay("Awww, practice? I don't wannnaaaa....")
+sm.sendSay("嘿嘿嘿，哈哈哈，哈哈哈哈哈哈！")
 
 
 sm.setSpeakerID(3000132)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("My powers require a transformation to really be effective. I think you should give it a shot. ")
-
-
-sm.setSpeakerID(3000132)
-sm.removeEscapeButton()
-sm.flipDialoguePlayerAsSpeaker()
-sm.setSpeakerType(3)
-sm.sendSay("Oh, okay!")
-
-
-sm.setSpeakerID(3000132)
-sm.removeEscapeButton()
-sm.setSpeakerType(3)
-sm.sendSay("Hehehe... Ahem, then look deep into your heart, feel my presence, and say REALLY loud... Dress-Up!")
+sm.sendSay("你根本没听我说的话，对吧？嘿！别笑得那么可怕了。你需要一些练习才能正确使用我的力量。")
 
 
 sm.setSpeakerID(3000132)
 sm.removeEscapeButton()
 sm.flipDialoguePlayerAsSpeaker()
 sm.setSpeakerType(3)
-sm.sendSay("Dress-Up?")
+sm.sendSay("啊啊啊，练习？我不想练啦....")
+
+
+sm.setSpeakerID(3000132)
+sm.removeEscapeButton()
+sm.setSpeakerType(3)
+sm.sendSay("我的力量需要变身才能真正发挥效果。我觉得你应该试试看。")
+
+
+sm.setSpeakerID(3000132)
+sm.removeEscapeButton()
+sm.flipDialoguePlayerAsSpeaker()
+sm.setSpeakerType(3)
+sm.sendSay("哦，好吧！")
+
+
+sm.setSpeakerID(3000132)
+sm.removeEscapeButton()
+sm.setSpeakerType(3)
+sm.sendSay("嘿嘿嘿...咳咳，那么深入你的内心，感受我的存在，然后大声喊出来...变身！")
+
+
+sm.setSpeakerID(3000132)
+sm.removeEscapeButton()
+sm.flipDialoguePlayerAsSpeaker()
+sm.setSpeakerType(3)
+sm.sendSay("变身？")
 
 
 sm.setTemporarySkillSet(0)

@@ -4,16 +4,16 @@ FANZY = 1500010
 sm.removeEscapeButton()
 
 sm.flipDialoguePlayerAsSpeaker()
-sm.sendNext("#bBleh! I almost drowned!#k")
+sm.sendNext("#b呸！我差点淹死了！#k")
 
 sm.setSpeakerID(FANZY)
-sm.sendSay("There must be some kind of enchantment to keep people from swimming across.")
+sm.sendSay("一定有什么魔法阻止人们游过去。")
 
 sm.flipDialoguePlayerAsSpeaker()
-sm.sendSay("#bYou could have told me that in advance!#k")
+sm.sendSay("#b你本可以提前告诉我！#k")
 
 sm.setSpeakerID(FANZY)
-sm.sendSay("I'm not omniscient, and you make a good test subject. We'll have to find another way.")
+sm.sendSay("我不是全知全能的，而且你是个很好的测试对象。我们得找其他方法。")
 
 sm.unlockUI()
 sm.startQuest(32102)

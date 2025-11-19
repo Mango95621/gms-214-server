@@ -2,6 +2,6 @@
 sm.setSpeakerType(3)
 sm.setParam(4)
 sm.setInnerOverrideSpeakerTemplateID(1500017) # Tosh the Fairy
-sm.sendSayOkay("Help me! I'm totally stuck 'cuz of all the monsters!\r\n\r\n#b(Defeat all nearby monsters.)#k")
+sm.sendSayOkay("帮助我！我被所有的怪物困住了!\r\n\r\n#b(击败附近的所有怪物.)#k")
 sm.showFieldEffect("monsterPark/clear", 0)
 sm.playSound("Party1/Clear", 100)

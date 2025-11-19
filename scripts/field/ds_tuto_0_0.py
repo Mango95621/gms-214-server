@@ -11,7 +11,7 @@ for i in range(3):
 
 sm.setSpeakerID(2007)
 sm.setBoxChat()
-if sm.sendAskAccept("Would you like to skip the introduction?"):
+if sm.sendAskAccept("你想跳过介绍吗?"):
     sm.levelUntil(10)
     if sm.sendAskSelectMenu(1, 0) == 1:
         # Demon Slayer

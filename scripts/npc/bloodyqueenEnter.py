@@ -48,4 +48,4 @@ if sm.getFieldID() == 105200000:
             sm.setInstanceTime(BossConstants.ROOTABYSS_TIME)
             sm.addCooldownTimeForParty(destinations[response][4], destinations[response][5])
         else:
-            sm.sendSayOkay("One or more party members are lacking the prerequisite entry quests, or are below level #b%d#k." % destinations[response][1])
+            sm.sendSayOkay("一名或多名队员缺少进入副本的先决条件或低于挑战级别 #b%d#k." % destinations[response][1])

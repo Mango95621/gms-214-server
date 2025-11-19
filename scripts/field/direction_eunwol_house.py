@@ -1,7 +1,7 @@
 SNIFFS = 3002003
 
 sm.setSpeakerID(2007)
-if sm.sendAskYesNo("Would you like to skip the tutorial cutscenes?"):
+if sm.sendAskYesNo("是否跳过教程过场动画？"):
     sm.createQuestWithQRValue(37999, "SKIP_RAIN_EXPLAIN")
 if sm.getQRValue(37999) != "SKIP_RAIN_EXPLAIN":
     sm.lockInGameUI(True, False)
@@ -12,23 +12,23 @@ if sm.getQRValue(37999) != "SKIP_RAIN_EXPLAIN":
 
     sm.removeEscapeButton()
     sm.setSpeakerID(SNIFFS)
-    sm.sendNext("Shade! Something bad is happening!")
+    sm.sendNext("影！有不好的事情发生了！")
 
     sm.forcedInput(1)
     sm.sendDelay(100)
 
     sm.forcedInput(0)
     sm.setPlayerAsSpeaker()
-    sm.sendNext("...Well, I'm not in the best situation either... Anyway, what happened?")
+    sm.sendNext("...嗯，我的情况也不是很好...总之，发生了什么？")
 
     sm.setSpeakerID(SNIFFS)
-    sm.sendSay("I-it's raining in the town!")
+    sm.sendSay("镇-镇上下雨了！")
 
     sm.setPlayerAsSpeaker()
-    sm.sendSay("Rain? Hm, I guess it's the first time I've seen it rain in this town. But why is it so bad? Are there damages to the houses?")
+    sm.sendSay("下雨？嗯，我想这是我第一次在这个小镇看到下雨。但为什么这么糟糕？房子有损坏吗？")
 
     sm.setSpeakerID(SNIFFS)
-    sm.sendSay("No, no! Raining means... It means... You should hear it from the chief himself.  Hurry, go talk to him!")
+    sm.sendSay("不，不！下雨意味着...意味着...你应该听族长亲口说。快点，去和他谈谈！")
 
     sm.removeNpc(SNIFFS)
 sm.startQuestNoCheck(38019)

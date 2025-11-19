@@ -4,7 +4,7 @@ sm.forcedInput(0)
 sm.setSpeakerType(3)
 sm.setParam(4)
 sm.setInnerOverrideSpeakerTemplateID(9010000) # Maple Administrator
-res = sm.sendAskYesNo("Would you like to skip the cutscenes?")
+res = sm.sendAskYesNo("你想跳过过场动画吗?")
 sm.createQuestWithQRValue(18418, "B=33295")
 sm.lockInGameUI(False, True)
 sm.showNpcSpecialActionByTemplateId(9390236, "summon", 0)

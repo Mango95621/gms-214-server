@@ -1,8 +1,8 @@
 sm.lockInGameUI(False)
-sm.progressMessageFont(3, 20, 20, 0, "You can start the quest by clicking the NPC with the lightbulb over their head.")
+sm.progressMessageFont(3, 20, 20, 0, "你可以通过点击头顶有灯泡的NPC来开始任务.")
 sm.blindEffect(False)
 
-if sm.sendAskAccept("Would you like to skip the introduction?"):
+if sm.sendAskAccept("你想跳过介绍吗?"):
     sm.levelUntil(10)
     sm.jobAdvance(400)
     sm.resetAP(chr.getJob())

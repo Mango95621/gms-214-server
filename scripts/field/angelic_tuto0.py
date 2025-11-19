@@ -10,19 +10,19 @@ sm.hideUser(True)
 sm.setSpeakerID(3000101)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendNext("Are you cryin' again, #h0#?!")
+sm.sendNext("你又在哭了吗，#h0#？！")
 
 
 sm.setSpeakerID(3000100)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("B-but the other kids are makin' fun of me!")
+sm.sendSay("但-但是其他孩子在取笑我！")
 
 
 sm.setSpeakerID(3000101)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("That's cause you don't have no magic!")
+sm.sendSay("那是因为你没有魔法！")
 
 
 sm.sendDelay(600)
@@ -31,19 +31,19 @@ sm.sendDelay(600)
 sm.setSpeakerID(3000106)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendNext("Do not be so harsh with her, Velderoth. #h0# can not help the way she was born. ")
+sm.sendNext("不要对她这么严厉，维尔德罗斯。#h0#无法改变她天生的样子。")
 
 
 sm.setSpeakerID(3000101)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("But... I don't want to see #h0# getting bullied anymore! Maybe she can learn to use magic like us...")
+sm.sendSay("但是...我不想再看到#h0#被欺负了！也许她可以像我们一样学习使用魔法...")
 
 
 sm.setSpeakerID(3000102)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("Stop picking on her, Velderoth. You're supposed to be her friend.")
+sm.sendSay("别欺负她了，维尔德罗斯。你应该是她的朋友。")
 
 
 sm.sendDelay(600)
@@ -52,31 +52,31 @@ sm.sendDelay(600)
 sm.setSpeakerID(3000100)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendNext("I'm sorry you guys, I don't want to start a fight...")
+sm.sendNext("对不起大家，我不想引起争吵...")
 
 
 sm.setSpeakerID(3000106)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("(Dear little #h0#...)")
+sm.sendSay("(亲爱的小#h0#...)")
 
 
 sm.setSpeakerID(3000102)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("We'll watch your back forever, #h0#. I swear it.")
+sm.sendSay("我们会永远保护你的，#h0#。我发誓。")
 
 
 sm.setSpeakerID(3000101)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("This is bummin' me out! Let's go down to town and get some candy!")
+sm.sendSay("这让我很沮丧！我们去镇上买点糖果吧！")
 
 
 sm.setSpeakerID(3000100)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("Okay!")
+sm.sendSay("好的！")
 
 
 sm.sendDelay(600)
@@ -85,19 +85,19 @@ sm.sendDelay(600)
 sm.setSpeakerID(3000101)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendNext("#h0#, you're so much less ugly when you smile!")
+sm.sendNext("#h0#，你笑起来就没那么丑了！")
 
 
 sm.setSpeakerID(3000102)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("Totally!")
+sm.sendSay("完全同意！")
 
 
 sm.setSpeakerID(3000100)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("Gee, thanks. Jerks.")
+sm.sendSay("哎呀，谢谢。混蛋们。")
 
 
 sm.sendDelay(300)

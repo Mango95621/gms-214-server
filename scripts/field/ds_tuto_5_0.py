@@ -12,28 +12,28 @@ sm.curNodeEventEnd(True)
 
 sm.removeEscapeButton()
 sm.setSpeakerID(BELLE)
-sm.sendNext("Y-you really have wings.")
+sm.sendNext("你...你真的有翅膀。")
 
 sm.setSpeakerID(ELEX)
-sm.sendSay("Who are you? Did the Black Wings send you as a spy? Actually, that wouldn't make sense...")
+sm.sendSay("你是谁？是黑翼派你来做间谍的吗？实际上，这说不通...")
 
 sm.setSpeakerID(BRIGHTON)
-sm.sendSay("Keep your guard up. We still don't know what's going on.")
+sm.sendSay("保持警惕。我们还不知道发生了什么。")
 
 sm.setSpeakerID(CLAUDINE)
-sm.sendSay("Who are you? What's your relationship with the Black Wings?")
+sm.sendSay("你是谁？你和黑翼是什么关系？")
 
 sm.setPlayerAsSpeaker()
-sm.sendSay("I have no idea who these Black Wings are. I've never heard of them. What do you want to know about me? I'm...not even sure where to begin...")
+sm.sendSay("我完全不知道这些黑翼是什么。我从未听说过他们。你想了解我什么？我...甚至不知道从哪里开始...")
 
 sm.setSpeakerID(J_AGENT)
-sm.sendSay("Well, let's start with your name, your organization, your background... And, if you don't mind, I'd like to know about those wings on your back.")
+sm.sendSay("好吧，让我们从你的名字、你的组织、你的背景开始...如果你不介意的话，我想知道你背上的那些翅膀。")
 
 sm.setPlayerAsSpeaker()
-sm.sendSay("My name is #h0#. I am not currently part of any organization...though I was once one of the Black Mage's Commanders. I rebelled against him, and we fought, but he defeated me. When I awoke, I saw what the man in the hat described. Oh, and I was born with these wings. My father was a demon.")
+sm.sendSay("我的名字是#h0#。我现在不属于任何组织...虽然我曾经是黑魔法师的指挥官之一。我反抗了他，我们战斗了，但他打败了我。当我醒来时，我看到了戴帽子的人描述的情况。哦，我天生就有这些翅膀。我的父亲是个恶魔。")
 
 sm.setSpeakerID(CLAUDINE)
-sm.sendSay("Wait, wait, wait. You were a Commander under the Black Mage? How? He's been sealed for hundreds of years?")
+sm.sendSay("等等，等等，等等。你曾经是黑魔法师手下的指挥官？怎么可能？他已经被封印了几百年了？")
 
 sm.showBalloonMsg("Effect/Direction6.img/effect/tuto/balloonMsg1/3", 2000)
 sm.sendDelay(600)
@@ -47,46 +47,46 @@ sm.showEffectOnPosition("Effect/Direction6.img/effect/tuto/balloonMsg0/10", 1500
 sm.sendDelay(1500)
 
 sm.setSpeakerID(BELLE)
-sm.sendNext("Sounds like someone has a screw loose to me. The experiments do that sometimes. One subject thought she was a violin.")
+sm.sendNext("听起来像是有人脑子不太正常。实验有时会这样。有个实验对象以为自己是一把小提琴。")
 
 sm.setPlayerAsSpeaker()
-sm.sendSay("(Hundreds of years ago? What are they talking about? But...this place is so strange. How long have I been asleep? And...could the Heroes have sealed the Black Mage?)")
+sm.sendSay("(几百年前？他们在说什么？但是...这个地方太奇怪了。我睡了多久？还有...难道是英雄们封印了黑魔法师？)")
 
 sm.setSpeakerID(BELLE)
-sm.sendSay("This makes no sense. What do you think, #p2159345#?")
+sm.sendSay("这说不通。你怎么看，#p2159345#？")
 
 sm.setSpeakerID(BLACK_JACK)
-sm.sendSay("It's no lie. That doesn't mean our guest isn't just crazy, though.")
+sm.sendSay("这不是谎言。但这并不意味着我们的客人不是疯了。")
 
 sm.setSpeakerID(CHECKY)
-sm.sendSay("I'm with Black Jack on this one. Either our guest is crazy...or it's all true.")
+sm.sendSay("我同意Black Jack的看法。要么我们的客人疯了...要么这一切都是真的。")
 
 sm.setSpeakerID(CLAUDINE)
-sm.sendSay("If that's true, then our guest is from hundreds of years ago, back before the Black Mage was sealed. Wait, if you were a Commander, why did you rebel?")
+sm.sendSay("如果这是真的，那么我们的客人来自几百年前，在黑魔法师被封印之前。等等，如果你是指挥官，为什么要反抗？")
 
 sm.setPlayerAsSpeaker()
-sm.sendSay("That is a personal matter. Now, since I answered your questions, you answer mine. Who are you people? And who are the Black Wings?")
+sm.sendSay("那是私人问题。现在，既然我回答了你的问题，你也回答我的。你们是谁？黑翼又是什么？")
 
 sm.setSpeakerID(J_AGENT)
-sm.sendSay("Like I said before, we're the Resistance. We're a group formed in secret to protect our home, the city of Edelstein, from the Black Wings. ")
-sm.sendSay("Those nasty folks that were using you like a battery were the Black Wings. They invaded Edelstein a while back, and have been draining energy from the city. We don't know why, but we do know that they're working for the Black Mage.")
+sm.sendSay("就像我之前说的，我们是反抗军。我们是一个秘密组建的组织，目的是保护我们的家园埃德尔斯坦城免受黑翼的侵害。")
+sm.sendSay("那些把你当电池用的讨厌家伙就是黑翼。他们不久前入侵了埃德尔斯坦，一直在从城市中吸取能量。我们不知道原因，但我们知道他们是为黑魔法师工作的。")
 
 sm.setPlayerAsSpeaker()
-sm.sendSay("They follow the Black Mage? I thought you said he was sealed.")
+sm.sendSay("他们追随黑魔法师？我以为你说他被封印了。")
 
 sm.setSpeakerID(ELEX)
-sm.sendSay("He is. We think they're trying to find a way to release him again. And, to be fair, there have been a lot of recent events that hint that it could happen.")
+sm.sendSay("他是被封印了。我们认为他们正在想办法再次释放他。而且，公平地说，最近有很多事件暗示这可能会发生。")
 
 sm.setPlayerAsSpeaker()
-sm.sendSay("The Black Mage is returning? That's excellent news...")
-sm.sendSay("That means I can still have my revenge!")
+sm.sendSay("黑魔法师要回来了？这真是好消息...")
+sm.sendSay("这意味着我还能复仇！")
 
 sm.setSpeakerID(BRIGHTON)
-sm.sendSay("Okay...you're kinda crazy, but I can see we're on the same side.")
+sm.sendSay("好吧...你有点疯狂，但我能看出我们在同一战线。")
 
 sm.startQuest(23279)
 sm.setSpeakerID(FERDI)
-sm.sendSay("If you want revenge on the Black Mage, why don't you join us?")
+sm.sendSay("如果你想向黑魔法师复仇，为什么不加入我们？")
 
 sm.showEffectOnPosition("Effect/Direction6.img/effect/tuto/balloonMsg1/4", 1500, -90, -150)
 sm.showEffectOnPosition("Effect/Direction6.img/effect/tuto/balloonMsg1/4", 1500, 210, -150)
@@ -96,42 +96,42 @@ sm.showEffectOnPosition("Effect/Direction6.img/effect/tuto/balloonMsg1/4", 1500,
 sm.showEffectOnPosition("Effect/Direction6.img/effect/tuto/balloonMsg1/4", 1500, 270, -50)
 
 sm.setSpeakerID(CLAUDINE)
-sm.sendSay("Headmaster, what are you saying...?")
+sm.sendSay("校长，你在说什么...？")
 
 sm.setSpeakerID(BRIGHTON)
-sm.sendSay("Are you crazy? This is obviously a trap! And even if it isn't, we'd be fools to trust a Commander of the Black Mage!")
+sm.sendSay("你疯了吗？这明显是个陷阱！即使不是，我们要是相信黑魔法师的指挥官就是傻瓜！")
 
 sm.setSpeakerID(FERDI)
-sm.sendSay("Well... I'm happy to see everyone together on this! Ha!")
-sm.sendSay("I trust #p2159345#'s judgment, and besides, we can use all the help we can get. Even if our new friend #bused to be#k a Commander, this is clearly no longer the case.")
+sm.sendSay("嗯...我很高兴看到大家在这个问题上团结一致！哈！")
+sm.sendSay("我相信#p2159345#的判断，而且，我们需要所有能得到的帮助。即使我们的新朋友#b曾经是#k指挥官，现在显然已经不是了。")
 
 sm.setSpeakerID(ELEX)
-sm.sendSay("Besides, better to have the Commander here with us than with the Black Wings.")
+sm.sendSay("而且，让指挥官和我们在一起总比和黑翼在一起好。")
 
 sm.setSpeakerID(FERDI)
-sm.sendSay("We can always use more members. As long as our goals are the same, we can work together.")
+sm.sendSay("我们总是需要更多成员。只要我们的目标一致，我们就可以合作。")
 
 sm.setPlayerAsSpeaker()
-sm.sendSay("W-wait, what's going on? I'm still trying to catch up to the story here!")
+sm.sendSay("等-等等，发生了什么？我还在努力跟上这里的故事！")
 
 sm.setSpeakerID(BELLE)
-sm.sendSay("There's no need to catch up. The decision has been made. If you want to fight the Black Mage, you'll have to go through the Black Wings, and you'll run into them the moment you leave this place. We have common enemies. Let's work together to bring them down!")
+sm.sendSay("没必要跟上。决定已经做出了。如果你想对抗黑魔法师，你就必须面对黑翼，你离开这个地方的那一刻就会遇到他们。我们有共同的敌人。让我们一起合作打倒他们！")
 
 sm.setSpeakerID(CHECKY)
-sm.sendSay("Caution is good. I don't expect you to fully trust us yet. We can work on that as we take the Black Wings apart, piece by piece.")
+sm.sendSay("谨慎是好的。我不指望你现在就完全信任我们。我们可以在逐步瓦解黑翼的过程中建立信任。")
 
 sm.setPlayerAsSpeaker()
-sm.sendSay("True... Very well. I will join you, for now.")
-sm.sendSay("I realize this is overdue, but...allow me to thank you for saving me.")
+sm.sendSay("确实...好吧。我暂时加入你们。")
+sm.sendSay("我知道这有点迟了，但是...请允许我感谢你们救了我。")
 
 sm.setSpeakerID(J_AGENT)
-sm.sendSay("You're quite welcome. Hearing that is a relief...I've never been betrayed by someone who thanked me.")
+sm.sendSay("非常欢迎。听到这个让我松了一口气...我从未被感谢过我的人背叛过。")
 
 sm.setPlayerAsSpeaker()
-sm.sendSay("I am loyal to those who are loyal to me.")
+sm.sendSay("我对忠诚于我的人忠诚。")
 
 sm.setSpeakerID(FERDI)
-sm.sendSay("Works for me. All right, make yourself at home. Our secret base is your secret base, and all that.")
+sm.sendSay("对我来说没问题。好吧，请随意。我们的秘密基地就是你的秘密基地，诸如此类。")
 
 sm.createQuestWithQRValue(23209, "1", False)
 sm.completeQuest(23279)

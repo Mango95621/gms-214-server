@@ -10,25 +10,25 @@ sm.hideUser(True)
 sm.setSpeakerID(3000100)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendNext("Super #h0# construction!")
+sm.sendNext("超级#h0#建造！")
 
 
 sm.setSpeakerID(3000101)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("Haha, what? You say the funniest things.")
+sm.sendSay("哈哈，什么？你说的东西真有趣。")
 
 
 sm.setSpeakerID(3000102)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("What are you gonna call this place?")
+sm.sendSay("你要给这个地方起什么名字？")
 
 
 sm.setSpeakerID(3000101)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("It's gotta be super tough! And awesome!")
+sm.sendSay("它必须超级坚韧！而且很酷！")
 
 
 sm.sendDelay(900)
@@ -37,25 +37,25 @@ sm.sendDelay(900)
 sm.setSpeakerID(3000100)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendNext("How about the Justice Lair?")
+sm.sendNext("正义巢穴怎么样？")
 
 
 sm.setSpeakerID(3000102)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("Hahahaha, you love justice like I love pushups!")
+sm.sendSay("哈哈哈哈，你热爱正义就像我热爱俯卧撑！")
 
 
 sm.setSpeakerID(3000101)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("That's too kiddy.")
+sm.sendSay("那太孩子气了。")
 
 
 sm.setSpeakerID(3000102)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("Then what are we gonna call it?")
+sm.sendSay("那我们该叫它什么？")
 
 
 sm.sendDelay(900)
@@ -64,85 +64,85 @@ sm.sendDelay(900)
 sm.setSpeakerID(3000101)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendNext("I know!! Let's call ourselves the Heliseum Force.")
+sm.sendNext("我知道了！！我们就叫自己赫里希姆部队吧。")
 
 
 sm.setSpeakerID(3000102)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("Heliseum Force?")
+sm.sendSay("赫里希姆部队？")
 
 
 sm.setSpeakerID(3000101)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("If we're gonna take back Heliseum from that stupid Magnus, we have to remember it every single day!")
+sm.sendSay("如果我们要从那个愚蠢的马格努斯手中夺回赫里希姆，我们必须每天都记住它！")
 
 
 sm.setSpeakerID(3000100)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("Cool!! That's so cool, Velderoth!")
+sm.sendSay("酷！！太酷了，维德罗斯！")
 
 
 sm.setSpeakerID(3000101)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("I know, right?")
+sm.sendSay("我知道，对吧？")
 
 
 sm.setSpeakerID(3000102)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("I think it sounds good.")
+sm.sendSay("我觉得听起来不错。")
 
 
 sm.setSpeakerID(3000100)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("Then this place will be the Heliseum Hideout from now on!")
+sm.sendSay("那么从现在开始这个地方就是赫里希姆藏身处了！")
 
 
 sm.setSpeakerID(3000101)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("This is going to be sooo awesome!")
+sm.sendSay("这将会超级棒！")
 
 
 sm.setSpeakerID(3000100)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("Are you gonna be our captain, Veldie?")
+sm.sendSay("你要当我们的队长吗，维迪？")
 
 
 sm.setSpeakerID(3000101)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("Uh... me?")
+sm.sendSay("呃...我？")
 
 
 sm.setSpeakerID(3000102)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("I don't want to lead people. I just want to be tough!")
+sm.sendSay("我不想领导别人。我只想变得强大！")
 
 
 sm.setSpeakerID(3000101)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("Is that really okay?")
+sm.sendSay("这样真的可以吗？")
 
 
 sm.setSpeakerID(3000100)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("Sure thing, cap'n!")
+sm.sendSay("当然可以，队长！")
 
 
 sm.setSpeakerID(3000101)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("Then today is the official founding of the Heliseum Force!")
+sm.sendSay("那么今天就是赫里希姆部队的正式成立日！")
 
 
 sm.sendDelay(300)

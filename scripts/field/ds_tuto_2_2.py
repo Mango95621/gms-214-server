@@ -14,7 +14,7 @@ sm.sendDelay(30)
 sm.forcedInput(0)
 sm.removeEscapeButton()
 sm.setSpeakerID(ARK_CHAT)
-sm.sendNext("You are rather powerful, aren't you? I think it's time we settled which of us is stronger. I've always wanted to test my magic against your Demon Fury. Of course, I know who will be victorious!")
+sm.sendNext("你相当强大，不是吗？我想是时候决定我们谁更强了。我一直想用我的魔法来测试你的恶魔之怒。当然，我知道谁会获胜！")
 
 sm.chatScript("Press the Control key rapidly to block Arkarium's attack and counterattack.")
 sm.showEffectOnPosition("Effect/Direction6.img/effect/tuto/guide1/0", 5010, 150, -300)
@@ -45,7 +45,7 @@ sm.sendDelay(1000)
 
 sm.removeEscapeButton()
 sm.setSpeakerID(ARKARIUM)
-sm.sendNext("You're stronger than I expected! How amusing!")
+sm.sendNext("你比我想象的还要强大！多么有趣！")
 
 sm.showNpcSpecialActionByTemplateId(ARKARIUM, "resolve", 0)
 sm.showBalloonMsgOnNpc("Effect/Direction6.img/effect/tuto/balloonMsg1/10", 2000, ARKARIUM)
@@ -71,8 +71,8 @@ sm.showBalloonMsgOnNpc("Effect/Direction6.img/effect/tuto/balloonMsg0/0", 2000, 
 sm.sendDelay(1200)
 
 sm.setSpeakerID(ARK_CHAT)
-sm.sendNext("Ah! It seems the Black Mage wishes to see you after all. It's a shame we cannot finish our little contest, but as always, I defer to my master. I believe I'll pay those so-called 'Heroes' a visit...")
-sm.sendSay("As for you, #h0# I don't expect I'll see you again. Enjoy the oblivion granted to you from the Black Mage himself! Ha ha ha!")
+sm.sendNext("啊！看来黑魔法师终究还是想见你。很遗憾我们不能完成我们的小比赛，但一如既往，我听从我的主人。我想我会去拜访那些所谓的'英雄们'...")
+sm.sendSay("至于你，#h0#，我不指望能再见到你了。好好享受黑魔法师本人赐予你的湮灭吧！哈哈哈！")
 
 sm.showNpcSpecialActionByTemplateId(ARKARIUM, "teleportation", 0)
 sm.sendDelay(570)

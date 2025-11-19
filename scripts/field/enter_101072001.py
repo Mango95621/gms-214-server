@@ -3,19 +3,19 @@ sm.lockInGameUI(True, True)
 sm.setSpeakerType(3)
 sm.setParam(5)
 sm.setInnerOverrideSpeakerTemplateID(1500003) # Woonie the Fairy
-sm.sendNext("Mr. Kalayan!")
+sm.sendNext("Kalayan先生！")
 sm.setInnerOverrideSpeakerTemplateID(1500004) # Tosh the Fairy
-sm.sendSay("We missed you!")
+sm.sendSay("我们好想你！")
 sm.setInnerOverrideSpeakerTemplateID(1500005) # Tracy the Fairy
-sm.sendSay("We were so scared.")
+sm.sendSay("我们好害怕。")
 sm.setInnerOverrideSpeakerTemplateID(1500006) # Ephony the Fairy
-sm.sendSay("I'm sorry! We'll never play in a danger zone again.")
+sm.sendSay("对不起！我们再也不会在危险区域玩耍了。")
 sm.setInnerOverrideSpeakerTemplateID(1500002) # Faculty Head Kalayan
-sm.sendSay("No, I'm the one at fault! I should have encouraged your pointless little plays! Forgive me!")
+sm.sendSay("不，是我的错！我应该鼓励你们那些毫无意义的小游戏！原谅我！")
 sm.setInnerOverrideSpeakerTemplateID(1500000) # Cootie the Really Small
-sm.sendSay("Look at the display of emotions between them! No human could ever hope to match this!")
+sm.sendSay("看看他们之间的情感表达！没有人类能希望与之匹敌！")
 sm.setInnerOverrideSpeakerTemplateID(1500001) # Headmistress Ivana
-sm.sendSay("I am rather impressed by your empathy and lack of savagery, #h0#. You have been of great help.")
-sm.sendSay("And you, Cootie the Really Small. Such understanding of fairy culture is uncommon, even amongst our own people. I would like to offer you a position here at the Academy...")
+sm.sendSay("我对你的同理心和缺乏野蛮行为印象深刻，#h0#。你帮了大忙。")
+sm.sendSay("还有你，非常小的Cootie。对精灵文化如此了解是不寻常的，即使在我们自己人中间也是如此。我想邀请你在学院任职...")
 sm.lockInGameUI(False, True)
 sm.warp(101072002)

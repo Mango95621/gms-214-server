@@ -6,13 +6,13 @@ sm.sendDelay(2500)
 sm.setSpeakerType(3)
 sm.setSpeakerID(2142921) # Dances with Balrog
 sm.setParam(1)
-sm.sendNext("The same dream for days on end... It's unbelievable.")
+sm.sendNext("连续几天都做同样的梦...真是难以置信。")
 sm.setSpeakerID(2142922) # Stands with Bulls
-sm.sendSay("This is simple trickery from the enemy! They're trying to make us lose faith in each other.")
+sm.sendSay("这只是敌人的简单伎俩！他们想让我们对彼此失去信心。")
 sm.setSpeakerID(2142923) # Ayan
-sm.sendSay("But the people of town are so scared... especially with these strange rumors.")
+sm.sendSay("但是镇上的人们都很害怕...尤其是这些奇怪的谣言。")
 sm.setSpeakerID(2142920) # Blackbull
-sm.sendSay("Isn't this a bad omen?")
+sm.sendSay("这难道不是个坏兆头吗？")
 sm.hideUser(False)
 sm.lockInGameUI(False, True)
 sm.warp(913051007)

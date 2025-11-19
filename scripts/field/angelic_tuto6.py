@@ -21,27 +21,27 @@ sm.showNpcSpecialActionByObjectId(OBJECT_3, "summon", 0)
 sm.setSpeakerID(3000152)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendNext("#h0#, you have finally come to.")
+sm.sendNext("#h0#，你终于醒了。")
 
 
 sm.setSpeakerID(3000152)
 sm.removeEscapeButton()
 sm.flipDialoguePlayerAsSpeaker()
 sm.setSpeakerType(3)
-sm.sendSay("Umm, where am I?")
+sm.sendSay("呃，我在哪里？")
 
 
 sm.setSpeakerID(3000106)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("Pantheon. How do you feel?")
+sm.sendSay("万神殿。你感觉怎么样？")
 
 
 sm.setSpeakerID(3000106)
 sm.removeEscapeButton()
 sm.flipDialoguePlayerAsSpeaker()
 sm.setSpeakerType(3)
-sm.sendSay("My head feels like a ripe watermelon, but I think I'm okay otherwise.")
+sm.sendSay("我的头感觉像个熟透的西瓜，但除此之外我觉得还好。")
 
 
 sm.showEffect("Effect/Direction10.img/effect/story/BalloonMsg1/0", 1200, 0, -120, -2, -2, False, 0)
@@ -52,103 +52,103 @@ sm.setSpeakerID(3000106)
 sm.removeEscapeButton()
 sm.flipDialoguePlayerAsSpeaker()
 sm.setSpeakerType(3)
-sm.sendNext("Huh? Why is there a pink thing on my arm?")
+sm.sendNext("嗯？为什么我手臂上有个粉色的东西？")
 
 
 sm.setSpeakerID(3000106)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("I wish I had better news, child, but I fear you have been cursed by the East Sanctum relic. In fact, it is quite stuck to your arm.")
+sm.sendSay("孩子，我希望我有更好的消息，但我担心你被东圣殿的圣物诅咒了。事实上，它已经牢牢粘在你的手臂上了。")
 
 
 sm.setSpeakerID(3000106)
 sm.removeEscapeButton()
 sm.flipDialoguePlayerAsSpeaker()
 sm.setSpeakerType(3)
-sm.sendSay("What?! What do I do?! How do I get it off?!")
+sm.sendSay("什么？！我该怎么办？！怎么把它弄下来？！")
 
 
 sm.setSpeakerID(3000107)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("The security threat of having a young, defenseless girl wandering around with one of our relics strapped to her arm has not escaped me.")
+sm.sendSay("让一个年轻、无助的女孩带着我们的圣物在四处游荡所带来的安全隐患，我并非没有注意到。")
 
 
 sm.setSpeakerID(3000106)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("Do not scold the girl, Cartalion. That relic would be entirely gone if it were not for Kaiser and #h0#.")
+sm.sendSay("不要责备这个女孩，卡塔利安。如果不是凯撒和#h0#，那个圣物早就完全消失了。")
 
 
 sm.setSpeakerID(3000107)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("I suppose you are right, as usual.")
-
-
-sm.setSpeakerID(3000107)
-sm.removeEscapeButton()
-sm.flipDialoguePlayerAsSpeaker()
-sm.setSpeakerType(3)
-sm.sendSay("Ha... hahaha... what? I don't remember anything...")
+sm.sendSay("我想你是对的，一如既往。")
 
 
 sm.setSpeakerID(3000107)
 sm.removeEscapeButton()
 sm.flipDialoguePlayerAsSpeaker()
 sm.setSpeakerType(3)
-sm.sendSay("Are you saying that the relic grabbed me and turned into a bracelet when I touched it? Who the heck is Kaiser? What is going on?!")
+sm.sendSay("哈...哈哈哈...什么？我什么都不记得了...")
+
+
+sm.setSpeakerID(3000107)
+sm.removeEscapeButton()
+sm.flipDialoguePlayerAsSpeaker()
+sm.setSpeakerType(3)
+sm.sendSay("你是说圣物抓住我，在我碰到它时变成了手镯？凯撒到底是谁？到底发生了什么？！")
 
 
 sm.setSpeakerID(3000152)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("Hey, it's going to be okay. We don't have a way to remove that relic from your arm, but it won't cause you any harm. Think of it like a nice accessory.")
+sm.sendSay("嘿，会没事的。我们没有办法把那个圣物从你手臂上取下来，但它不会对你造成任何伤害。就当它是一个漂亮的饰品吧。")
 
 
 sm.setSpeakerID(3000152)
 sm.removeEscapeButton()
 sm.flipDialoguePlayerAsSpeaker()
 sm.setSpeakerType(3)
-sm.sendSay("I-I didn't mean to take it! I don't even like pink!")
+sm.sendSay("我-我不是故意拿走的！我甚至不喜欢粉色！")
 
 
 sm.setSpeakerID(3000106)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("#h0#, no one is blaming you for this. Three relics remain in Pantheon. We are quite safe.")
+sm.sendSay("#h0#，没有人为此责怪你。万神殿还有三个圣物。我们相当安全。")
 
 
 sm.setSpeakerID(3000106)
 sm.removeEscapeButton()
 sm.flipDialoguePlayerAsSpeaker()
 sm.setSpeakerType(3)
-sm.sendSay("B-but, I...")
+sm.sendSay("但-但是，我...")
 
 
 sm.setSpeakerID(3000107)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("#h0#, please don't start crying. I'm a very sensitive sympathy-weeper.")
+sm.sendSay("#h0#，请不要开始哭。我是个非常敏感的同情性哭泣者。")
 
 
 sm.setSpeakerID(3000107)
 sm.removeEscapeButton()
 sm.flipDialoguePlayerAsSpeaker()
 sm.setSpeakerType(3)
-sm.sendSay("Ugh...")
+sm.sendSay("呃...")
 
 
 sm.setSpeakerID(3000106)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("Cartalion!")
+sm.sendSay("卡塔利安！")
 
 
 sm.setSpeakerID(3000107)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("I'm sorry. I have very little control over my tearducts.")
+sm.sendSay("对不起。我对我的泪腺控制力很差。")
 
 
 sm.forcedInput(1)

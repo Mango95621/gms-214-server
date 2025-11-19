@@ -28,27 +28,27 @@ sm.showEffect("Effect/BasicEff.img/Kaiser_Transform4_S", 0, 0, 0, 0, OBJECT_1, F
 sm.setSpeakerID(3000115)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendNext("W-what is this madness?!")
+sm.sendNext("这么疯狂?!")
 
 
 sm.setSpeakerID(3000111)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("How could a mere child have that kind of power?!")
+sm.sendSay("一个孩子怎么会有这种力量?!")
 sm.reservedEffect("Effect/Direction10.img/angelicTuto/Scene3")
 
 
 sm.setSpeakerID(3000115)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("He seems to be unconscious. We are lucky.")
+sm.sendSay("他似乎失去了意识。我们是幸运的.")
 sm.reservedEffect("Effect/Direction10.img/angelicTuto/Scene3")
 
 
 sm.setSpeakerID(3000111)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("They came out of nowhere. We must eliminate them before more come.")
+sm.sendSay("他们不知从哪里冒出来的。我们必须在更多的人到来之前消灭他们.")
 sm.reservedEffect("Effect/Direction10.img/angelicTuto/Scene3")
 
 
@@ -61,7 +61,7 @@ sm.forcedInput(0)
 sm.setSpeakerID(3000115)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendNext("He's waking up!")
+sm.sendNext("他醒了!")
 
 
 sm.sendDelay(150)

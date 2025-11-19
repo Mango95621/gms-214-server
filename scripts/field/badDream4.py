@@ -5,27 +5,27 @@ sm.sendDelay(2500)
 sm.setSpeakerType(3)
 sm.setSpeakerID(1105005) # Lady Syl
 sm.setParam(1)
-sm.sendNext("Ereve destroyed and Cygnus turned to evil? Didn't we prove this was only a false future?")
+sm.sendNext("埃雷弗被摧毁，希纳斯转向邪恶？我们不是已经证明这只是虚假的未来吗？")
 sm.setSpeakerID(1105003) # Neinheart
-sm.sendSay("That is not our future. It is nothing but a fabrication.")
+sm.sendSay("那不是我们的未来。那只是捏造出来的。")
 sm.setSpeakerID(1105002) # Claudine
-sm.sendSay("It's not completely impossible...")
+sm.sendSay("这并非完全不可能...")
 sm.setSpeakerID(1105014) # Mihile
-sm.sendSay("How dare you insinuate we would be involved?!")
+sm.sendSay("你竟敢暗示我们会参与其中？！")
 sm.setSpeakerID(1105006) # Belle
-sm.sendSay("What are you going to do about it, blondie?")
+sm.sendSay("你打算怎么办，金发小子？")
 sm.setSpeakerID(1105001) # Athena Pierce
-sm.sendSay("No fights!")
+sm.sendSay("不要打架！")
 sm.setSpeakerID(1105002) # Claudine
-sm.sendSay("Everyone stay calm. We need to look at this situation from all sides if we're going to solve it.")
+sm.sendSay("大家都冷静下来。如果我们要解决这个问题，需要从各个方面来看待这个情况。")
 sm.setParam(17)
-sm.sendSay("#b(It's going to take some time before the Alliance members can agree with one another.)#k")
+sm.sendSay("#b(联盟成员之间达成一致还需要一些时间。)#k")
 sm.setSpeakerID(1105001) # Athena Pierce
 sm.setParam(1)
-sm.sendSay("This is serious. That fake future is haunting peoples' dreams.")
+sm.sendSay("这很严重。那个虚假的未来正在困扰着人们的梦境。")
 sm.setSpeakerID(1105004) # Grendel the Really Old
-sm.sendSay("Is something like that even possible? This kind of dream control would be next to impossible for even the most highly-trained magician.")
+sm.sendSay("这种事情真的可能吗？即使是训练有素的魔法师，这种梦境控制也几乎是不可能的。")
 sm.setSpeakerID(1105000) # Cygnus
-sm.sendSay("It's not just Henesys. This nightmare is spreading like the plague.")
+sm.sendSay("不仅仅是射手村。这个噩梦正在像瘟疫一样蔓延。")
 sm.lockInGameUI(False, True)
 sm.warp(913051004)

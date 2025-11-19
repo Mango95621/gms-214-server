@@ -10,7 +10,7 @@ PATIENCE = 3002009
 TUMBLEWEED = 3002105
 
 sm.setSpeakerID(2007)
-if sm.sendAskYesNo("Would you like to skip the tutorial cutscenes?"):
+if sm.sendAskYesNo("是否跳过教程过场动画？"):
     sm.createQuestWithQRValue(37999, "SKIP_FOXVILLAGE")
 
 if sm.getQRValue(37999) != "SKIP_FOXVILLAGE":
@@ -50,28 +50,28 @@ if sm.getQRValue(37999) != "SKIP_FOXVILLAGE":
 
     sm.removeEscapeButton()
     sm.setSpeakerID(TIMBER)
-    sm.sendNext("We were really getting used to having you around here...")
+    sm.sendNext("我们真的已经习惯有你在这里了...")
 
     sm.setSpeakerID(BROOK)
-    sm.sendSay("Have all three meals of the day. Especially breakfast. Foxes live to eat.")
+    sm.sendSay("每天要吃三顿饭。特别是早餐。狐狸活着就是为了吃。")
 
     sm.setSpeakerID(SILVER)
-    sm.sendSay("You're leaving this town, but don't ever forget you are one of us Pointy-Ear Foxes. Don't forget the pride of foxes. Come back anytime you like. We'll be waiting for you.")
+    sm.sendSay("你要离开这个小镇了，但永远不要忘记你是我们尖耳狐狸的一员。不要忘记狐狸的骄傲。随时都可以回来。我们会等着你的。")
 
     sm.flipDialoguePlayerAsSpeaker()
-    sm.sendSay("Thank you for all you've done. And I will never...never forget.")
+    sm.sendSay("感谢你们所做的一切。我永远不会...永远不会忘记。")
 
     sm.setSpeakerID(TWITCH)
-    sm.sendSay("Shade! You sound like you're leaving forever! Come back soon, and bring yummy treats next time!")
+    sm.sendSay("影！你听起来像是要永远离开了！快点回来，下次带些好吃的来！")
 
     sm.setSpeakerID(SILVER)
-    sm.sendSay("Ah, old age makes me tear up about anything. But enough about me, Moonbeam won't come out of her room. She doesn't want to see you leave. And that heavy rainfall... I don't think she'll stop crying anytime soon.")
+    sm.sendSay("啊，年纪大了让我对什么都容易流泪。但别管我了，月光不肯出房间。她不想看到你离开。还有那场大雨...我觉得她一时半会儿不会停止哭泣。")
 
     sm.flipDialoguePlayerAsSpeaker()
     sm.sendSay("......")
 
     sm.setSpeakerID(TUMBLEWEED)
-    sm.sendSay("I still think you should wait a couple days and go with me, but I guess if you're busy that's too bad. Here, take this scroll, it will take you right to Pantheon. When you get there, talk to  #rCartalion#k. Tell him you came on behalf of me and he'll take good care of you.")
+    sm.sendSay("我还是觉得你应该等几天和我一起去，但如果你很忙那也没办法。给，拿着这个卷轴，它会直接带你去万神殿。到了那里，找#r卡塔利昂#k谈谈。告诉他你是代表我来的，他会好好照顾你的。")
 
     sm.removeNpc(LUMPS)
     sm.removeNpc(SALLY)

@@ -131,7 +131,7 @@ public class DressingRoom {
 //                }
 //            }
 //        }
-        log.info(String.format("Loaded Dressing Room in %dms  load num %d. ", System.currentTimeMillis() - start, length));
+        log.info(String.format("加载装备商店 in %dms  load num %d. ", System.currentTimeMillis() - start, length));
     }
 
     public static List<Equip> getHats() {

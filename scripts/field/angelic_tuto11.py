@@ -19,14 +19,14 @@ sm.sendDelay(1200)
 sm.setSpeakerID(3000132)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendNext("Holy moly, you look amazing! Look at those legs! And that hair! And your-- why are you looking at me like that?")
+sm.sendNext("天啊，你看起来太棒了！看看那双腿！还有那头发！还有你的——你为什么那样看着我？")
 
 
 sm.setSpeakerID(3000132)
 sm.removeEscapeButton()
 sm.flipDialoguePlayerAsSpeaker()
 sm.setSpeakerType(3)
-sm.sendSay("W-what am I wearing?! Where are my pants?!")
+sm.sendSay("我-我穿的是什么？！我的裤子在哪里？！")
 # Unhandled User Effect [PlaySoundWithMuteBGM] Packet: 23 15 00 56 6F 69 63 65 2E 69 6D 67 2F 41 6E 67 65 6C 69 63 5F 46 2F 31
 
 
@@ -48,64 +48,64 @@ sm.sendDelay(90)
 sm.setSpeakerID(3000119)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendNext("There! That girl has the relic on her arm!")
+sm.sendNext("在那里！那个女孩手臂上有圣物！")
 
 
 sm.setSpeakerID(3000115)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("Do we really need to hurt a pretty little thing like her? The relic is out of the Sanctum, it won't cause us any trouble.")
+sm.sendSay("我们真的需要伤害像她这样漂亮的小东西吗？圣物已经离开了圣殿，不会给我们带来任何麻烦。")
 
 
 sm.setSpeakerID(3000119)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("Don't be stupid! We can't let some little bimbo take credit for our actions!")
+sm.sendSay("别傻了！我们不能让某个小傻瓜抢走我们的功劳！")
 
 
 sm.setSpeakerID(3000111)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("I-I'm sorry, um, ma'am, but would you please give me that relic?")
-
-
-sm.setSpeakerID(3000111)
-sm.removeEscapeButton()
-sm.flipDialoguePlayerAsSpeaker()
-sm.setSpeakerType(3)
-sm.sendSay("You're one of those creeps I saw before!")
-
-
-sm.setSpeakerID(3000111)
-sm.removeEscapeButton()
-sm.setSpeakerType(3)
-sm.sendSay("Well, I wouldn't say 'creep' so much as liberator. Look, maybe you can give me that beautiful bracelet of yours for a bit and I can take you out for dinner...")
+sm.sendSay("我-我很抱歉，嗯，女士，你能把那个圣物给我吗？")
 
 
 sm.setSpeakerID(3000111)
 sm.removeEscapeButton()
 sm.flipDialoguePlayerAsSpeaker()
 sm.setSpeakerType(3)
-sm.sendSay("No way, you old weirdo! I can't even get this thing off of my arm.")
+sm.sendSay("你就是我之前看到的那些变态之一！")
+
+
+sm.setSpeakerID(3000111)
+sm.removeEscapeButton()
+sm.setSpeakerType(3)
+sm.sendSay("嗯，与其说是'变态'，更像是解放者。听着，也许你可以把你那个漂亮的手镯给我一会儿，我可以带你出去吃晚餐...")
+
+
+sm.setSpeakerID(3000111)
+sm.removeEscapeButton()
+sm.flipDialoguePlayerAsSpeaker()
+sm.setSpeakerType(3)
+sm.sendSay("不可能，你这个老怪人！我甚至没法把这个东西从我手臂上弄下来。")
 
 
 sm.setSpeakerID(3000119)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("Would you stop flirting?! Just grab the bimbo and we'll get out of here!")
+sm.sendSay("你能不能停止调情？！抓住那个傻瓜，我们离开这里！")
 
 
 sm.setSpeakerID(3000132)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("#h0#! Now would be a good time to kick the tar out of them.")
+sm.sendSay("#h0#！现在是狠狠教训他们的时候了。")
 
 
 sm.setSpeakerID(3000132)
 sm.removeEscapeButton()
 sm.flipDialoguePlayerAsSpeaker()
 sm.setSpeakerType(3)
-sm.sendSay("H-how do I do that?!")
+sm.sendSay("我-我该怎么做？！")
 
 
 sm.showEffect("Effect/Direction10.img/effect/tuto/BalloonMsg1/3", 900, 30, -70, -2, -2, False, 0)
@@ -115,7 +115,7 @@ sm.sendDelay(900)
 sm.setSpeakerID(3000119)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendNext("What mad devilry is going on inside that lovely little head of yours? Come now! Let's go!")
+sm.sendNext("你这可爱的小脑袋里究竟在酝酿什么疯狂的鬼点子？走吧！咱们出发！")
 
 
 sm.sendDelay(300)
@@ -126,8 +126,8 @@ sm.sendNpcController(OBJECT_3, False)
 sm.spawnMob(9300560, 150, 239, False)
 sm.spawnMob(9300561, 250, 239, False)
 sm.spawnMob(9300562, 350, 239, False)
-sm.chatScript("Press the CTRL key to attack.")
-sm.systemMessage("Press the CTRL key to attack.")
+sm.chatScript("按CTRL键攻击.")
+sm.systemMessage("按CTRL键攻击.")
 sm.showFieldEffect("lightning/screenMsg/0", 0)
 sm.setTemporarySkillSet(0)
 sm.setInGameDirectionMode(False, True, False, False)

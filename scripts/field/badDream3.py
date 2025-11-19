@@ -6,15 +6,15 @@ sm.sendDelay(2500)
 sm.setSpeakerType(3)
 sm.setSpeakerID(2142900) # Chief Stan
 sm.setParam(1)
-sm.sendNext("That's strange. All of the people in one town having the same dream?")
+sm.sendNext("这很奇怪。一个镇上的所有人都做了同一个梦？")
 sm.setSpeakerID(2142901) # Mrs. Ming Ming
-sm.sendSay("It was a horrible dream. The very thought of it sends shivers down my spine.")
+sm.sendSay("那是个可怕的梦。光是想到它就让我脊背发凉。")
 sm.setSpeakerID(2142904) # Pia
-sm.sendSay("I never imagined that the Cygnus Knights would side with the powers of the dark...")
+sm.sendSay("我从没想过皇家骑士团会站在黑暗势力一边...")
 sm.setSpeakerID(2142902) # Bruce
-sm.sendSay("We can't be sure that's what happened!")
+sm.sendSay("我们不能确定那就是事实！")
 sm.setSpeakerID(2142903) # Camila
-sm.sendSay("But it was too vivid to be called a dream. It was like watching the world through someone else's eyes.")
+sm.sendSay("但它太真实了，不能称之为梦。就像是通过别人的眼睛看世界一样。")
 sm.hideUser(False)
 sm.lockInGameUI(False, True)
 sm.warp(913051003)

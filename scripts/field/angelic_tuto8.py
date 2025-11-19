@@ -16,7 +16,7 @@ sm.setSpeakerID(0)
 sm.removeEscapeButton()
 sm.flipDialoguePlayerAsSpeaker()
 sm.setSpeakerType(3)
-sm.sendNext("What am I gonna do?! Maybe I can just hide in here until I die of old age.")
+sm.sendNext("我该怎么办？！也许我可以躲在这里，直到我老死.")
 
 
 sm.sendDelay(300)

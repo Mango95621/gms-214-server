@@ -54,66 +54,66 @@ sm.sendDelay(1200)
 sm.setSpeakerID(3000132)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendNext("Hey! Girly. Can you see me?")
+sm.sendNext("嘿！小姑娘。你能看见我吗？")
 
 
 sm.setSpeakerID(3000132)
 sm.removeEscapeButton()
 sm.flipDialoguePlayerAsSpeaker()
 sm.setSpeakerType(3)
-sm.sendSay("WHAT THE--")
+sm.sendSay("什么鬼——")
 
 
 sm.setSpeakerID(3000132)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("AH! Relax! I'm Eskalade. I, uh, I live in that bracelet on your pillowy-soft wrist. I was thinking, maybe since we're, like, attached that I'd give you a little of my power.")
-
-
-sm.setSpeakerID(3000132)
-sm.removeEscapeButton()
-sm.flipDialoguePlayerAsSpeaker()
-sm.setSpeakerType(3)
-sm.sendSay("Power? What're you talking about?")
-
-
-sm.setSpeakerID(3000132)
-sm.removeEscapeButton()
-sm.setSpeakerType(3)
-sm.sendSay("Just go over to the spot where you grabbed that relic.")
+sm.sendSay("啊！放松！我是埃斯卡拉德。我，呃，我住在你柔软手腕上的那个手镯里。我在想，既然我们，嗯，连在一起了，也许我可以给你一点我的力量。")
 
 
 sm.setSpeakerID(3000132)
 sm.removeEscapeButton()
 sm.flipDialoguePlayerAsSpeaker()
 sm.setSpeakerType(3)
-sm.sendSay("Fine, but I'm not going to do it just because you told me. I was already going there.")
+sm.sendSay("力量？你在说什么？")
 
 
 sm.setSpeakerID(3000132)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("Fine! How did I end up with such a disobedient little brat?")
-
-
-sm.setSpeakerID(3000132)
-sm.removeEscapeButton()
-sm.flipDialoguePlayerAsSpeaker()
-sm.setSpeakerType(3)
-sm.sendSay("I'm not going to take you anywhere if you're going to be rude.")
-
-
-sm.setSpeakerID(3000132)
-sm.removeEscapeButton()
-sm.setSpeakerType(3)
-sm.sendSay("Who's being rude?! I'm offering you ultimate power in exchange for a little trip to a place you were already going!")
+sm.sendSay("就去你拿到那个圣物的地方。")
 
 
 sm.setSpeakerID(3000132)
 sm.removeEscapeButton()
 sm.flipDialoguePlayerAsSpeaker()
 sm.setSpeakerType(3)
-sm.sendSay("Oh, yeah, I guess that's true.")
+sm.sendSay("好吧，但我不会仅仅因为你告诉我才去。我本来就打算去那里。")
+
+
+sm.setSpeakerID(3000132)
+sm.removeEscapeButton()
+sm.setSpeakerType(3)
+sm.sendSay("好吧！我怎么就摊上了这么个不听话的小鬼？")
+
+
+sm.setSpeakerID(3000132)
+sm.removeEscapeButton()
+sm.flipDialoguePlayerAsSpeaker()
+sm.setSpeakerType(3)
+sm.sendSay("如果你这么无礼，我不会带你去任何地方。")
+
+
+sm.setSpeakerID(3000132)
+sm.removeEscapeButton()
+sm.setSpeakerType(3)
+sm.sendSay("谁无礼了？！我是在给你终极力量，来换取你去一个你本来就打算去的地方！")
+
+
+sm.setSpeakerID(3000132)
+sm.removeEscapeButton()
+sm.flipDialoguePlayerAsSpeaker()
+sm.setSpeakerType(3)
+sm.sendSay("哦，是啊，我想这是真的。")
 
 
 sm.forcedInput(2)

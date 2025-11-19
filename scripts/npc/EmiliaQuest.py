@@ -21,15 +21,15 @@ face_female = StyleRoom.getFemaleFace()
 
 # id, gender_string, list
 hair_categories = [
-    [0, "Male Hair",     hair_male],
-    [1, "Female Hair",   hair_female],
-    [2, "Special Hair",  hair_special]
+    [0, "男性头发",     hair_male],
+    [1, "女性头发",   hair_female],
+    [2, "特殊发型",  hair_special]
 ]
 
 # id, gender_string, list
 face_categories = [
-    [0, "Male Face",     face_male],
-    [1, "Female Face",   face_female],
+    [0, "男性面孔",     face_male],
+    [1, "女性面孔",   face_female],
 ]
 
 # vars
@@ -39,7 +39,7 @@ al = chr.getAvatarData().getAvatarLook()
 
 def prompt_category(category_name, category_list):
     text = (
-        "What type of #b{}#k would you like to browse?\r\n#b"
+        "你想浏览哪种类型? #b{}#k \r\n#b"
     ).format(category_name)
 
     for c in category_list:
@@ -50,12 +50,12 @@ def prompt_category(category_name, category_list):
 # SCRIPT_START
 
 text_menu = (
-    "Welcome to #b{}'s Style Room!#k \r\n\r\nWhat would you like to change?\r\n#b"
-    "#L0#Hair#l\r\n"
-    "#L1#Face#l\r\n"
-    "#L2#Hair Color#l\r\n"
-    "#L3#Eye Color#l\r\n"
-    "#L4#Skin Color#l\r\n"
+    "欢迎来到 #b{}'s 美容院!#k \r\n\r\n你想改变什么?\r\n#b"
+    "#L0#头发#l\r\n"
+    "#L1#脸#l\r\n"
+    "#L2#发色#l\r\n"
+    "#L3#眼色#l\r\n"
+    "#L4#肤色#l\r\n"
 
 ).format(SERVER_NAME)
 
@@ -87,7 +87,7 @@ if selection_menu < 2:
     category_name = option[1]
     category_list = option[2]
 
-    text_category = "Select a category you'd like to browse!"
+    text_category = "选择要浏览的类别！"
     for idx, category in enumerate(category_list):
         text_category += "\r\n#b#L" + repr(idx) + "#" + category_name + " " + repr(idx + 1) + "#l"
     selection_number = sm.sendNext(text_category)
@@ -96,6 +96,6 @@ if selection_menu < 2:
         options.append(hair.getId())
 
 if len(options) > 0:
-    answer = sm.sendAskAvatar("Choose your new look!", False, False, options)
+    answer = sm.sendAskAvatar("选择你的新造型!", False, False, options)
     if answer < len(options):
         sm.changeCharacterLook(options[answer])

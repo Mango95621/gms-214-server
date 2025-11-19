@@ -81,7 +81,7 @@ sm.sendDelay(500)
 
 sm.showEffect("Mob/8150000.img/attack1/info/hit", 0, 0, 0, 0, 0, False, 0)
 sm.playSound("cannonshooter/Attack1", 100)
-sm.ballonMsg("Why are you acting like this?")
+sm.ballonMsg("你为什么要这样做？")
 sm.forcedInput(6)
 sm.reservedEffect("Effect/Direction4.img/cannonshooter/face01")
 sm.sendDelay(500)

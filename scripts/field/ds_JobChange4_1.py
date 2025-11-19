@@ -2,7 +2,7 @@
 sm.spawnNpc(2159335, 377, 69)
 sm.removeEscapeButton()
 sm.setPlayerAsSpeaker()
-sm.sendNext("#b(I remember the feeling of unleashing my Fury... But I can't hold onto it for long...)")
+sm.sendNext("#b(我记得释放愤怒的感觉。..但我坚持不了多久...)")
 sm.spawnMob(9001041, 377, 69, False)
 sm.removeNpc(2159335)
 sm.waitForMobDeath(9001041)

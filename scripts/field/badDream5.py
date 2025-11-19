@@ -6,11 +6,11 @@ sm.sendDelay(2500)
 sm.setSpeakerType(3)
 sm.setSpeakerID(2142910) # Kirium
 sm.setParam(1)
-sm.sendNext("You're having the dream as well?")
+sm.sendNext("你也做了那个梦吗？")
 sm.setSpeakerID(2142911) # Kiriwing
-sm.sendSay("It's strange. Everyone having nightmares.")
+sm.sendSay("这很奇怪。每个人都在做噩梦。")
 sm.setSpeakerID(2142912) # Kiryu
-sm.sendSay("We have Empress Cygnus here to ground our fears, but what about people in other areas?")
+sm.sendSay("我们有希纳斯女皇在这里安抚我们的恐惧，但其他地区的人们怎么办？")
 sm.hideUser(False)
 sm.lockInGameUI(False, True)
 sm.warp(913051005)

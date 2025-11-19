@@ -16,13 +16,13 @@ sm.setSpeakerID(3000132)
 sm.removeEscapeButton()
 sm.flipDialoguePlayerAsSpeaker()
 sm.setSpeakerType(3)
-sm.sendNext("Okay, dragon-guy, we're here. ")
+sm.sendNext("好了，龙先生，我们到了。")
 
 
 sm.setSpeakerID(3000132)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("Do you see a ring where the relic used to be?")
+sm.sendSay("你看到圣物原来位置的那个戒指了吗？")
 
 
 sm.forcedInput(2)

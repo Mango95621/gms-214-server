@@ -36,13 +36,13 @@ sm.sendDelay(900)
 sm.setSpeakerID(3000107)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendNext("What's going on here?")
+sm.sendNext("这里发生了什么?")
 
 
 sm.setSpeakerID(3000104)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("Kyle! #h0#!")
+sm.sendSay("凯尔! #h0#!")
 
 
 sm.showEffect("Effect/BasicEff.img/Kaiser_Transform4_S", 0, 0, 0, 0, OBJECT_1, False, 0)
@@ -63,7 +63,7 @@ sm.setSpeakerID(3000106)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
 sm.reservedEffect("Effect/Direction10.img/angelicTuto/Scene3")
-sm.sendNext("Kaiser has finally made himself known. Cartalion, please take these two to the clinic.")
+sm.sendNext("凯撒终于让自己出名了。卡塔利安，请带这两个去诊所.")
 
 
 sm.setTemporarySkillSet(0)

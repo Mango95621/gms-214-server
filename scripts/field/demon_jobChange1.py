@@ -2,12 +2,12 @@ FERDI = 2159311
 
 sm.removeEscapeButton()
 sm.setPlayerAsSpeaker()
-sm.sendNext("#bThere's much to consider...")
-sm.sendSay("#bBut the fact remains that my strength has not yet fully returned.")
-sm.sendSay("#bHow vexing, to have lost the power I wielded against the Black Mage himself.")
-sm.sendSay("#bPerhaps it is a sign that I was meant for another path...")
-sm.sendSay("#b...Why am I spouting such nonsense?")
-sm.sendSay("#bI am #h0#. The Fury that once served the Black Mage now seeks his total destruction.")
+sm.sendNext("#b有很多需要考虑...")
+sm.sendSay("#b但事实是我的力量还没有完全恢复。")
+sm.sendSay("#b多么令人烦恼，失去了我曾经对抗黑魔法师的力量。")
+sm.sendSay("#b也许这是一个迹象，表明我注定要走另一条路...")
+sm.sendSay("#b...我为什么要说这些废话？")
+sm.sendSay("#b我是#h0#。曾经侍奉黑魔法师的狂怒者现在寻求彻底摧毁他。")
 
 sm.setSpeakerID(FERDI)
 if sm.sendAskSelectMenu(1, 0) == 1:
@@ -49,7 +49,7 @@ else:
     sm.giveItem(2001527, 30)
 
 sm.setPlayerAsSpeaker()
-sm.sendNext("#bMy strength as a Commander will serve me on my dark quest!")
-sm.sendSay("#bI should check my Use tab first by pressing #rI#b.")
+sm.sendNext("#b我作为指挥官的力量将在我黑暗的旅程中为我服务！")
+sm.sendSay("#b我应该先按#rI#b键检查我的使用标签。")
 
 sm.lockInGameUI(False)

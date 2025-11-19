@@ -15,10 +15,10 @@ sm.showNpcSpecialActionByTemplateId(ARKARIUM, "summon", 0)
 
 sm.removeEscapeButton()
 sm.setSpeakerID(ARKARIUM)
-sm.sendNext("You disappoint me! You don't even understand the Black Mage's true goal. Guards! Eliminate the betrayer!")
+sm.sendNext("你让我失望！你甚至不理解黑魔法师的真正目标。卫兵！消灭这个叛徒！")
 
 sm.lockInGameUI(False)
-sm.chatScript("Eliminate all guards.")
+sm.chatScript("消除所有防护装置.")
 sm.playSound("demonSlayer/summonGuard", 100)
 
 sm.spawnMob(MOB, 450, 71, False)

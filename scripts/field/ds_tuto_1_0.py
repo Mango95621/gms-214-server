@@ -9,98 +9,98 @@ sm.sendDelay(30)
 sm.forcedInput(0)
 sm.removeEscapeButton()
 sm.setSpeakerID(VON_LEON)
-sm.sendNext("Are all the Commanders here, aside from those away on missions? Good. Let's begin the meeting.")
+sm.sendNext("除了外出执行任务的指挥官外，所有指挥官都到齐了吗？很好。我们开始会议吧。")
 
 sm.setSpeakerID(ARKARIUM)
-sm.sendSay("Until the mighty Black Mage finishes his plan, we must not relax for even a moment! We are still vulnerable to attack, and must remain on guard while the Black Mage is distracted. Now, #h0#, I heard you uncovered some interesting information.")
+sm.sendSay("在伟大的黑魔法师完成他的计划之前，我们一刻也不能放松！我们仍然容易受到攻击，在黑魔法师分心时必须保持警惕。现在，#h0#，我听说你发现了一些有趣的信息。")
 
 sm.setPlayerAsSpeaker()
-sm.sendSay("Yes...I have discovered a resistance group has formed in secret, and is building a force to move against us.")
+sm.sendSay("是的...我发现一个抵抗组织已经秘密形成，正在集结力量来对抗我们。")
 
 sm.setSpeakerID(ARKARIUM)
-sm.sendSay("Resistance? Ha! There's no one left in this world that can resist us. I've even heard some of the rabble calling them #rHeroes#k. Isn't that precious?")
+sm.sendSay("抵抗？哈！这个世界上已经没有人能抵抗我们了。我甚至听到一些乌合之众称他们为#r英雄们#k。这不是很可笑吗？")
 
 sm.setSpeakerID(ORCHID)
-sm.sendSay("Of course, I'm a little excited to see them scramble around in their last-ditch panic. Might make for some entertaining fights. They certainly didn't put up much resistance when we took Ereve. Or when I eliminated the Castellan.")
+sm.sendSay("当然，我有点兴奋想看看他们在最后绝望中挣扎的样子。可能会带来一些有趣的战斗。当我们占领埃雷弗时，他们确实没有进行太多抵抗。或者当我消灭城堡主时也是如此。")
 
 sm.setSpeakerID(ARKARIUM)
-sm.sendSay("The battle at Ereve was easy because of the Black Mage's involvement, not because of your power, #p2159339#. Watch your tongue.")
+sm.sendSay("埃雷弗的战斗之所以轻松是因为黑魔法师的参与，而不是因为你的力量，#p2159339#。注意你的言辞。")
 
 sm.setSpeakerID(ORCHID)
-sm.sendSay("Well... Since the Black Mage took care of everything, I didn't have to use my full power. So, there.")
+sm.sendSay("嗯...既然黑魔法师处理了一切，我就不必使用我的全部力量了。所以，就是这样。")
 
 sm.setPlayerAsSpeaker()
-sm.sendSay("Lotus seems very busy... What are you doing here, Orchid? Are you not working with Lotus?")
+sm.sendSay("莲花似乎很忙...你在这里做什么，奥奇德？你不是和莲花一起工作吗？")
 
 sm.setSpeakerID(ORCHID)
-sm.sendSay("Lotus is the one who's too busy for me! I was GOING to go back my twin up...you don't have to bug me about it. You guys are too uptight, anyway.")
+sm.sendSay("莲花才是那个对我太忙的人！我本来要去支援我的双胞胎兄弟...你不用一直烦我这件事。你们这些人太紧张了，不管怎样。")
 
 sm.setSpeakerID(VON_LEON)
-sm.sendSay("...This meeting is not going anywhere...")
+sm.sendSay("...这次会议毫无进展...")
 
 sm.setSpeakerID(ARKARIUM)
-sm.sendSay("Have you ever noticed that when #p2159339# opens her mouth, our meetings grind to a halt? Funny, that. As for the Heroes, I'm sure #h0# has a plan to deal with them.")
-sm.sendSay("Since you brought down the Goddess of Time, I'm sure these pathetic 'Heroes' will be no match for you.")
+sm.sendSay("你有没有注意到，当#p2159339#开口说话时，我们的会议就会停滞不前？真有趣。至于英雄们，我相信#h0#有办法对付他们。")
+sm.sendSay("既然你击倒了时间女神，我相信这些可怜的'英雄们'根本不是你的对手。")
 
 sm.setPlayerAsSpeaker()
-sm.sendSay("...They will not be so easy to eliminate. Unlike most foes, the Heroes fight for others, not themselves. They are special, because they have chosen to protect the world, rather than struggle desperately. That makes them dangerous. And I'll remind you, I only stunned the Goddess. The Black Mage was the one to defeat her, of course.")
+sm.sendSay("...他们不会那么容易消灭。与大多数敌人不同，英雄们为他人而战，而不是为自己。他们很特别，因为他们选择保护世界，而不是绝望地挣扎。这使他们变得危险。我要提醒你，我只是击晕了女神。当然，是黑魔法师击败了她。")
 
 sm.setSpeakerID(ARKARIUM)
-sm.sendSay("Goodness, how modest of you! That must be why you're the Black Mage's favorite. You really just put the rest of us to shame, don't you? My, my, my...")
+sm.sendSay("天哪，你真是太谦虚了！这一定是你成为黑魔法师最宠爱的指挥官的原因。你真的让我们其他人相形见绌，不是吗？哎呀呀...")
 
 sm.showBalloonMsg("Effect/Direction6.img/effect/tuto/balloonMsg0/10", 2000)
 sm.sendDelay(1500)
 
 sm.setSpeakerID(VON_LEON)
-sm.sendNext("#p2159309#, I've heard enough from you. #h0# stunned the Goddess of Time, allowing for our victory. THAT was the turning point in the battle. Accept it.")
+sm.sendNext("#p2159309#，我已经听够了。#h0#击晕了时间女神，为我们赢得了胜利。那才是战斗的转折点。接受这个事实吧。")
 
-sm.sendSay("Besides, you were credited for blinding the Goddess. What more do you want, #p2159309#?")
+sm.sendSay("此外，你因为弄瞎女神而得到了功劳。你还想要什么，#p2159309#？")
 
 sm.setSpeakerID(ARKARIUM)
-sm.sendSay("Oh, I don't want anything. I'm just...making observations. Shouldn't we move on with the meeting? The Heroes will be taken care of, but what of the remaining resistance group?")
+sm.sendSay("哦，我什么都不想要。我只是...在做观察。我们不应该继续会议吗？英雄们会被处理掉，但剩下的抵抗组织怎么办？")
 
 sm.setSpeakerID(VON_LEON)
-sm.sendSay("As commanded, they have been completely eliminated.")
+sm.sendSay("按照命令，他们已经被完全消灭了。")
 
 sm.setSpeakerID(ARKARIUM)
-sm.sendSay("Oh, I see!")
+sm.sendSay("哦，我明白了！")
 
 sm.setSpeakerID(ORCHID)
-sm.sendSay("I have a question, actually. Why has the Black Mage changed our orders? I mean, if we destroy everything, who will be left to rule over...?")
+sm.sendSay("实际上我有个问题。为什么黑魔法师改变了我们的命令？我是说，如果我们摧毁一切，那还有谁来统治...？")
 
 sm.setPlayerAsSpeaker()
-sm.sendSay("Destroy everything? Did the Black Mage order such a thing? I received no such order.")
+sm.sendSay("摧毁一切？黑魔法师下达了这样的命令吗？我没有收到这样的命令。")
 
 sm.setSpeakerID(ARKARIUM)
-sm.sendSay("Oh, yes! I forgot. You seemed so tired from your epic battle against the Goddess, I didn't even mention the new orders to you.")
+sm.sendSay("哦，是的！我忘了。你看起来因为与女神的史诗级战斗而太累了，我甚至没有向你提到新的命令。")
 
-sm.sendSay("You see, our great leader, the Black Mage, ordered all of us, except you, to eliminate everything. And I mean, EVERYTHING!")
+sm.sendSay("你看，我们伟大的领袖黑魔法师命令我们所有人，除了你，去消灭一切。我是说，一切！")
 
 sm.showBalloonMsg("Effect/Direction6.img/effect/tuto/balloonMsg1/18", 2000)
 sm.sendDelay(1500)
 
 sm.setSpeakerID(VON_LEON)
-sm.sendNext("Indeed. For example, I saw Leafre burned to cinders. Nothing remained...")
+sm.sendNext("确实。例如，我看到莱夫雷被烧成了灰烬。什么都没剩下...")
 
 sm.setSpeakerID(ARKARIUM)
-sm.sendSay("The Black Mage told us to show the world the price of resistance, so we began eliminating areas suspected of treachery. I think we did rather well.")
+sm.sendSay("黑魔法师告诉我们要让世界看到抵抗的代价，所以我们开始消灭涉嫌背叛的地区。我认为我们做得相当不错。")
 
 sm.setSpeakerID(VON_LEON)
-sm.sendSay("Yes... There are only a few remaining dragon servants left.")
+sm.sendSay("是的...只剩下几个龙族仆人了。")
 
 sm.setPlayerAsSpeaker()
-sm.sendSay("Wait, wait. Did the Black Mage not promise that he would not attack the Southern Region? Which parts were destroyed?")
+sm.sendSay("等等，等等。黑魔法师不是承诺过不会攻击南部地区吗？哪些地方被摧毁了？")
 
 sm.setSpeakerID(ARKARIUM)
-sm.sendSay("Which parts? Ha! All of them, of course! We took our orders quite seriously. Why...is something bothering you?")
+sm.sendSay("哪些地方？哈！当然是所有地方！我们非常认真地执行了命令。为什么...有什么困扰你吗？")
 
 sm.showBalloonMsg("Effect/Direction6.img/effect/tuto/balloonMsg0/11", 2000)
 sm.sendDelay(1500)
 
 sm.setPlayerAsSpeaker()
-sm.sendNext("...Please excuse me. There is a matter I must attend to.")
+sm.sendNext("...请原谅我。有件事我必须去处理。")
 
 sm.setSpeakerID(ARKARIUM)
-sm.sendSay("Hold it right there! No matter how favored you are by the Black Mage, you follow orders. No one has dismissed you yet. Sit down. THAT is an order.")
+sm.sendSay("站住！无论黑魔法师多么宠爱你，你都要服从命令。还没有人让你离开。坐下。这是命令。")
 
 sm.forcedInput(2)

@@ -19,7 +19,7 @@ def skip_tutorial():
     sm.removeEscapeButton()
     sm.lockInGameUI(True)
 
-    if sm.sendAskYesNo("Would you like to skip the tutorial questline and instantly arrive at #m" + str(map_to_warp) + "#?"):
+    if sm.sendAskYesNo("您想跳过教程任务线并立即到达吗 #m" + str(map_to_warp) + "#?"):
         if sm.getChr().getLevel() < target_level:
             sm.addLevel(target_level - sm.getChr().getLevel())
 
@@ -57,8 +57,8 @@ if not sm.hasQuest(32202) or not sm.hasQuestCompleted(32203):
     sm.setSpeakerType(3)
     sm.removeEscapeButton()
     sm.setPlayerAsSpeaker()
-    sm.sendNext("Who was that girl? Why did she run away when she saw me?")
-    sm.sendNext("Maybe I'll follow her..")
+    sm.sendNext("那个女孩是谁？她为什么看见我就跑了?")
+    sm.sendNext("也许我会跟着她..")
 
     sm.removeNpc(UNK_NPC)
     sm.completeQuestNoRewards(32202)

@@ -11,16 +11,16 @@ if not sm.hasQuest(35906):
     sm.setParam(549)
     sm.setColor(1)
     sm.setInnerOverrideSpeakerTemplateID(1013358) # Pathfinder
-    sm.sendNext("#face3#There's something moving there, in the brush. Time to find out what we're dealing with.")
+    sm.sendNext("#face3#灌木丛里有东西在动。是时候弄清楚我们面对的是什么了。")
     sm.forcedMove(False, 320)
     sm.zoomCamera(2000, 1000, 2000, 110, -30)
     sm.sendDelay(2500)
     sm.setParam(37)
     sm.setInnerOverrideSpeakerTemplateID(1013353) # Mascarpo
-    sm.sendNext("#face1#Argh...S-save meeeee. My poor head... It's become stuck in the ground, you see...")
+    sm.sendNext("#face1#啊...救...救救我。我的可怜的头...你看，它卡在地里了...")
     sm.setParam(549)
     sm.setInnerOverrideSpeakerTemplateID(1013358) # Pathfinder
-    sm.sendSay("#face1#(I should proooobably help him. You never know which random person will have the clue that leads you on your next adventure, after all!)")
+    sm.sendSay("#face1#(我应...应该帮帮他。毕竟，你永远不知道哪个路人会拥有引导你进行下一次冒险的线索！)")
     sm.showFadeTransition(0, 1000, 3000)
     sm.zoomCamera(0, 1000, 2147483647, 2147483647, 2147483647)
     sm.moveCamera(True, 0, 0, 0)

@@ -15,15 +15,15 @@ def sellItemsFromTab(invType = InvType.EQUIP):
     invItems = inventory.getItems()
     tabName = ""
     if invType == InvType.CONSUME:
-        tabName = "CONSUME"
+        tabName = "消耗品"
     elif invType == InvType.ETC:
-        tabName = "ETC"
+        tabName = "材料"
     else:
-        tabName = "EQUIPMENT"
+        tabName = "装备"
 
     # empty inv
     if len(invItems) == 0:
-        sm.sendSayOkay("You have no item to sell")
+        sm.sendSayOkay("您没有要出售的商品")
         disposeAll()
         return
 
@@ -32,21 +32,21 @@ def sellItemsFromTab(invType = InvType.EQUIP):
         # only has 1 item, proceed to ask for confirmation
         sellingItems = list(invItems)
         _itemId = invItems.get(0).getItemId()
-        confirmed = sm.sendAskYesNo("Are you sure you want to sell #i{}# #z{}#".format(_itemId, _itemId))
+        confirmed = sm.sendAskYesNo("你确定要卖吗 #i{}# #z{}#".format(_itemId, _itemId))
     else:
         # has more than 1 item, prompt mode selection
-        optionList = "Please select what you want to sell in your {} tab:\r\n#L1##rEverything#k#l\r\n#L2##gSell between selected items#k#l\r\n#L3#Maybe later#l\r\n".format(tabName)
+        optionList = "请选择您想要出售的 {} tab:\r\n#L1##r全部#k#l\r\n#L2##g在选定物品中销售#k#l\r\n#L3#暂时不卖了#l\r\n".format(tabName)
         option = sm.sendNext(optionList)
         if option:
             if option == 1:
                 # sell everything
                 sellingItems = list(invItems)
-                confirmed = sm.sendAskYesNo("Are you sure you want to sell #rEVERYTHING#k in your Equipment inventory?")
+                confirmed = sm.sendAskYesNo("你确定要卖吗 #r全部#k 在您的背包装备中?")
             if option == 2:
                 # sell from/to
                 sortedItems = list(invItems)
                 sortedItems.sort(key=lambda x: x.getBagIndex())
-                itemListTemplate = "This option will sell all available items between STARTING item and ENDING item.\r\nPlease select #r<order>#k item:\r\n"
+                itemListTemplate = "此选项将出售选中的所有可出售的物品.\r\n请选择 #r<order>#k item:\r\n"
                 for item in sortedItems:
                     itemListTemplate += "#L{}##i{}# #z{}##l\r\n".format(item.getBagIndex(), item.getItemId(), item.getItemId())
                 startIndex = sm.sendNext(itemListTemplate.replace("<order>", "STARTING"))
@@ -54,7 +54,7 @@ def sellItemsFromTab(invType = InvType.EQUIP):
                 if startIndex > endIndex:
                     startIndex, endIndex = endIndex, startIndex
                 sellingItems = filter(lambda x: (startIndex <= x.getBagIndex() <= endIndex), sortedItems)
-                soldItemsTemplate = "You will sell the following items:\r\n"
+                soldItemsTemplate = "您将出售以下物品:\r\n"
                 for item in sellingItems:
                     soldItemsTemplate += "#i{}# #z{}#\r\n".format(item.getItemId(), item.getItemId(), item.getBagIndex())
                 confirmed = sm.sendAskYesNo(soldItemsTemplate)
@@ -64,7 +64,7 @@ def sellItemsFromTab(invType = InvType.EQUIP):
             return
     # finish asking for selling items, proceed to actually sell it
     if not confirmed:
-        sm.sendSayOkay("Thank you for using my service")
+        sm.sendSayOkay("感谢您使用我的服务")
         disposeAll()
         return
 
@@ -95,15 +95,15 @@ def sellItemsFromTab(invType = InvType.EQUIP):
                 chr.consumeItem(_id, _quantity)
         # add money
         chr.addMoney(totalMesos)
-        sm.sendSayOkay("You've received {} mesos. Thank you for using my service!".format(totalMesos))
+        sm.sendSayOkay("您已收到｛｝金币。感谢您使用我的服务!".format(totalMesos))
         disposeAll()
         return
     else:
-        sm.sendSayOkay("#rYou've reached maximum meso cap.#k Please deposit at least {} mesos and run the command again!".format(totalMesos))
+        sm.sendSayOkay("#r您已达到最大金币上限。#k请至少存入｛｝金币，然后再次运行该命令！".format(totalMesos))
         disposeAll()
         return
 
-inventoryList = "Please select which inventory you want to sell:\r\n#L1#Equipment#l\r\n#L2#Consume#l\r\n#L3#ETC#l\r\n"
+inventoryList = "请选择要出售的物品:\r\n#L1#装备#l\r\n#L2#消耗品#l\r\n#L3#材料#l\r\n"
 selectedInv = sm.sendNext(inventoryList)
 
 if selectedInv == 1:
@@ -113,5 +113,5 @@ elif selectedInv == 2:
 elif selectedInv == 3:
     sellItemsFromTab(InvType.ETC)
 else:
-    sm.sendSayOkay("Invalid inventory. Please run the command again!")
+    sm.sendSayOkay("物品无效。请再次运行该命令!")
     disposeAll()

@@ -27,7 +27,7 @@ sm.showNpcSpecialActionByObjectId(OBJECT_6, "summon", 0)
 sm.setSpeakerID(3000104)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendNext("Nothing here, big surprise...")
+sm.sendNext("这里什么都没有，真是意料之中...")
 
 
 sm.showEffect("Effect/Direction10.img/effect/story/BalloonMsg1/0", 1200, 0, -120, 0, OBJECT_2, False, 0)
@@ -40,19 +40,19 @@ sm.setSpeakerID(3000104)
 sm.removeEscapeButton()
 sm.flipDialoguePlayerAsSpeaker()
 sm.setSpeakerType(3)
-sm.sendNext("Hey, who are those priests? I've never seen 'em before.")
+sm.sendNext("嘿，那些祭司是谁？我以前从没见过他们。")
 
 
 sm.setSpeakerID(3000140)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("Velderoth, this isn't right!")
+sm.sendSay("维尔德罗斯，这不对劲！")
 
 
 sm.setSpeakerID(3000104)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("You're right. They look suspicious. I'm going to run back to base and get help. You two stay here and keep an eye on them, okay? But no heroics. You get out of here if they spot you.")
+sm.sendSay("你说得对。他们看起来很可疑。我要跑回基地寻求帮助。你们两个留在这里盯着他们，好吗？但别逞英雄。如果他们发现你们，就赶紧离开这里。")
 
 
 sm.showEffect("Effect/Direction10.img/effect/story/BalloonMsg0/0", 1200, 0, -120, -2, -2, False, 0)
@@ -63,46 +63,46 @@ sm.setSpeakerID(3000104)
 sm.removeEscapeButton()
 sm.flipDialoguePlayerAsSpeaker()
 sm.setSpeakerType(3)
-sm.sendNext("What are they talking about?")
+sm.sendNext("他们在谈论什么？")
 
 
 sm.sendNpcController(OBJECT_2, False)
 sm.setSpeakerID(3000110)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("The relic's disappearance should weaken the shields.")
+sm.sendSay("圣物的消失应该会削弱防护罩。")
 
 
 sm.setSpeakerID(3000114)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("I thought the relic was cursed... should we really be touching it?")
+sm.sendSay("我以为圣物被诅咒了...我们真的应该碰它吗？")
 
 
 sm.setSpeakerID(3000110)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("I did not realize they allowed superstitious nincompoops entry to our order! Will you balk at the call of destiny?")
+sm.sendSay("我没想到他们竟然允许迷信的傻瓜加入我们的教团！你会对命运的召唤退缩吗？")
 
 
 sm.setSpeakerID(3000110)
 sm.removeEscapeButton()
 sm.flipDialoguePlayerAsSpeaker()
 sm.setSpeakerType(3)
-sm.sendSay("(Are they trying to steal the relic?)")
+sm.sendSay("(他们是想偷走圣物吗？)")
 
 
 sm.setSpeakerID(3000140)
 sm.removeEscapeButton()
 sm.setSpeakerType(3)
-sm.sendSay("They're gonna take the relic away!")
+sm.sendSay("他们要把圣物拿走了！")
 
 
 sm.setSpeakerID(3000140)
 sm.removeEscapeButton()
 sm.flipDialoguePlayerAsSpeaker()
 sm.setSpeakerType(3)
-sm.sendSay("Let's stop them!")
+sm.sendSay("我们去阻止他们！")
 
 
 sm.moveNpcByObjectId(OBJECT_1, False, 300, 100)

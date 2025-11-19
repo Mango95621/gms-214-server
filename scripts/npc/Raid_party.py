@@ -95,12 +95,12 @@ dp_surprise_box = [
 
 # ===============================================
 
-main_menu = sm.options("Trade in Vote Points", "Trade in Donation Points")
+main_menu = sm.options("点券交易", "捐赠点数交易")
 
 # Options for vote point menu
-vp_menu = sm.options("Exp / Drop Coupons", "Cosmetics", "Game Changers", "Pet Items")
+vp_menu = sm.options("经验 / 掉落率卷", "消耗品", "游戏商店", "宠物商店")
 # Options for donation point menu
-dp_menu = sm.options("Exp / Drop Coupons", "Cosmetics", "Game Changers", "Surprise Box")
+dp_menu = sm.options("经验 / 掉落率卷", "消耗品", "游戏商店", "抽奖商店")
 
 # for sub-menu item options
 option = ""
@@ -124,10 +124,10 @@ def exchange(opt, items, duration, donation):
     timed = items[opt][3]
 
     currency = sm.getVotePoints()
-    currencyName = "vote points"
+    currencyName = "点券"
     if donation:
         currency = sm.getDonationPoints()
-        currencyName = "donation points"
+        currencyName = "捐赠点数"
 
     durOrQty = ""
     if duration:
@@ -137,9 +137,10 @@ def exchange(opt, items, duration, donation):
 
     timeMsg = ""
     if timed == 1:
-        timeMsg = "\r\n\r\n(#rThis is a time-sensitive item, duration until expire will start as soon as item is in your inventory!!#k)"
+        timeMsg = "\r\n\r\n#r(这是一个时间期限的物品，一旦物品进入您的背包，持续时间将立即开始扣减!!#k)"
 
-    if sm.sendAskYesNo("You currently have #b" + str(currency) + " " + currencyName + "#k.\r\nAre you sure you want the following item(s)?:\r\n " + durOrQty + " of #b#z " + str(name) + "##k #i" + str(name) + "# for #r" + str(cost) + "#k " + currencyName + "?" + timeMsg):
+    if sm.sendAskYesNo("您目前拥有 #b" + str(currency) + " " + currencyName + "#k.\r\n您确定要以下物品吗?:\r\n " +
+    durOrQty + " 的 #b#z " + str(name) + "##k #i" + str(name) + "# 为了 #r" + str(cost) + "#k " + currencyName + "?" + timeMsg):
             if currency >= cost:
                 if sm.canHold(name):
                     if duration:
@@ -157,11 +158,11 @@ def exchange(opt, items, duration, donation):
                         sm.deductDonationPoints(cost)
                     else:
                         sm.deductVotePoints(cost)
-                    sm.sendSayOkay("You have obtained " + durOrQty + " #b#z" + str(name) + "##k for #r" + str(cost) + "#k " + currencyName + ".")
+                    sm.sendSayOkay("您已获得 " + durOrQty + " #b#z" + str(name) + "##k for #r" + str(cost) + "#k " + currencyName + ".")
                 else:
-                    sm.sendNext("Please make sure you have enough space in your inventory")
+                    sm.sendNext("请确保您的背包中有足够的空间")
             else:
-                sm.sendNext("You don't have enough " + currencyName + ". You need #r" + str(cost) + "#k " + currencyName + ".")
+                sm.sendNext("你没有足够的 " + currencyName + ". 你需要 #r" + str(cost) + "#k " + currencyName + ".")
 
 
 def showAndExchange(msg, items, has_duration, donation):
@@ -172,38 +173,38 @@ def showAndExchange(msg, items, has_duration, donation):
 
 def votePointOptions():
     type = False
-    prompt = "You currently have #b" + str(sm.getVotePoints()) + " vote points#k.\r\nWhat would you like to buy with your vote points?\r\n\r\n(#dYou can obtain vote points by voting for us every 12 hours through our website or discord#k!)\r\n"
+    prompt = "您目前拥有 #b" + str(sm.getVotePoints()) + " 点券#k.\r\n你要用点券买什么?\r\n\r\n(#d你可以通过网站或联系管理员来获取点券#k!)\r\n"
     selection = sm.sendNext(prompt + "#b" + vp_menu + "#k")
 
     if selection == 0:
-        showAndExchange("What would you like from the Exp / Drop coupon shop?", vp_exp, True, type) # items have have a duration
+        showAndExchange("您想从经验/掉落率券商店购买什么？", vp_exp, True, type) # items have have a duration
     elif selection == 1:
-        showAndExchange("What would you like from the Cosmetics shop?", vp_cosmetics, False, type) # items don't have a duration
+        showAndExchange("你想从化妆品店买什么?", vp_cosmetics, False, type) # items don't have a duration
     elif selection == 2:
-        showAndExchange("What would you like from the Game Changers shop?", vp_game_changers, True, type)
+        showAndExchange("你想从游戏商店买什么?", vp_game_changers, True, type)
     elif selection == 3:
-        showAndExchange("What would you like from the Pet shop?", vp_pet_shop, False, type)
+        showAndExchange("你想从宠物商店买什么？", vp_pet_shop, False, type)
 
 
 # =========================== Donation Points ======================================================
 
 def donationPointOptions():
     type = True # is DP
-    prompt = "You currently have #b" + str(sm.getDonationPoints()) + " donation points#k.\r\nWhat would you like to buy with your donation points?\r\n\r\n(#dYou can obtain donation points by visiting our website and purchasing them by clicking on the store#k.)\r\n"
+    prompt = "您目前拥有 #b" + str(sm.getDonationPoints()) + " 捐赠点数#k.\r\n你要用捐赠点数买什么?\r\n\r\n(#d你可以通过捐赠来获取捐赠点数#k.)\r\n"
     selection = sm.sendNext(prompt + "#b" + dp_menu + "#k")
 
     if selection == 0:
-        showAndExchange("What would you like from the Exp / Drop coupon shop?", dp_exp, True, type) # items have have a duration
+        showAndExchange("您想从经验/掉落券商店买什么?", dp_exp, True, type) # items have have a duration
     elif selection == 1:
-        showAndExchange("What would you like from the Cosmetics shop?", dp_cosmetics, False, type) # items don't have a duration
+        showAndExchange("您想从消耗品商店买什么?", dp_cosmetics, False, type) # items don't have a duration
     elif selection == 2:
-        showAndExchange("What would you like from the Game Changers shop?", dp_game_changers, True, type)
+        showAndExchange("您想从游戏商店买什么?", dp_game_changers, True, type)
     elif selection == 3:
-        showAndExchange("What would you like from the Surprise Box shop?", dp_surprise_box, False, type)
+        showAndExchange("你想从抽奖商店买什么?", dp_surprise_box, False, type)
 
 # ===================================================================================================
 
-selection = sm.sendNext("Hey! What would you have me do?\r\n#b" + main_menu + "#k")
+selection = sm.sendNext("嘿！你想让我做什么?\r\n#b" + main_menu + "#k")
 if selection:
     donationPointOptions()
 else:

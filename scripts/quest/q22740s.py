@@ -23,10 +23,10 @@ sm.blind(0, 0, 0, 1000)
 sm.sendDealy(1400)
 
 sm.setIntroBoxChat(KINESIS)
-sm.sendNext("Where am I? Who are you?")
+sm.sendNext("我在哪里?你是谁?")
 
 sm.setIntroBoxChat(THREE_MOON)
-sm.sendSay("I am the third child of the moon, hero of another world.")
+sm.sendSay("我是月亮的第三个孩子，另一个世界的英雄。")
 
 
 sm.setIntroBoxChat(KINESIS)
@@ -47,11 +47,11 @@ sm.sendSay("......")
 
 sm.setIntroBoxChat(KINESIS)
 sm.sendSay("#face2#Oh, wait, wolf. Sorry.")
-sm.sendSay("What is this place? I thought I was on the subway. Am I dreaming all this?")
+sm.sendSay("这是什么地方？我以为我在地铁上。我是在做梦吗？")
 
 
 sm.setIntroBoxChat(NERO)
-sm.sendSay("#face4#Nope! Welcome to Maple World!")
+sm.sendSay("#face4#Nope! 欢迎来到枫叶冒险岛！")
 
 sm.spawnNpc(NERO_NPC, -45, 0)
 sm.showNpcSpecialActionByTemplateId(NERO_NPC, "summon")
@@ -90,7 +90,7 @@ sm.sendSay("#face2##fs20#What on Earth are you talking about, Nero?")
 
 
 sm.setIntroBoxChat(NERO)
-sm.sendSay("#face2#Hey hey hey HEY! I'm not Nero!")
+sm.sendSay("#face2#嘿嘿嘿！我不是尼禄！")
 
 sm.sendDealy(1000)
 
@@ -106,11 +106,11 @@ sm.sendDealy(1000)
 
 
 sm.setIntroBoxChat(KINESIS)
-sm.sendNext("Cute. Look, Nero, I need to know where I am and how to get back.")
+sm.sendNext("亲爱的。听着，尼禄，我需要知道我在哪里，怎么回去。")
 
 
 sm.setIntroBoxChat(NERO)
-sm.sendSay("#face0#HEY. We saved you. So shut your facehole and listen for a minute!")
+sm.sendSay("#face0#嘿，我们救了你，所以挡住你的脸，听一分钟！")
 
 sm.sendDealy(500)
 
