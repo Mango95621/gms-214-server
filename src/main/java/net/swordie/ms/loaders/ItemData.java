@@ -1383,7 +1383,8 @@ public class ItemData {
                                     continue;
                                 }
                                 value = value.replace("[\r\n]", "").replace("[R8]", "")
-                                        .replace("\\r", "").replace("\\n", "");
+                                        .replace("\\r", "").replace("\\n", "")
+                                        .trim();
                                 switch (name) {
                                     case "count":
                                         iri.setCount(Integer.parseInt(value));
