@@ -35,10 +35,12 @@ public class CustomConfigsLoad {
 
             // 加载配置文件
             properties.load(input);
-            Set<Object> objects = properties.keySet();
-            for (Object object : objects) {
-                log.debug("load param: {}",  object);
-            }
+            // 输出全部加载配置
+            log.debug("load param: {}", properties.toString());
+//            Set<Object> objects = properties.keySet();
+//            for (Object object : objects) {
+//                log.debug("load param: {}",  object);
+//            }
 
         } catch (IOException ex) {
             ex.printStackTrace();
