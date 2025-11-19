@@ -22,7 +22,7 @@ import java.util.List;
 
 /**
  * Created on 1/23/2018.
- *
+ * <p>
  * 游戏配置，
  */
 public class GameConstants {
@@ -32,10 +32,16 @@ public class GameConstants {
     public static final int BUFFED_CH_END = 10;
 
     /**
-     *
+     * 经验倍率
      */
     public static final int MOB_EXP_RATE = Integer.parseInt(CustomConfigsLoad.getConfig("GameConstants.MOB_EXP_RATE"));
+    /**
+     * 金币掉落率
+     */
     public static final int MOB_MESO_RATE = Integer.parseInt(CustomConfigsLoad.getConfig("GameConstants.MOB_MESO_RATE"));;
+    /**
+     * 材料掉落率
+     */
     public static final int MOB_DROP_RATE = Integer.parseInt(CustomConfigsLoad.getConfig("GameConstants.MOB_DROP_RATE"));;
 
 
@@ -338,27 +344,27 @@ public class GameConstants {
 
     private static void initQuickMove() {
         quickMoveInfos = new ArrayList<>();
-        quickMoveInfos.add(new QuickMoveInfo(0, 9010063, QuickMoveType.Girl, 0, "Dressing Room", false,
+        quickMoveInfos.add(new QuickMoveInfo(0, 9010063, QuickMoveType.Girl, 0, "时装商店", false,
                 FileTime.fromType(FileTime.Type.ZERO_TIME), FileTime.fromType(FileTime.Type.MAX_TIME)));
-        quickMoveInfos.add(new QuickMoveInfo(0, 9400301, QuickMoveType.Nurse, 0, "Style Room", false,
+        quickMoveInfos.add(new QuickMoveInfo(0, 9400301, QuickMoveType.Nurse, 0, "美容院", false,
                 FileTime.fromType(FileTime.Type.ZERO_TIME), FileTime.fromType(FileTime.Type.MAX_TIME)));
         quickMoveInfos.add(new QuickMoveInfo(0, 9000035, QuickMoveType.Boat, 1, "万能NPC", false,
                 FileTime.fromType(FileTime.Type.ZERO_TIME), FileTime.fromType(FileTime.Type.MAX_TIME)));
-        quickMoveInfos.add(new QuickMoveInfo(0, 1092014, QuickMoveType.Taxi, 0, "Taxi", false,
+        quickMoveInfos.add(new QuickMoveInfo(0, 1092014, QuickMoveType.Taxi, 0, "出租车", false,
                 FileTime.fromType(FileTime.Type.ZERO_TIME), FileTime.fromType(FileTime.Type.MAX_TIME)));
-        quickMoveInfos.add(new QuickMoveInfo(0, 9000038, QuickMoveType.Cat, 0, "VP / DP Shop", false,
+        quickMoveInfos.add(new QuickMoveInfo(0, 9000038, QuickMoveType.Cat, 0, "充值/捐赠的商店", false,
                 FileTime.fromType(FileTime.Type.ZERO_TIME), FileTime.fromType(FileTime.Type.MAX_TIME)));
-        quickMoveInfos.add(new QuickMoveInfo(0, 9010022, QuickMoveType.DimensionalPortal, 20, "Dimensional Portal", false,
+        quickMoveInfos.add(new QuickMoveInfo(0, 9010022, QuickMoveType.DimensionalPortal, 20, "组队副本", false,
                 FileTime.fromType(FileTime.Type.ZERO_TIME), FileTime.fromType(FileTime.Type.MAX_TIME)));
-        quickMoveInfos.add(new QuickMoveInfo(0, 9071003, QuickMoveType.MonsterPark, 20, "Monster Park", false,
+        quickMoveInfos.add(new QuickMoveInfo(0, 9071003, QuickMoveType.MonsterPark, 20, "怪物公园", false,
                 FileTime.fromType(FileTime.Type.ZERO_TIME), FileTime.fromType(FileTime.Type.MAX_TIME)));
-        quickMoveInfos.add(new QuickMoveInfo(0, 9030300, QuickMoveType.FreeMarket, 0, "Free Market", false,
+        quickMoveInfos.add(new QuickMoveInfo(0, 9030300, QuickMoveType.FreeMarket, 0, "自由市场", false,
                 FileTime.fromType(FileTime.Type.ZERO_TIME), FileTime.fromType(FileTime.Type.MAX_TIME)));
-        quickMoveInfos.add(new QuickMoveInfo(0, 1012009, QuickMoveType.Bunny, 0, "Storage", false,
+        quickMoveInfos.add(new QuickMoveInfo(0, 1012009, QuickMoveType.Bunny, 0, "仓库", false,
                 FileTime.fromType(FileTime.Type.ZERO_TIME), FileTime.fromType(FileTime.Type.MAX_TIME)));
-        quickMoveInfos.add(new QuickMoveInfo(0, 9900000, QuickMoveType.Baret, 0, "Inventory Seller", false,
+        quickMoveInfos.add(new QuickMoveInfo(0, 9900000, QuickMoveType.Baret, 0, "背包清理", false,
                 FileTime.fromType(FileTime.Type.ZERO_TIME), FileTime.fromType(FileTime.Type.MAX_TIME)));
-        quickMoveInfos.add(new QuickMoveInfo(0, 9900001, QuickMoveType.Waitress, 0, "Job Advancement (Explorers only)", false,
+        quickMoveInfos.add(new QuickMoveInfo(0, 9900001, QuickMoveType.Waitress, 0, "一键转职(仅限于冒险家职业)", false,
                 FileTime.fromType(FileTime.Type.ZERO_TIME), FileTime.fromType(FileTime.Type.MAX_TIME)));
     }
 
@@ -904,7 +910,7 @@ public class GameConstants {
         if (EtcData.isForbidden(name)) {
             return false;
         }
-        switch(name) {
+        switch (name) {
             case "Nigger":
             case "Faggot":
             case "Fag":
