@@ -16,7 +16,7 @@ sm.setParam(37)
 sm.setColor(1)
 sm.setInnerOverrideSpeakerTemplateID(1013350) # Brie
 sm.sendNext("#face0#嗯...这很奇怪。我们已经仔细搜索了阴森爬行林，但我没在任何地方看到那个最后的指南针零件。它会藏在哪里呢？")
-sm.sendSay("#face0#也许Gorgonz只是以为他看到第三个指南针零件掉在这里。但如果它不在这里，你觉得它可能在哪里？")
+sm.sendSay("#face0#也许戈尔贡兹只是以为他看到第三个指南针零件掉在这里。但如果它不在这里，你觉得它可能在哪里？")
 sm.sendDelay(300)
 sm.zoomCamera(1000, 1500, 1000, -150, 45)
 sm.forcedMove(False, 190)

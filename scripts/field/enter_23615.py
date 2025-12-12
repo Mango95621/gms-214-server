@@ -22,11 +22,11 @@ sm.sendNext("嘿，你在这里做什么？另外那个人去哪儿了？你看�
 sm.setPlayerAsSpeaker()
 sm.sendSay("我是黑翼成员。")
 sm.setSpeakerID(BLACK_WINGS_LACKEY)
-sm.sendSay("是吗？让我看看...我觉得我以前见过你的脸。我想我在从Gelimer那里收到的一些命令中见过你。")
+sm.sendSay("是吗？让我看看...我觉得我以前见过你的脸。我想我在从吉利默那里收到的一些命令中见过你。")
 sm.setPlayerAsSpeaker()
 sm.sendSay("你搞错了。")
 sm.setSpeakerID(BLACK_WINGS_LACKEY)
-sm.sendSay("是吗？也许我最好和Gelimer确认一下。我可不想惹上麻烦。跟我来！")
+sm.sendSay("是吗？也许我最好和吉利默确认一下。我可不想惹上麻烦。跟我来！")
 sm.setPlayerAsSpeaker()
 sm.sendSay("也许我应该直接解决掉这家伙...")
 

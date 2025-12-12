@@ -59,7 +59,7 @@ sm.setSpeakerID(BLACK_JACK)
 sm.sendSay("这不是谎言。但这并不意味着我们的客人不是疯了。")
 
 sm.setSpeakerID(CHECKY)
-sm.sendSay("我同意Black Jack的看法。要么我们的客人疯了...要么这一切都是真的。")
+sm.sendSay("我同意黑杰克的看法。要么我们的客人疯了...要么这一切都是真的。")
 
 sm.setSpeakerID(CLAUDINE)
 sm.sendSay("如果这是真的，那么我们的客人来自几百年前，在黑魔法师被封印之前。等等，如果你是指挥官，为什么要反抗？")
