@@ -4,8 +4,7 @@ quest = 28256   # Treasure, and Crocell the Demon  Quest
 mapid = 677000006   # Crocell Strolling Path (Map before Boss Map)
 
 if sm.hasQuest(quest):
-    if sm.sendAskYesNo("Would you like to enter?"):
+    if sm.sendAskYesNo("你想进入吗？"):
         sm.warp(mapid, 0)
 else:
-    sm.sendSayOkay("#b(A strange doorway)")
-
+    sm.sendSayOkay("#b(一扇奇怪的门)")

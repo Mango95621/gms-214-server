@@ -6,5 +6,5 @@ if sm.hasQuest(22005) and not sm.hasQuestCompleted(22005): # Rescuing the Piglet
         sm.hideNpcByTemplateId(1013200, True, True) # removes Piglet npc
         sm.dispose()
     else:
-        sm.sendSay("Please make room in your Etc Inventory.")
+        sm.sendSay("请在你的其他物品栏腾出空间。")
         sm.dispose()

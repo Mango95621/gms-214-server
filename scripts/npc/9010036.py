@@ -1,6 +1,6 @@
 from net.swordie.ms.scripts import ScriptUtil as su
 
-# NX Item NPC \\ Lilin \\ 9010036 \\ Free Market
+# NX Item NPC \ Lilin \ 9010036 \ Free Market
 
 cubes = { #[itemid, price, expiration time]
     0 : [2711000, 750, 0],
@@ -79,17 +79,17 @@ coupons = {
 }
 
 if sm.sendNext:
-    selection = sm.sendNext("Hello my name is Lilin, This shop is where you can spend your #bNX#k.\r\n"
-                            "\r\n#eYou have#r " + str(sm.getNX()) + " #bNX.\r\n#n#b"
-                            "#L0#Cubes\r\n"
-                            "#L1#Scrolls\r\n"
-                            "#L2#Scrolling Tools\r\n"
-                            "#L3#Game-enhancing\r\n"
-                            "#L4#Hired Merchants\r\n"
-                            "#L5#ETC\r\n"
-                            "#L6#Messaging\r\n"
-                            "#L7#Gachapon\r\n"
-                            "#L8#Expansion Slots\r\n")
+    selection = sm.sendNext("你好，我叫莉莉安，这是你可以消费#bNX#k的地方。\r\n"
+                            "\r\n#e你有#r " + str(sm.getNX()) + " #bNX。\r\n#n#b"
+                            "#L0#方块\r\n"
+                            "#L1#卷轴\r\n"
+                            "#L2#强化工具\r\n"
+                            "#L3#游戏增强\r\n"
+                            "#L4#雇佣商人\r\n"
+                            "#L5#其他\r\n"
+                            "#L6#消息\r\n"
+                            "#L7#冒险岛\r\n"
+                            "#L8#扩展槽位\r\n")
 
     items = []
     if selection == 0:
@@ -111,20 +111,20 @@ if sm.sendNext:
     elif selection == 8:
         items = coupons
 
-    output = "Choose the item you would like to buy \r\n"
+    output = "选择你想购买的物品 \r\n"
     for x in range (len(items)):
         output += "#b" + su.addSelectItem(x) + su.getItemImg(items[x][0]) + "   " + su.getItemName(items[x][0]) + " #r#e(" + str(items[x][1]) + ") NX#n"
         if items[x][2] > 0:
-            output += " for " + str(items[x][2] / 24) + " days"
+            output += " 持续 " + str(items[x][2] / 24) + " 天"
         output += "\r\n"
     selection = sm.sendNext(output)
     itemId = items[selection][0]
-    text = "how many #r" + su.getItemName(itemId) + " #bwould you like to buy?"
+    text = "你想购买多少个 #r" + su.getItemName(itemId) + " #b？"
     amount = sm.sendAskNumber(text, 1, 1, 1000)
     totalPrice = items[selection][1] * amount
-    answer = sm.sendAskYesNo("are you sure you wanna buy " + str(amount) + " #b" + su.getItemName(itemId) + " #kfor #r(" + str(totalPrice) + ") NX")
+    answer = sm.sendAskYesNo("你确定要购买 " + str(amount) + " 个 #b" + su.getItemName(itemId) + " #k 吗？需要 #r(" + str(totalPrice) + ") NX")
     if answer and sm.canHold(itemId, amount) and chr.getUser().getMaplePoints() >= totalPrice:
         sm.giveItem(itemId, amount, items[selection][2])
         chr.addNx(-totalPrice)
     else:
-        sm.sendNext("You do not have enough nx or cannot hold this item")
+        sm.sendNext("你的NX不足或背包空间不够")

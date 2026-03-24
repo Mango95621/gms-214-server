@@ -1,15 +1,15 @@
 sm.setSpeakerID(9400534) # Goddess Avaracia
-sm.sendNext("Are you ready to begin?")
+sm.sendNext("你准备好开始了吗？")
 
 sm.setPlayerAsSpeaker() # Player
-sm.sendNext("What are you talking about? Who are you?")
+sm.sendNext("你在说什么？你是谁？")
 
 sm.setSpeakerID(9400534) # Goddess Avaracia
-response = sm.sendAskYesNo("There isn't much time to explain, will you help me?")
+response = sm.sendAskYesNo("没有多少时间解释了，你会帮我吗？")
 
 if response == 1:
-    sm.sendNext("Please go eliminate 100 #r#o9390010##k, They need to be dealt with.")
+    sm.sendNext("请去消灭100个 #r#o9390010##k，它们必须被处理掉。")
     sm.startQuest(14524)
 else:
-    sm.sendSayOkay("I guess you aren't up for the task")
+    sm.sendSayOkay("我猜你无法胜任这个任务")
 sm.dispose()

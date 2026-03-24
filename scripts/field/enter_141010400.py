@@ -1,1 +1,1 @@
-sm.chatScript("Eliminate all mobs.")
+sm.chatScript("消灭所有怪物.")

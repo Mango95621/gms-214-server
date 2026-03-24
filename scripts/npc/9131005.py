@@ -1,13 +1,11 @@
 # Princess No (9131005) |
 sm.setPlayerAsSpeaker()
 sm.removeEscapeButton()
-sm.sendNext("Please step aside, madam. I have no quarrel with you.")
+sm.sendNext("请让开，夫人。我与你无冤无仇。")
 sm.setSpeakerID(parentID)
-sm.sendNext("How dar you speak to me in such a familiar tongue. I am Kichou, daughter of the Saitou Dousan, lawful wife of the Demon King!")
+sm.sendNext("你怎么敢用这种熟悉的语气对我说话。我是Kichou，斋藤道三的女儿，恶魔王的合法妻子！")
 sm.setPlayerAsSpeaker()
-sm.sendNext("The tales of your beauty are not exaggerations, Lady Nou, but you ust stand aside. Your husband is my sworn enemy.")
+sm.sendNext("关于您美貌的传说并没有夸大，诺女士，但您必须让开。您的丈夫是我的宿敌。")
 sm.setSpeakerID(parentID)
-sm.sendNext("Cocky little brat, are you trying to pick a fight with me?")
+sm.sendNext("狂妄的小鬼，你想和我打架吗？")
 sm.warp(807040000)
-
-

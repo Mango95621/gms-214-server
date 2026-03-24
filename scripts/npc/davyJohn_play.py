@@ -4,10 +4,10 @@ from net.swordie.ms.constants import GameConstants
 from net.swordie.ms.constants import WzConstants
 
 pqItems = [
-4001117, # Old Metal Key
-4001120, # Rookie Pirate Mark
-4001121, # Rising Pirate Mark
-4001122, # Veteran Pirate Mark
+4001117, # 旧金属钥匙
+4001120, # 新手海盗标志
+4001121, # 崛起海盗标志
+4001122, # 老兵海盗标志
 ]
 
 ROOKIE_PIRATE_MARK = 4001120 # Stage 0
@@ -35,31 +35,31 @@ if sm.getFieldID() == 925100100: # Hidden Street: Through the Head of the Ship!
 
     if sm.isPartyLeader():
         if stage == 3:
-            sm.sendNext("Make your way through the portal on the right")
+            sm.sendNext("通过右边的传送门继续前进")
 
         else:
             if sm.hasItem(item, count):
                 if stage == 2:
-                    sm.sendNext("Great you may now continue to the next stage!")
+                    sm.sendNext("太棒了，你现在可以继续到下一阶段了！")
                     sm.invokeForParty("showEffectToField", WzConstants.EFFECT_CLEAR)
 
                 else:
-                    sm.sendNext("Alright, next up I need "+ str(count) +" #v"+ str(nextItem) +"##b#t"+ str(nextItem) +"##k.")
+                    sm.sendNext("好的，接下来我需要 "+ str(count) +" #v"+ str(nextItem) +"##b#t"+ str(nextItem) +"##k。")
                 sm.consumeItem(item, count)
                 sm.invokeForParty("setQRValue", GameConstants.LORD_PIRATE_QUEST, str(int(sm.getQRValue(GameConstants.LORD_PIRATE_QUEST)) + 1))
 
             else:
-                sm.sendNext("Please bring me "+ str(count) +" #v"+ str(item) +"##b#t"+ str(item) +"##k.")
+                sm.sendNext("请给我带来 "+ str(count) +" #v"+ str(item) +"##b#t"+ str(item) +"##k。")
     else:
-        sm.sendSayOkay("Please, have your party leader speak to me.")
+        sm.sendSayOkay("请让你的队伍队长来和我对话。")
 
 
 elif sm.getFieldID() == 925100500: # Hidden Street: The Captain's Dignity
     if not sm.hasMobsInField():
         if not sm.isPartyLeader():
-            sm.sendSayOkay("Please have your party leader speak to me.")
+            sm.sendSayOkay("请让你的队伍队长来和我对话。")
         else:
-            sm.sendNext("You have done us a great favour, what ever can we do to repay you?")
+            sm.sendNext("你帮了我们一个大忙，我们该如何报答你呢？")
         sm.warpInstanceIn(925100700, True)
         # For all party members
         for partyMembers in sm.getParty().getMembers():
@@ -79,7 +79,7 @@ elif sm.getFieldID() == 925100500: # Hidden Street: The Captain's Dignity
                     sm.consumeItem(item, quantity)
 
     else:
-        sm.sendSayOkay("Please get rid of the Captain!")
+        sm.sendSayOkay("请消灭船长！")
 
 elif sm.getFieldID() == 925100700: #pq exist of completion
      sm.giveNX(200000)
@@ -88,7 +88,7 @@ elif sm.getFieldID() == 925100700: #pq exist of completion
      sm.setQRValue(GameConstants.LORD_PIRATE_QUEST, "0")
 
 else:
-    response = sm.sendAskYesNo("Are you sure you want to leave?")
+    response = sm.sendAskYesNo("你确定要离开吗？")
     if response:
         if not sm.getParty() is None:
             sm.warpInstanceOut(910002000)

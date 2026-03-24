@@ -1,3 +1,3 @@
 # Shinsoo (1101001) | Ereve
 sm.useItem(2022458)
-sm.sendSayOkay("Don't stop training. Every ounce of your energy is required to protect the world of Maple...")
+sm.sendSayOkay("不要停止训练。保护枫叶世界需要你的每一分能量...")

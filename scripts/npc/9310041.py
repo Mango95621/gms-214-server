@@ -10,44 +10,44 @@ sm.setSpeakerID(parentID)
 sm.setBoxChat()
 if sm.hasQuest(62001):
     if sm.hasQuest(NOT_A_DEMON):
-        sm.sendSayOkay("I'm waiting...")
+        sm.sendSayOkay("我在等待...")
 
     elif sm.hasQuestCompleted(NOT_A_DEMON):
-        sm.sendSayOkay("Turns out you're a human after all...")
+        sm.sendSayOkay("原来你终究是人类啊...")
 
     else:
-        sm.sendNext("Hello! Goodbye! Shaolin Temple is closed! Come back and visit us again real soon!")
+        sm.sendNext("你好！再见！少林寺关闭了！尽快再来拜访我们！")
 
         sm.flipBoxChat()
         sm.flipBoxChatPlayerNoEscape()
         if not sm.hasItem(INTERCEPTED_MESSAGE):
-            sm.sendNext("#b(I don't think I can enter just by word from elder Jung, I should find that message before heading here again.")
+            sm.sendNext("#b(我觉得我不能仅凭 elder Jung 的一句话就进去，我应该在再来之前找到那封信。)")
             sm.diposse()
-        sm.sendNext("Wait, I need to deliver this message to the #b#p"+ str(WISE_CHIEF_PRIEST) +"##k! #b#p"+ str(ELDER_JUNG) +"##k from Mount Song Hamlet sent me!")
+        sm.sendNext("等等，我需要把这封信送给 #b#p"+ str(WISE_CHIEF_PRIEST) +"##k！嵩山 Hamlet 的 #b#p"+ str(ELDER_JUNG) +"##k 派我来的！")
 
         sm.setSpeakerID(parentID)
         sm.setBoxChat()
-        sm.sendNext("The #b#p"+ str(WISE_CHIEF_PRIEST) +"##k? The #b#p"+ str(WISE_CHIEF_PRIEST) +"##k, you say? "
-                    "Why didn't you say so! The #b#p"+ str(WISE_CHIEF_PRIEST) +"##k is exactly the person who gave me orders not to let anyone in!")
+        sm.sendNext("#b#p"+ str(WISE_CHIEF_PRIEST) +"##k？你是说 #b#p"+ str(WISE_CHIEF_PRIEST) +"##k？"
+                    "你怎么不早说！就是 #b#p"+ str(WISE_CHIEF_PRIEST) +"##k 下令不让我放任何人进去的！")
 
-        sm.sendNext("Just look around. Even the censers are possessed by evil spirits, and you look even scarier than they do.")
+        sm.sendNext("随便看看。连香炉都被恶灵附身了，你看起来比它们还可怕。")
 
-        sm.sendNext("You probably have a legion of demons tap-dancing inside you, so I can't let you in. Bye-bye now!")
+        sm.sendNext("你体内大概有一群恶魔在跳舞，所以我不能让你进去。再见！")
 
         sm.flipBoxChat()
         sm.flipBoxChatPlayerNoEscape()
-        sm.sendNext("Alright.. Listen up motherfucker.\r\n"
-                    "My look is 'singular' not 'scary' and I'm NOT possessed.")
+        sm.sendNext("好吧。。听好了混蛋。\r\n"
+                    "我的外表是'独特'不是'可怕'，我没有被附身。")
 
         sm.setSpeakerID(parentID)
         sm.setBoxChat()
-        response = sm.sendAskYesNo("That's what the last guy said, before he burst into flames and tried to eat my robe. "
-                    "If you REALLY want to enter the temple to talk to The #b#p"+ str(WISE_CHIEF_PRIEST) +"##k, you're going to have to prove you're human.")
+        response = sm.sendAskYesNo("上次那个人也是这么说的，然后他全身起火并试图吃掉我的法衣。 "
+                    "如果你真的想进寺庙和 #b#p"+ str(WISE_CHIEF_PRIEST) +"##k 谈话，你得证明你是人类。")
 
         if response:
-            sm.sendNext("Then defeat 100 Censers and bring me the Prayer Beads they stole. "
-                        "I'll be able to tell if you're human because they glow when humans hold them.")
+            sm.sendNext("那么打败100个香炉，把它们偷走的念珠带给我。 "
+                        "因为人类拿着它们会发光，我就能判断你是不是人类。")
             sm.startQuestNoCheck(NOT_A_DEMON) # [Shaolin Temple] Not a demon
 
 else:
-    sm.sendSayOkay("Hello! Goodbye! Shaolin Temple is closed! Come back and visit us again real soon!")
+    sm.sendSayOkay("你好！再见！少林寺关闭了！尽快再来拜访我们！")

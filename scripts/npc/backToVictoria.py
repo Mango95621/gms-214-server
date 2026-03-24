@@ -3,5 +3,5 @@ if sm.getFieldID() != 120040000:
     map = 120040000
 
 
-if sm.sendAskYesNo("Would you like to go to #m" + str(map) + "#?"):
+if sm.sendAskYesNo("你想前往 #m" + str(map) + "# 吗？"):
     sm.warp(map, 0)

@@ -1,1 +1,1 @@
-sm.sendNext("test")
+sm.sendNext("测试")

@@ -1,5 +1,5 @@
 # Ralphio (1082003) | Gold Beach Resort
 if sm.hasQuestCompleted(2964):
-    sm.sendSayOkay("Thank you so much for returning me my Ring! you got me out of a lot of trouble")
+    sm.sendSayOkay("非常感谢你把我的戒指找回来！你帮我解决了很大的麻烦")
 else:
-    sm.sendSayOkay("I wouldn't trust #p1082004#, he seems suspicious.")
+    sm.sendSayOkay("我不会信任#p1082004#的，他看起来很可疑。")

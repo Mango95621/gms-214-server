@@ -11,10 +11,10 @@ items = [1020000,1021000,1022015,1022014,1022013,1022012,1022011,1022010,1022009
 ]
 
 
-question = sm.sendAskYesNo("#eWould you like to spend #r2k NX#n #efor a random #bEye Acessory?")
+question = sm.sendAskYesNo("#e你想花费 #r2000 NX#n #e换取一个随机 #b眼部装备 吗？")
 randitem = random.choice(items)
 if question and sm.canHold(randitem) and chr.getUser().getNxPrepaid() >= 2000:
     sm.giveItem(randitem)
     sm.deductNX(-2000)
 else:
-    sm.sendNext("#e#dYour inventory is full or you don't have enough NX.")
+    sm.sendNext("#e#d你的背包已满或你的NX不足。")

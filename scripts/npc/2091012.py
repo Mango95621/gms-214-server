@@ -19,15 +19,15 @@ itemsDojo = [
 
 costDojoPoints = [
     [400000,400000,100000,2000000],
-    [20000,400000,5000,100000,50000,8000,15000,7000,7000,7000,7000,7000,7000,35000,35000,35000,35000,35000,35000,5000000,12000000,50000000,100000000,20000,400000,100000000,500000000],
-    [100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000],
-    [250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000],
+    [20000,400000,5000,100000,50000,8000,15000,7000,7000,7000,7000,7000,7000,7000,35000,35000,35000,35000,35000,35000,5000000,12000000,50000000,100000000,20000,400000,100000000,500000000],
+    [100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000,100000],
+    [250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000,250000],
     [125000,125000,125000,125000,125000,200000,125000,125000,125000,125000,125000,125000,125000,125000,125000,125000,125000,125000,125000,125000,125000,100000,100000,100000,250000],
     [500000,500000,500000,500000,500000,500000,500000,500000,500000,500000,500000,500000,500000,500000,500000,500000,500000,500000,500000,500000,500000,500000,500000,500000,500000,500000,500000,500000,500000],
     [175000,175000,175000,175000,175000,175000,175000,175000,175000,175000,175000,175000,175000,175000,175000,175000,175000,175000,175000,175000,175000],
     [750000,750000,750000,750000,750000,750000,750000,750000,750000,750000,750000,750000,750000,750000,750000,750000,750000,750000,750000,750000,750000,750000,750000,750000,750000,750000,750000,750000,750000,750000],
     [200000,200000,200000,200000,200000,240000,200000,200000,200000,200000,200000,200000,200000,200000,200000,200000,200000,200000,200000,200000,200000,150000,150000,150000,400000],
-    [1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000],
+    [1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000,1000000],
 ]
 
 # Dojo Array Finish
@@ -35,95 +35,95 @@ costDojoPoints = [
 dojoHall = 925020001
 
 if sm.getFieldID() == dojoHall:
-    selection = sm.sendNext("My master is the strongest person in Mu Lung. His challenges grant Dojo Points Which you can spend here.\r\nYou currently have #r"+ str(sm.getDojoPoints()) +" #bDojo Points\r\n#b"
-                            "#L0#Trade a Bamboo Luck Sack for 1,000,000 Dojo Points.#l\r\n"
-                            "#L1#Trade 1,000,000 Dojo Points for a Bamboo Luck Sack.#l\r\n"
-                            "#L2#Spend Dojo Points.#l\r\n")
+    selection = sm.sendNext("我的师父是慕灵最强的人。他的挑战可以获得武斗点数，你可以在这里消费。\r\n你目前有 #r"+ str(sm.getDojoPoints()) +" #b武斗点数\r\n#b"
+                            "#L0#用竹子福袋换取1,000,000武斗点数。#l\r\n"
+                            "#L1#用1,000,000武斗点数换取竹子福袋。#l\r\n"
+                            "#L2#消费武斗点数.#l\r\n")
 
     if selection == 0:
-        answer = sm.sendAskNumber("How many #b#v 3993002 # #t 3993002 #(s)#k #kdo you wish purchase?", 0, 1, 1000)
+        answer = sm.sendAskNumber("你想要购买多少个 #b#v 3993002 # #t 3993002 #(s)#k？", 0, 1, 1000)
 
         Total = answer * 1
         totalQty = answer * 1000000
 
         if  sm.getDojoPoints() <= totalQty:
-            sm.sendSayOkay("You do not have enough #bDojo Points#k.")
+            sm.sendSayOkay("你的#b武斗点数#k不足。")
             sm.dispose()
 
         else:
             sm.deductDojoPoints(totalQty)
             sm.giveItem(3993002, Total)
-            sm.sendSayOkay("Thank you for your purchase!\r\nYou have #r"+ str(sm.getDojoPoints()) +"#b Dojo Points#k left.")
+            sm.sendSayOkay("感谢你的购买！\r\n你还剩 #r"+ str(sm.getDojoPoints()) +"#b 武斗点数#k。")
             sm.dispose()
 
     if selection == 1:
-        answer = sm.sendAskNumber("How many #b#v 3993002 # #t 3993002 #(s)#k #kdo you wish sell?", 0, 1, 1000)
+        answer = sm.sendAskNumber("你想要卖出多少个 #b#v 3993002 # #t 3993002 #(s)#k？", 0, 1, 1000)
 
         Total = answer * 1
         totalQty = answer * 1000000
 
 
         if not sm.hasItem(3993002, Total):
-            sm.sendSayOkay("You do not have enough #b#v 3993002 # #t 3993002 #(s)#k.")
+            sm.sendSayOkay("你的 #b#v 3993002 # #t 3993002 #(s)#k 不足。")
             sm.dispose()
 
         else:
             sm.consumeItem(3993002, Total)
             sm.giveDojoPoints(totalQty)
-            sm.sendSayOkay("Thank you for your purchase!\r\nYou now have #r"+ str(sm.getDojoPoints()) +"#b Dojo Points#k.")
+            sm.sendSayOkay("感谢你的购买！\r\n你现在有 #r"+ str(sm.getDojoPoints()) +"#b 武斗点数#k。")
             sm.dispose()
 
     if selection == 2:
 
-        selection1 = sm.sendNext("Which category of items would you like to purchase from?\r\nYou currently have #r"+ str(sm.getDojoPoints()) +" #bDojo Points\r\n"
-                                "#L0#Useables.#l\r\n"
-                                "#L1#Other.#l\r\n"
-                                "#L2#Reverse Armors.#l\r\n"
-                                "#L3#Reverse Weapons.#l\r\n"
-                                "#L4#Timeless Armors.#l\r\n"
-                                "#L5#Timeless Weapons.#l\r\n"
-                                "#L6#Abyss Armors.#l\r\n"
-                                "#L7#Abyss Weapons.#l\r\n"
-                                "#L8#Fearless Armors.#l\r\n"
-                                "#L9#Fearless Weapons.#l\r\n")
+        selection1 = sm.sendNext("你想从哪个类别购买物品？\r\n你目前有 #r"+ str(sm.getDojoPoints()) +" #b武斗点数\r\n"
+                                "#L0#消耗品.#l\r\n"
+                                "#L1#其他.#l\r\n"
+                                "#L2#逆时针防具.#l\r\n"
+                                "#L3#逆时针武器.#l\r\n"
+                                "#L4#永恒防具.#l\r\n"
+                                "#L5#永恒武器.#l\r\n"
+                                "#L6#深渊防具.#l\r\n"
+                                "#L7#深渊武器.#l\r\n"
+                                "#L8#无畏防具.#l\r\n"
+                                "#L9#无畏武器.#l\r\n")
 
-        listStr = "What item would you like to purchase? #b"
+        listStr = "你想要购买什么物品？ #b"
 
         i = 0
 
         while i < len(itemsDojo[selection1]):
-            listStr += "\r\n#L" + str(i) + "##v" + str(itemsDojo[selection1][i]) + "#"   "#z" + str(itemsDojo[selection1][i]) + "# #r(" + str(costDojoPoints[selection1][i]) + " Dojo Points)#b"
+            listStr += "\r\n#L" + str(i) + "##v" + str(itemsDojo[selection1][i]) + "#"   "#z" + str(itemsDojo[selection1][i]) + "# #r(" + str(costDojoPoints[selection1][i]) + " 武斗点数)#b"
 
             i += 1
 
         selection2 = sm.sendNext(listStr)
 
         if selection1 == 0 or selection1 == 1:
-            materialStr = "So you want #b#v" + str(itemsDojo[selection1][selection2]) + "##z" + str(itemsDojo[selection1][selection2]) + "#s? \r\n #kThat will cost you.\r\n"
+            materialStr = "你想要 #b#v" + str(itemsDojo[selection1][selection2]) + "##z" + str(itemsDojo[selection1][selection2]) + "#s？ \r\n #k这需要付费。\r\n"
 
         else:
-            materialStr = "So you want a #b#v" + str(itemsDojo[selection1][selection2]) + "##z" + str(itemsDojo[selection1][selection2]) + "#? \r\n#kThat will cost you.\r\n"
+            materialStr = "你想要 #b#v" + str(itemsDojo[selection1][selection2]) + "##z" + str(itemsDojo[selection1][selection2]) + "#？ \r\n#k这需要付费。\r\n"
 
         i = 0
 
         if costDojoPoints[selection1][selection2] > 0:
-            materialStr += "\r\n#i4001620#   #r" + str(costDojoPoints[selection1][selection2]) + " #bDojo Points"
+            materialStr += "\r\n#i4001620#   #r" + str(costDojoPoints[selection1][selection2]) + " #b武斗点数"
 
         if (selection1 == 0 or selection1 == 1) and not ItemConstants.isThrowingItem(itemsDojo[selection1][selection2]):
             sm.chat("a")
-            materialStr += "\r\n\r\nHow many do you wish to purchase?"
+            materialStr += "\r\n\r\n你想购买多少个？"
             amount = sm.sendAskNumber(materialStr, 1, 1, 50000)
 
             TotalCost = (amount * costDojoPoints[selection1][selection2])
             TotalQty = amount
 
             if sm.getDojoPoints() <= TotalCost:
-                sm.sendSayOkay("I'm afraid you cannot afford this purchase.")
+                sm.sendSayOkay("恐怕你买不起这个。")
                 sm.dispose()
 
             else:
                 if not sm.canHold(itemsDojo[selection1][selection2]):
-                    sm.sendSayOkay("Please make sure you have room in your inventory, and talk to me again.")
+                    sm.sendSayOkay("请确保你的背包有空间，再来和我对话。")
                     sm.dispose()
 
                 else:
@@ -131,7 +131,7 @@ if sm.getFieldID() == dojoHall:
                     if costDojoPoints[selection1][selection2] > 0:
                         sm.deductDojoPoints(TotalCost)
                         sm.giveItem(itemsDojo[selection1][selection2], TotalQty)
-                        sm.sendSayOkay("Come and see me if you need anything else.")
+                        sm.sendSayOkay("需要其他帮助再来找我。")
 
         else:
             response = sm.sendAskYesNo(materialStr)
@@ -139,12 +139,12 @@ if sm.getFieldID() == dojoHall:
 
 
             if sm.getDojoPoints() <= costDojoPoints[selection1][selection2]:
-                sm.sendSayOkay("I'm afraid you cannot afford this purchase.")
+                sm.sendSayOkay("恐怕你买不起这个。")
                 sm.dispose()
 
             else:
                 if not sm.canHold(itemsDojo[selection1][selection2]):
-                    sm.sendSayOkay("Please make sure you have room in your inventory, and talk to me again.")
+                    sm.sendSayOkay("请确保你的背包有空间，再来和我对话。")
                     sm.dispose()
 
                 else:
@@ -152,64 +152,64 @@ if sm.getFieldID() == dojoHall:
                     if costDojoPoints[selection1][selection2] > 0:
                         sm.deductDojoPoints(costDojoPoints[selection1][selection2])
                         sm.giveItem(itemsDojo[selection1][selection2])
-                        sm.sendSayOkay("Come and see me if you need anything else.")
+                        sm.sendSayOkay("需要其他帮助再来找我。")
 
 elif sm.sendNext:
-    selection = sm.sendNext("Hey there would you like to come try your luck at Mu Lung Dojo?\r\n#b"
-                            "#L0#Yes, Teleport me to Dojo now.#l\r\n"
-                            "#L1#No, I would like to purchase something.#l\r\n")
+    selection = sm.sendNext("嘿，你想来慕灵武斗场碰碰运气吗？\r\n#b"
+                            "#L0#是的，现在就传送到武斗场。#l\r\n"
+                            "#L1#不，我想购买一些东西。#l\r\n")
     if selection == 0: #
         sm.warp(925020001)
     if selection == 1:
 
-        selection1 = sm.sendNext("Which category of items would you like to purchase from?\r\nYou currently have #r"+ str(sm.getDojoPoints()) +" #bDojo Points\r\n"
-                                                                                                                                               "#L0#Useables.#l\r\n"
-                                                                                                                                               "#L1#Other.#l\r\n"
-                                                                                                                                               "#L2#Reverse Armors.#l\r\n"
-                                                                                                                                               "#L3#Reverse Weapons.#l\r\n"
-                                                                                                                                               "#L4#Timeless Armors.#l\r\n"
-                                                                                                                                               "#L5#Timeless Weapons.#l\r\n"
-                                                                                                                                               "#L6#Abyss Armors.#l\r\n"
-                                                                                                                                               "#L7#Abyss Weapons.#l\r\n"
-                                                                                                                                               "#L8#Fearless Armors.#l\r\n"
-                                                                                                                                               "#L9#Fearless Weapons.#l\r\n")
+        selection1 = sm.sendNext("你想从哪个类别购买物品？\r\n你目前有 #r"+ str(sm.getDojoPoints()) +" #b武斗点数\r\n"
+                                                                                                                                               "#L0#消耗品.#l\r\n"
+                                                                                                                                               "#L1#其他.#l\r\n"
+                                                                                                                                               "#L2#逆时针防具.#l\r\n"
+                                                                                                                                               "#L3#逆时针武器.#l\r\n"
+                                                                                                                                               "#L4#永恒防具.#l\r\n"
+                                                                                                                                               "#L5#永恒武器.#l\r\n"
+                                                                                                                                               "#L6#深渊防具.#l\r\n"
+                                                                                                                                               "#L7#深渊武器.#l\r\n"
+                                                                                                                                               "#L8#无畏防具.#l\r\n"
+                                                                                                                                               "#L9#无畏武器.#l\r\n")
 
-        listStr = "What item would you like to purchase? #b"
+        listStr = "你想要购买什么物品？ #b"
 
         i = 0
 
         while i < len(itemsDojo[selection1]):
-            listStr += "\r\n#L" + str(i) + "##v" + str(itemsDojo[selection1][i]) + "#"   "#z" + str(itemsDojo[selection1][i]) + "# #r(" + str(costDojoPoints[selection1][i]) + " Dojo Points)#b"
+            listStr += "\r\n#L" + str(i) + "##v" + str(itemsDojo[selection1][i]) + "#"   "#z" + str(itemsDojo[selection1][i]) + "# #r(" + str(costDojoPoints[selection1][i]) + " 武斗点数)#b"
 
             i += 1
 
         selection2 = sm.sendNext(listStr)
 
         if selection1 == 0 or selection1 == 1:
-            materialStr = "So you want #b#v" + str(itemsDojo[selection1][selection2]) + "##z" + str(itemsDojo[selection1][selection2]) + "#s? \r\n #kThat will cost you.\r\n"
+            materialStr = "你想要 #b#v" + str(itemsDojo[selection1][selection2]) + "##z" + str(itemsDojo[selection1][selection2]) + "#s？ \r\n #k这需要付费。\r\n"
 
         else:
-            materialStr = "So you want a #b#v" + str(itemsDojo[selection1][selection2]) + "##z" + str(itemsDojo[selection1][selection2]) + "#? \r\n#kThat will cost you.\r\n"
+            materialStr = "你想要 #b#v" + str(itemsDojo[selection1][selection2]) + "##z" + str(itemsDojo[selection1][selection2]) + "#？ \r\n#k这需要付费。\r\n"
 
         i = 0
 
         if costDojoPoints[selection1][selection2] > 0:
-            materialStr += "\r\n#i4001620#   #r" + str(costDojoPoints[selection1][selection2]) + " #bDojo Points"
+            materialStr += "\r\n#i4001620#   #r" + str(costDojoPoints[selection1][selection2]) + " #b武斗点数"
 
         if selection1 == 0 or selection1 == 1:
-            materialStr += "\r\n\r\nHow many do you wish to purchase?"
+            materialStr += "\r\n\r\n你想购买多少个？"
             amount = sm.sendAskNumber(materialStr, 1, 1, 50000)
 
             TotalCost = (amount * costDojoPoints[selection1][selection2])
             TotalQty = amount
 
             if sm.getDojoPoints() <= TotalCost:
-                sm.sendSayOkay("I'm afraid you cannot afford this purchase.")
+                sm.sendSayOkay("恐怕你买不起这个。")
                 sm.dispose()
 
             else:
                 if not sm.canHold(itemsDojo[selection1][selection2]):
-                    sm.sendSayOkay("Please make sure you have room in your inventory, and talk to me again.")
+                    sm.sendSayOkay("请确保你的背包有空间，再来和我对话。")
                     sm.dispose()
 
                 else:
@@ -217,7 +217,7 @@ elif sm.sendNext:
                     if costDojoPoints[selection1][selection2] > 0:
                         sm.deductDojoPoints(TotalCost)
                         sm.giveItem(itemsDojo[selection1][selection2], TotalQty)
-                        sm.sendSayOkay("Come and see me if you need anything else.")
+                        sm.sendSayOkay("需要其他帮助再来找我。")
 
         else:
             response = sm.sendAskYesNo(materialStr)
@@ -225,12 +225,12 @@ elif sm.sendNext:
 
 
             if sm.getDojoPoints() <= costDojoPoints[selection1][selection2]:
-                sm.sendSayOkay("I'm afraid you cannot afford this purchase.")
+                sm.sendSayOkay("恐怕你买不起这个。")
                 sm.dispose()
 
             else:
                 if not sm.canHold(itemsDojo[selection1][selection2]):
-                    sm.sendSayOkay("Please make sure you have room in your inventory, and talk to me again.")
+                    sm.sendSayOkay("请确保你的背包有空间，再来和我对话。")
                     sm.dispose()
 
                 else:
@@ -238,4 +238,4 @@ elif sm.sendNext:
                     if costDojoPoints[selection1][selection2] > 0:
                         sm.deductDojoPoints(costDojoPoints[selection1][selection2])
                         sm.giveItem(itemsDojo[selection1][selection2])
-                        sm.sendSayOkay("Come and see me if you need anything else.")
+                        sm.sendSayOkay("需要其他帮助再来找我。")

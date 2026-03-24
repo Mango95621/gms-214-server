@@ -12,34 +12,34 @@ if not sm.hasItem(BOOK_OF_DEMONS):
     sm.flipBoxChat()
     sm.flipBoxChatPlayerAsSpeaker()
     if not sm.canHold(BOOK_OF_DEMONS):
-        sm.sendNext("Let's make some space in my inventory.. I think I see the book right there.")
+        sm.sendNext("让我们清出一格背包空间。。我看到书就在那里。")
         sm.dispose()
-    sm.sendNext("Huh? This is the #rBook of Demons#k")
+    sm.sendNext("咦？这是#r恶魔之书#k")
 
     sm.giveItem(BOOK_OF_DEMONS)
     sm.warpInstanceIn(701220350) # hidden library
 
     sm.lockInGameUI(True, False)
 
-    sm.sendNext("Eureka! This must be the book the #p"+ str(WISE_CHIEF_PRIEST) +"# needs. I'd better go give it to him.")
+    sm.sendNext("找到了！这一定是#p"+ str(WISE_CHIEF_PRIEST) +"#需要的那本书。我最好快去给他。")
 
     sm.setSpeakerID(NINE_TAILED_FOX)
     sm.setBoxChat()
-    sm.sendNext("Wait, #b#h0##k! I have a gift for you!")
+    sm.sendNext("等等，#b#h0##k！我有礼物要给你！")
 
     sm.flipBoxChat()
     sm.flipBoxChatPlayerAsSpeaker()
-    sm.sendNext("Why are you holding a mirror? Is that for me?")
+    sm.sendNext("你为什么拿着镜子？是给我的吗？")
 
     sm.setSpeakerID(NINE_TAILED_FOX)
     sm.setBoxChat()
-    sm.sendNext("It's no ordinary mirror.\r\n"
-                "It shows a person's true form, human or demon.\r\n"
-                "Perhaps you'll find it useful someday.")
+    sm.sendNext("这不是普通的镜子。\r\n"
+                "它能显示一个人的真实形态，人类或恶魔。\r\n"
+                "也许有一天你会觉得它有用。")
 
     sm.flipBoxChat()
     sm.flipBoxChatPlayerAsSpeaker()
-    sm.sendNext("That's amazing! Thanks! Now I better run and deliver this book to the #p"+ str(WISE_CHIEF_PRIEST) +"#.")
+    sm.sendNext("太棒了！谢谢！现在我得赶紧把这本书送给#p"+ str(WISE_CHIEF_PRIEST) +"#了。")
 
     sm.warpInstanceOut(701220300, 2) # Sutra 5-6
     sm.lockInGameUI(False)

@@ -3,7 +3,7 @@ from net.swordie.ms.enums import EventType
 # Mode, Required Level, Map ID, Death Count, Event Type
 
 destinations = [
-    ["Normal", 235, 861000100, 5, EventType.AlienPQ],
+    ["普通", 235, 861000100, 5, EventType.AlienPQ],
 ]
 
 runsADay = 5
@@ -18,23 +18,23 @@ if sm.getFieldID() == 861000000:
 
     sm.sendAskYesNo
 
-    dialog = "Do you want to participate in the Alien Party Quest?\r\n"
+    dialog = "你想参加外星组队任务吗？\r\n"
 
     for i in range(len(destinations)):
-        dialog += "#b#L0#Enter Alien Party Quest  -  " + str(sm.getEventAmountDone(EventType.getByVal(50))) + "/" + str(runsADay) + " Attempted today\r\n"
+        dialog += "#b#L0#进入外星组队任务  -  " + str(sm.getEventAmountDone(EventType.getByVal(50))) + "/" + str(runsADay) + " 今天已尝试\r\n"
 
     response = sm.sendSay(dialog)
 
     if sm.getParty() is None:
-        sm.sendSayOkay("Please create a party before going in.")
+        sm.sendSayOkay("请先创建一个队伍再进去。")
         sm.dispose()
 
     if not sm.isPartyLeader():
-        sm.sendSayOkay("Please have your party leader talk to me if you wish to participate in the Alien Party Quest.")
+        sm.sendSayOkay("请让你的队伍队长来和我对话，如果你想参加外星组队任务的话。")
         sm.dispose()
 
     if sm.partyHasCoolDown(destinations[response][4], runsADay):
-        sm.sendNext("You or one of your party member has already attempted the Alien Party Quest within the past 24 Hours.")
+        sm.sendNext("你或你的队伍成员在过去24小时内已经尝试过外星组队任务了。")
         sm.dispose()
 
     elif sm.checkParty() and response != 99:
@@ -44,7 +44,7 @@ if sm.getFieldID() == 861000000:
             sm.setInstanceTime(5*60)
             sm.addCoolDownInXDaysForParty(destinations[response][4], 1, 1)
         else:
-            sm.sendSayOkay("One or more party members are lacking the prerequisite entry quests, or are below level #b%d#k." % destinations[response][1])
+            sm.sendSayOkay("一个或多个队伍成员缺少前置任务，或等级低于 #b%d#k。" % destinations[response][1])
 else:
-    if sm.sendAskYesNo("Are you sure you want to leave the battlefield?"):
+    if sm.sendAskYesNo("你确定要离开战场吗？"):
         sm.warpInstanceOut(861000000)

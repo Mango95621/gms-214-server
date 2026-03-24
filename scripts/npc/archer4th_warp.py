@@ -7,14 +7,14 @@ DARK_GRIFFEY_FOREST = 924000201
 
 
 sm.setSpeakerID(parentID)
-sm.sendNext("Is it in you to become a hero? The only way to find out is for you to take action...")
+sm.sendNext("你有成为英雄的潜质吗？唯一能找到答案的方法就是采取行动...")
 if not sm.hasQuest(1455):
     sm.dispose()
 
-selection = sm.sendNext("If you agree to take this test, I will send you to Manon and Girffey. Of course, if you are capable of visit Manon Forest or Griffey Forest on your own, plese feel free to do so. What would you like to do?\r\n\r\n#L0##bPlease send me to Manon Forest.\r\n#L1#Please send me to Griffey Forest.#l\r\n#L2#It's nothing. I will go there on my own.#l#n")
+selection = sm.sendNext("如果你同意参加这个测试，我会送你去莫恩和格里菲。当然，如果你有能力自己访问莫恩森林或格里菲森林，请随意。你想怎么做？\r\n\r\n#L0##b请送我去莫恩森林。\r\n#L1#请送我去格里菲森林。#l\r\n#L2#没什么。我会自己去的。#l#n")
 if selection == 0:
-    sm.sendNext("Would you like to go to Manon Forest? I will send you there. Come back if you can't find the other monster on your own.")
+    sm.sendNext("你想去莫恩森林吗？我会送你去那里。如果你找不到另一个怪物，自己回来找我。")
     sm.warpInstanceIn(MANONS_DARK_FOREST, False)
 elif selection == 1:
-    sm.sendNext("Would you like to go to Griffey Forest? I will send you there. Come back if you can't find the other monster on your own.")
+    sm.sendNext("你想去格里菲森林吗？我会送你去那里。如果你找不到另一个怪物，自己回来找我。")
     sm.warpInstanceIn(DARK_GRIFFEY_FOREST, False)

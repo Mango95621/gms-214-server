@@ -3,7 +3,7 @@
 # Maple Road : Entrance to Adventurer Training Center
 
 sm.setSpeakerID(12100)
-selection = sm.sendNext("This is the perfect place to train your basic skills. Where do you want to train?\r\n#b#L0#Adventurer Training Center 1#l\r\n#b#L1#Adventurer Training Center 2#l\r\n#b#L2#Adventurer Training Center 3#l\r\n#b#L3#Adventurer Training Center 4#l")
+selection = sm.sendNext("这是训练你基本技能的完美地方。你想在哪里训练？\r\n#b#L0#冒险者训练中心 1#l\r\n#b#L1#冒险者训练中心 2#l\r\n#b#L2#冒险者训练中心 3#l\r\n#b#L3#冒险者训练中心 4#l")
 if selection == 0:
     sm.warp(4000022, 4)
 elif selection == 1:

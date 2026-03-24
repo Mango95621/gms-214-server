@@ -1,14 +1,14 @@
 MAPS = [
-    ["Victoria Island Station", 104020100],
-    ["Ereve Sky Ferry", 130000210],
-    ["Orbis Station", 200000100],
-    ["Ludibrium Station", 220000100],
-    ["Ariant Station", 260000100],
-    ["Leafre Station", 240000100],
-    ["#rEdelstein#k", 310000010]
+    ["维多利亚岛站", 104020100],
+    ["圣地天空渡轮", 130000210],
+    ["天空之城站", 200000100],
+    ["玩具城站", 220000100],
+    ["阿里安特站", 260000100],
+    ["神木村站", 240000100],
+    ["#r埃德尔斯坦#k", 310000010]
 ]
 
-text = "Welcome aboard. Please let me know where you would like to go. #b\r\n\r\n"
+text = "欢迎登船。请告诉我你想去哪里。 #b\r\n\r\n"
 i = 0
 while i < len(MAPS):
     text += "\r\n#L" + str(i) + "#" + str(MAPS[i][0]) + "#l"
@@ -16,10 +16,10 @@ while i < len(MAPS):
 
 answer = sm.sendNext(text)
 
-if sm.sendAskYesNo("Would you like to go directly to " + str(MAPS[answer][0]) + "?"):
+if sm.sendAskYesNo("你想直接前往 " + str(MAPS[answer][0]) + " 吗？"):
     sm.createQuestWithQRValue(25010, str(MAPS[answer][1]))
     sm.warp(150000001, 0)
     sm.dispose()
 else:
-    sm.sendNext("Ah, so you wish to go somewhere else. Please tell me your destination.")
+    sm.sendNext("啊，所以你想去别的地方。请告诉我你的目的地。")
     sm.dispose()

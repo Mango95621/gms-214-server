@@ -1,2 +1,2 @@
 # Pam (2081004) | Pam's House
-sm.sendSayOkay("Hmmm... baby formula? Don't you think you're past that age?")
+sm.sendSayOkay("嗯...婴儿配方奶？你不觉得你已经过了那个年龄吗？")

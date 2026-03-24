@@ -46,7 +46,7 @@ mapleItemWeapons 	= [
 ];
 
 
-strBuyOptions = "What would you like to buy?#b\r\n#L0#Vampire Blood\r\n#L1#Onyx Maple Equips\r\n#L2#Onyx Maple Weapons\r\n#L3#Trade Maple Leaves for Experience ";
+strBuyOptions = "你想买什么？#b\r\n#L0#吸血鬼之血\r\n#L1#红曜石枫叶装备\r\n#L2#红曜石枫叶武器\r\n#L3#用枫叶兑换经验值";
 
 buyOptionsSelection = sm.sendSayOkay(strBuyOptions);
 buyEquipSelection = -1;
@@ -57,28 +57,28 @@ buyEquipYesNo = -1;
 #==========================
 
 if buyOptionsSelection == 0:
-    answer = sm.sendAskNumber("How much #v2433559##bVampire Blood #kdo you wish to purchase?\r\n#r 500 #bMaple Leaves #kEach", 0, 1, 1000)
+    answer = sm.sendAskNumber("你想购买多少个 #v2433559##b吸血鬼之血？\r\n#r 500 #b枫叶 #k每个", 0, 1, 1000)
 
     totalCost = answer * 500
 
     if sm.getQuantityOfItem(4001126) < totalCost:
-        sm.sendSayOkay("You do not have enough #v4001126##bMaple Leaves.")
+        sm.sendSayOkay("你的 #v4001126##b枫叶 不足。")
         sm.dispose()
 
     if not sm.canHold(2433559, answer):
-        sm.sendSayOkay("Please make sure you have room in your inventory.")
+        sm.sendSayOkay("请确保你的背包有空间。")
 
     else:
         sm.consumeItemFromDiffStacks(4001126, totalCost)
         sm.giveItem(2433559, answer)
-        sm.sendSayOkay("Enjoy your #v2433559##bVampire Blood #k!")
+        sm.sendSayOkay("享受你的 #v2433559##b吸血鬼之血 吧！")
 
 #==========================
 # EQUIPMENT
 #==========================
 
 if buyOptionsSelection == 1:
-    strItemEquipsList = "What would you like to buy?\r\n\r\nEach item will cost: \r\n"+su.getItemImg(mapleLeafID)+" #b5000\r\n"+su.getItemImg(mesosBagID)+" #b10 Million Mesos\r\n\r\n#b";
+    strItemEquipsList = "你想买什么？\r\n\r\n每个物品需要： \r\n"+su.getItemImg(mapleLeafID)+" #b5000\r\n"+su.getItemImg(mesosBagID)+" #b1000万金币\r\n\r\n#b";
     i = 0;
     for itemEquip in mapleItemEquips:
         strItemEquipsList += su.addSelectItem(i)+su.getItemImg(itemEquip)+"   "+su.getItemName(itemEquip)+"\r\n";
@@ -88,14 +88,14 @@ if buyOptionsSelection == 1:
 
 
 if buyEquipSelection >= 0:
-    buyEquipStr = "Are you sure you want to buy: " + su.getItemImg(mapleItemEquips[buyEquipSelection]) + "\r\n " +su.getItemImg(mapleLeafID)+" #b5000 \r\n "+su.getItemImg(mesosBagID)+" #b 10 Million Mesos";
+    buyEquipStr = "你确定要购买：" + su.getItemImg(mapleItemEquips[buyEquipSelection]) + "\r\n " +su.getItemImg(mapleLeafID)+" #b5000 \r\n "+su.getItemImg(mesosBagID)+" #b 1000万金币？";
     buyEquipYesNo = sm.sendAskYesNo(buyEquipStr);
 
 if buyEquipYesNo == True:
     mapleLeafQuantity = sm.getQuantityOfItem(mapleLeafID);
     if mapleLeafQuantity >= 5000 and sm.getMesos() >= 10000000:
         if chr.getEquipInventory().getEmptySlots() <= 0:
-            sm.sendSayOkay("Make room in your inventory");
+            sm.sendSayOkay("请清出背包空间");
             sm.dispose();
         else:
             sm.deductMesos(10000000);
@@ -103,7 +103,7 @@ if buyEquipYesNo == True:
             sm.giveItem(mapleItemEquips[buyEquipSelection]);
             sm.dispose();
     else:
-        sm.sendSayOkay("You do not have enough maple leaves or mesos");
+        sm.sendSayOkay("你的枫叶或金币不足");
         sm.dispose();
 
 
@@ -112,7 +112,7 @@ if buyEquipYesNo == True:
 #==========================
 
 if buyOptionsSelection == 2:
-    strItemEquipsList = "What would you like to buy?\r\n\r\nEach item will cost: \r\n"+su.getItemImg(mapleLeafID)+" #b5000\r\n"+su.getItemImg(mesosBagID)+" #b10 Million Mesos\r\n\r\n#b";
+    strItemEquipsList = "你想买什么？\r\n\r\n每个物品需要： \r\n"+su.getItemImg(mapleLeafID)+" #b5000\r\n"+su.getItemImg(mesosBagID)+" #b1000万金币\r\n\r\n#b";
     i = 0;
     for itemEquip in mapleItemWeapons:
         strItemEquipsList += su.addSelectItem(i)+su.getItemImg(itemEquip)+"   "+su.getItemName(itemEquip)+"\r\n";
@@ -122,14 +122,14 @@ if buyOptionsSelection == 2:
 
 
 if buyEquipSelection >= 0:
-    buyEquipStr = "Are you sure you want to buy: " + su.getItemImg(mapleItemWeapons[buyEquipSelection]) + "  \r\n" +su.getItemImg(mapleLeafID)+" #b5000  \r\n"+su.getItemImg(mesosBagID)+" #b 10 Million Mesos";
+    buyEquipStr = "你确定要购买：" + su.getItemImg(mapleItemWeapons[buyEquipSelection]) + "  \r\n" +su.getItemImg(mapleLeafID)+" #b5000  \r\n"+su.getItemImg(mesosBagID)+" #b 1000万金币？";
     buyEquipYesNo = sm.sendAskYesNo(buyEquipStr);
 
 if buyEquipYesNo == True:
     mapleLeafQuantity = sm.getQuantityOfItem(mapleLeafID);
     if mapleLeafQuantity >= 5000 and sm.getMesos() >= 10000000:
         if chr.getEquipInventory().getEmptySlots() <= 0:
-            sm.sendSayOkay("Make room in your inventory");
+            sm.sendSayOkay("请清出背包空间");
             sm.dispose();
         else:
             sm.deductMesos(10000000);
@@ -137,7 +137,7 @@ if buyEquipYesNo == True:
             sm.giveItem(mapleItemWeapons[buyEquipSelection]);
             sm.dispose();
     else:
-        sm.sendSayOkay("You do not have enough maple leaves or mesos");
+        sm.sendSayOkay("你的枫叶或金币不足");
         sm.dispose();
 
 #==========================
@@ -145,16 +145,16 @@ if buyEquipYesNo == True:
 #==========================
 
 if buyOptionsSelection == 3:
-    answer = sm.sendAskNumber("How many #v4001126##bMaple Leaves #kdo you wish to trade?", 0, 1, 1000)
+    answer = sm.sendAskNumber("你想兑换多少个 #v4001126##b枫叶？", 0, 1, 1000)
 
     totalExp = answer * 35 # EXP Per Maple leaf.
     totalQty = answer * 1  # Leaves Per EXP Tick.
 
     if sm.getQuantityOfItem(4001126) < totalQty:
-        sm.sendSayOkay("You do not have enough#v4001126##bMaple Leaves.\r\n#kYou only have#r#c4001126#\r\n.")
+        sm.sendSayOkay("你的#v4001126##b枫叶 不足。\r\n#k你只有#r#c4001126#\r\n。")
         sm.dispose()
 
     else:
         sm.consumeItemFromDiffStacks(4001126, totalQty)
         sm.giveExp(totalExp)
-        sm.sendSayOkay("Thank you for the #v4001126##bMaple Leaves.\r\n#kEnjoy the experience!")
+        sm.sendSayOkay("谢谢你的 #v4001126##b枫叶。\r\n#k享受经验值吧！")

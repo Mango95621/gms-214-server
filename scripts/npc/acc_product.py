@@ -8,55 +8,55 @@ ALCHEMY_CRAFT_SKILL = 92040000
 FEE = [5000, 15000, 25000, 40000, 60000, 85000, 115000, 150000, 190000, 235000]
 
 if not sm.hasSkill(ACCESSORY_CRAFT_SKILL):
-    selection = sm.sendSay("The brilliant radiance! The crystalline purity! The prismatic beauty! Are you a Jeweler too, my friend? Shall we seek the mysteries of Accessory Crafting together?\r\n#L0#Hear an explanation about #b#eAccessory Crafting#n.#l\r\n#L1#Learn #eAccessory Crafting#n.#k#l")
+    selection = sm.sendSay("璀璨的光芒！水晶的纯度！棱镜的美丽！你也是珠宝商吗，朋友？让我们一起探索首饰制作的奥秘吧？\r\n#L0#听 #b#e首饰制作#n 的说明。#l\r\n#L1#学习 #e首饰制作#n。#k#l")
     if selection == 0:
-        sm.sendNext("Where to begin, where to begin? I could tell you about the inherent beauty of jewels, but...that could take all night.\r\nIn short, Accessory Crafting is the art of taking a raw jewel or mineral, and shaping it until its true beauty comes shining through. Even the roughest gemstone has the power to become not only elegant, but powerful.")
+        sm.sendNext("从哪里开始呢，从哪里开始呢？我可以告诉你宝石的固有之美，但是……那可能要花整晚。\n简而言之，首饰制作是一门将原始宝石或矿物塑形，直到其真正之美闪耀出来的艺术。即使是最粗糙的宝石也有可能变得优雅而强大。")
     elif selection == 1:
         if not sm.hasSkill(MINING_SKILL):
-            sm.sendSayOkay("Oh, no. You simply MUST learn Mining from #bCole#k before I can teach you to be a Jeweler. He'll teach you how to get all the minerals and jewels you need to make shining, glowing accessories.")
+            sm.sendSayOkay("哦，不。你必须先从 #b科尔#k 那里学习采矿，我才能教你成为珠宝商。他会教你如何获得制作闪亮发光配饰所需的所有矿物和宝石。")
             sm.dispose()
 
         if sm.hasSkill(SMITHING_CRAFT_SKILL) or sm.hasSkill(ALCHEMY_CRAFT_SKILL):
-            sm.sendNext("Don't you know you can't learn Accessory Crafting if you've already learned Smithing and Alchemy? Shh... All you need to do is delete one of your current Professions, and we can study Accessory Crafting together!")
+            sm.sendNext("难道你不知道如果你已经学习了锻造和炼金，就不能学习首饰制作吗？嘘……你只需要删除你当前的一个专业，我们就可以一起学习首饰制作了！")
             sm.dispose()
 
-        learn = sm.sendAskYesNo("Oh, you're ready to learn #bAccessory Crafting#k?\r\nSince you're so cute, I'll give you a discount. #b5,000 Mesos#k to become my student.\r\n")
+        learn = sm.sendAskYesNo("哦，你准备好学习 #b首饰制作#k 了吗？\n因为你太可爱了，我会给你折扣。#b5,000金币#k 成为我的学生。\r\n")
         if learn:
             if sm.getMesos() < 5000:
-                sm.sendNext("You don't have #b 5000 Mesos#k? I wish I could, but I just can't teach you for free.")
+                sm.sendNext("你没有 #b 5000金币#k？我希望我能帮你，但我真的不能免费教你。")
                 sm.dispose()
 
             sm.giveMesos(-5000)
             sm.giveSkill(ACCESSORY_CRAFT_SKILL, 0x1000000, 13)
             sm.playSound("profession/levelup")
-            sm.sendNext("Oh! Wonderful! And that's how you do Accessory Crafting. Practice, practice, practice, and when you've gained enough Mastery, I'll teach you some more.")
+            sm.sendNext("哦！太棒了！这就是首饰制作的方式。练习，练习，练习，当你获得了足够的基础技能后，我会教你更多。")
         else:
-            sm.sendNext("What? Why not?! I was looking forward to sharing my knowledge with you!")
+            sm.sendNext("什么？为什么不？！我一直期待着与你分享我的知识！")
 else:
-    selection = sm.sendSay("The brilliant radiance! The crystalline purity! The prismatic beauty! Are you a Jeweler too, my friend? Shall we seek the mysteries of Accessory Crafting together?\r\n#L2##bRaise #eAccessory Crafting#n level.#l\r\n#L3#Unlearn Accessory Crafting.#k#l")
+    selection = sm.sendSay("璀璨的光芒！水晶的纯度！棱镜的美丽！你也是珠宝商吗，朋友？让我们一起探索首饰制作的奥秘吧？\r\n#L2##b提升 #e首饰制作#n 等级。#l\r\n#L3#忘记首饰制作。#k#l")
     if selection == 2:
         if sm.isAbleToLevelUpMakingSkill(ACCESSORY_CRAFT_SKILL):
-            levelup = sm.sendAskYesNo("Looks like you're ready to level up your Accessory Crafting. I'll take #b" + str(FEE[sm.getMakingSkillLevel(ACCESSORY_CRAFT_SKILL)]) + " Mesos#k as tuition. Ready to learn?")
+            levelup = sm.sendAskYesNo("看起来你准备好提升首饰制作等级了。我会收取 #b" + str(FEE[sm.getMakingSkillLevel(ACCESSORY_CRAFT_SKILL)]) + "金币#k 作为学费。准备好学习了吗？")
             if levelup:
                 if sm.getMesos() < FEE[sm.getMakingSkillLevel(ACCESSORY_CRAFT_SKILL)]:
-                    sm.sendNext("You don't have enough mesos.")
+                    sm.sendNext("你的金币不足。")
                     sm.dispose()
                 sm.giveMesos(-FEE[sm.getMakingSkillLevel(ACCESSORY_CRAFT_SKILL)])
                 sm.makingSkillLevelUp(ACCESSORY_CRAFT_SKILL)
-                sm.sendNext("Your Accessory Crafting skill is now Lv. " + str(sm.getMakingSkillLevel(ACCESSORY_CRAFT_SKILL)) +".")
+                sm.sendNext("你的首饰制作技能现在是 " + str(sm.getMakingSkillLevel(ACCESSORY_CRAFT_SKILL)) + " 级。")
             else:
-                sm.sendNext("Sure, take some time to think it over. I'll be here.")
+                sm.sendNext("当然，花点时间考虑一下。我会在这里。")
                 sm.dispose()
         else:
-            sm.sendNext("Oh, you're not ready to level up your Profession just yet. Keep at it, though!")
+            sm.sendNext("哦，你还没准备好提升你的专业等级。继续努力吧！")
     elif selection == 3:
-        unlearn = sm.sendAskYesNo("You want to delete your Accessory Crafting skill? Are you tired of me already? All the effort you've put into raising your level and Mastery will be lost... All that...effort...gone... Are you really doing this?")
+        unlearn = sm.sendAskYesNo("你想删除你的首饰制作技能吗？你已经厌倦我了吗？你为提升等级和基础技能所付出的所有努力都将失去……所有那些……努力……消失了……你真的确定要这样做吗？")
         if unlearn:
             sm.removeSkill(ACCESSORY_CRAFT_SKILL)
             # set quest value 11496, "0"
             # start quest 3263
             # complete quest 3263
             # remove quest 3263
-            sm.sendNext("It's been reset... You are so cold... But if you ever change your mind, I'll be here.")
+            sm.sendNext("已经重置了……你真是冷漠……但如果你改变主意，我会在这里。")
         else:
-            sm.sendSayOkay("Oh, thank you, thank you, thank you!")
+            sm.sendSayOkay("哦，谢谢，谢谢，谢谢！")

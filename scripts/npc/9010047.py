@@ -5,56 +5,56 @@ from net.swordie.ms.client.character.items import BodyPart
 STONE_SHIELD = 1092068
 PRICE = 100000
 
-selection = sm.sendNext("Hello my name is Gale, I am in charge of transferring potentials between your secondaries.\r\n"
-                        "\r\n#eYou have#r " + str(sm.getNX()) + " #bNX#n.\r\n\r\n"
-                        "#L0#Purchase a secondary#l \r\n"                                                                
-                        "#L1#Buy a Stone Shield #e#r(100,000) NX#b#n#l \r\n"
-                        "#L2#Transfer Equipped Secondary potential to the first stone shield in your inventory #e#r(100,000) NX#b#n#l \r\n"
-                        "#L3#Transfer the first Stone Shield's potential in your inventory to your current equipped secondary #e#r(100,000) NX#b#n #r\r\n#e(This will overwrite your equipped secondaries potential)#n.#l"
-                        "#L4##d#eUnequip your current secondary weapon.#l")
+selection = sm.sendNext("你好，我叫盖尔，负责在你的副武器之间转移潜能。\r\n"
+                        "\r\n#e你有#r " + str(sm.getNX()) + " #bNX#n。\r\n\r\n"
+                        "#L0#购买一个副武器#l \r\n"                                                                
+                        "#L1#购买一个石盾 #e#r(100,000) NX#b#n#l \r\n"
+                        "#L2#将装备的副武器潜能转移到背包第一个石盾上 #e#r(100,000) NX#b#n#l \r\n"
+                        "#L3#将背包第一个石盾的潜能转移到当前装备的副武器上 #e#r(100,000) NX#b#n #r\r\n#e(这将覆盖你装备的副武器的潜能)#n.#l"
+                        "#L4##d#e卸下你当前的副武器.#l")
 
 if selection == 0:
     sm.invokeAfterDelay(1, "openShop", 9072100)
     sm.dispose()
 elif selection == 1:
     if not sm.canHold(1092068):
-        sm.sendSayOkay("You do not have space in your equip inventory.")
+        sm.sendSayOkay("你的装备栏没有空间。")
         sm.dispose()
     if sm.getNX() >= PRICE:
         sm.deductNX(PRICE)
         sm.giveItem(1092068)
-        sm.sendSayOkay("Thank you for your purchase!")
+        sm.sendSayOkay("感谢你的购买！")
     else:
-        sm.sendSayOkay("You do not have enough #rNX#k.")
+        sm.sendSayOkay("你的 #rNX#k 不足。")
 
 elif selection == 2:
     result = sm.SecondaryFunction(1)
     if result == -1:
-        sm.sendSayOkay("Either there is no stone shield in your inventory or the stone shield lacks potential.")
+        sm.sendSayOkay("要么你的背包里没有石盾，要么石盾没有潜能。")
     elif result == -2:
-        sm.sendSayOkay("You do not have a secondary currently equipped.")
+        sm.sendSayOkay("你当前没有装备副武器。")
     elif result == -3:
-        sm.sendSayOkay("You do not have enough #rNX#k to perform this action.")
+        sm.sendSayOkay("你的 #rNX#k 不足，无法执行此操作。")
     elif result == -4:
-        sm.sendSayOkay("Your first Stone Shield in your inventory already has potential. Please put a Stone Shield that does not have potential in first slot of your inventory.")
+        sm.sendSayOkay("你背包里的第一个石盾已经有潜能了。请把没有潜能的石盾放在背包的第一个格子。")
 
     else:
-        sm.sendSayOkay("I have transferred your secondaries potential to the first Stone Shield in your inventory.")
+        sm.sendSayOkay("我已经将你的副武器潜能转移到你背包里的第一个石盾上了。")
 
 elif selection == 3:
     result = sm.SecondaryFunction(0)
     if result == -1:
-        sm.sendSayOkay("Either there is no stone shield in your inventory or the stone shield lacks a potential.")
+        sm.sendSayOkay("要么你的背包里没有石盾，要么石盾没有潜能。")
     elif result == -2:
-        sm.sendSayOkay("You do not have a secondary currently equipped.")
+        sm.sendSayOkay("你当前没有装备副武器。")
     elif result == -3:
-        sm.sendSayOkay("You do not have enough #rNX#k to perform this action.")
+        sm.sendSayOkay("你的 #rNX#k 不足，无法执行此操作。")
     else:
-        sm.sendSayOkay("I have transferred your Stone Shield's potential to your equipped secondary.")
+        sm.sendSayOkay("我已经将你石盾的潜能转移到你的装备副武器上了。")
 
 elif selection == 4:
     currentSecondary = chr.getEquippedItemByBodyPart(BodyPart.Shield)
     if currentSecondary is not None and chr.canHold(currentSecondary.getItemId()):
         sm.unequip(currentSecondary)
     else:
-        sm.sendNext("You are not equipped with a secondary weapon or cannot hold it in your equip inventory.")
+        sm.sendNext("你没有装备副武器，或者无法将其放入装备栏。")

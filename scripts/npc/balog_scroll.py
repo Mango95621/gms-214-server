@@ -17,26 +17,26 @@ items = [
 balrogLeather = 4001261
 
 if sm.hasItem(balrogLeather):
-    sm.sendNext("Hello #h0#. I see you have #c"+ str(balrogLeather) +"# Piece"+ ("s" if sm.getQuantityOfItem(balrogLeather) > 1 else "") +" of Balrog Leather, interested in exchanging those for items?")
+    sm.sendNext("你好 #h0#。我看到你有 #c"+ str(balrogLeather) +"# 块"+ ("s" if sm.getQuantityOfItem(balrogLeather) > 1 else "") +"巴洛古皮革，有兴趣交换成物品吗？")
 else:
-    sm.sendNext("Hello #h0#. I can exchange #z"+str(balrogLeather)+"#for items")
+    sm.sendNext("你好 #h0#。我可以交换 #z"+str(balrogLeather)+"# 成物品")
 
 
-selString = "Alright, this is what I can offer you\r\n#b"
+selString = "好的，这是我可以提供给你的\r\n#b"
 i = 0
 while i < len(items):
     selString += "#L"+ str(i) +"##z"+ str(items[i]) +"##l\r\n"
     i += 1
 selection = sm.sendNext(selString)
 
-quantity = sm.sendAskNumber("How many of your #b#z"+ str(balrogLeather) +"##k are you willing to trade for my #b#z"+ str(items[selection]) +"##k?"
-                 "\r\nyou have #c"+ str(balrogLeather) +"# Piece"+ ("s" if sm.getQuantityOfItem(balrogLeather) > 1 else "") +" of Balrog Leather", 1, 1, 100)
+quantity = sm.sendAskNumber("你愿意用多少 #b#z"+ str(balrogLeather) +"##k 来交换我的 #b#z"+ str(items[selection]) +"##k？"
+                 "\r\n你有 #c"+ str(balrogLeather) +"# 块"+ ("s" if sm.getQuantityOfItem(balrogLeather) > 1 else "") +"巴洛古皮革", 1, 1, 100)
 
 if not sm.canHold(items[selection]):
-    sm.sendSayOkay("You don't have enough space in your inventory.")
+    sm.sendSayOkay("你的背包空间不足。")
 elif sm.getQuantityOfItem(balrogLeather) < quantity:
-    sm.sendSayOkay("You don't fool me\r\nYou do not have enough leather pieces.")
+    sm.sendSayOkay("你骗不了我\r\n你没有足够的皮革块。")
 else:
     sm.giveItem(items[selection], quantity)
     sm.consumeItem(balrogLeather, quantity)
-    sm.sendSayOkay("Thank you for your redemption")
+    sm.sendSayOkay("感谢你的兑换")

@@ -3,7 +3,7 @@
 Ardentmill = 910001000
 
 if sm.getFieldID() == Ardentmill:
-    sm.sendNext("I am not coded\r\n#b")
-elif sm.sendAskYesNo("Would you like to teleported to Ardentmill?\r\n#b"):
+    sm.sendNext("我还没有完成\r\n#b")
+elif sm.sendAskYesNo("你想被传送到阿尔德恩米尔斯吗？\r\n#b"):
     sm.setReturnField()
     sm.warp(910001000)

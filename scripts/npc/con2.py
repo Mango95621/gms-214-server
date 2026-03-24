@@ -1,3 +1,3 @@
 # Konpei | Near the Hideout
-if sm.sendAskYesNo("Would you like to go back to Showa Town?"):
+if sm.sendAskYesNo("你想返回昭和镇吗？"):
     sm.warp(801000000, 11)

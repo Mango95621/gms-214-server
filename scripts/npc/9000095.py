@@ -1,11 +1,11 @@
 sm.setSpeakerID(9000095) # Witchy Woman
-sm.sendNext("Do you want to test your knowledge?")
+sm.sendNext("你想测试一下你的知识吗？")
 
-response = sm.sendAskYesNo("Let's get started shall we")
+response = sm.sendAskYesNo("那我们开始吧")
 
 if response == 1:
-    sm.setHintText("This is a hint")
-    sm.setAnswer("Yes")
+    sm.setHintText("这是提示")
+    sm.setAnswer("是")
 else:
-    sm.sendNext("nvm")
+    sm.sendNext("好吧")
 sm.dispose()

@@ -3,13 +3,13 @@ sm.removeEscapeButton()
 if sm.hasQuest(23200):
     sm.setSpeakerID(2159328)
     sm.setPlayerAsSpeaker()
-    sm.sendNext("#bMother! Where are you?!#k")
+    sm.sendNext("#b妈妈！你在哪里？！#k")
     sm.completeQuestNoRewards(23200)
     sm.startQuestNoCheck(23201)
 elif sm.hasQuest(23201):
     sm.setSpeakerID(2159329)
     sm.setPlayerAsSpeaker()
-    sm.sendNext("Damien! Answer me!")
+    sm.sendNext("达米安！回答我！")
     sm.completeQuestNoRewards(23201)
     sm.startQuestNoCheck(23202)
 elif sm.hasQuest(23202):
@@ -22,12 +22,12 @@ elif sm.hasQuest(23202):
 
     sm.setSpeakerID(MASTEMA)
     sm.setPlayerAsSpeaker()
-    sm.sendNext("#bThis is...#k")
+    sm.sendNext("#b这是...#k")
 
     sm.showFieldEffect("demonSlayer/pendant", 0)
     sm.sendDelay(4200)
 
-    sm.sendNext("#bMother... Damien...#k")
+    sm.sendNext("#b妈妈...达米安...#k")
     sm.sendSay("#b...#k")
 
     sm.showBalloonMsg("Effect/Direction6.img/effect/tuto/balloonMsg1/5", 2000)
@@ -39,4 +39,4 @@ elif sm.hasQuest(23202):
     sm.lockInGameUI(False)
     sm.warpInstanceIn(927000081, 0)
 else:
-    sm.systemMessage("It's too far away to see clearly. I must get closer.")
+    sm.systemMessage("太远了看不清楚。我必须靠近一点。")

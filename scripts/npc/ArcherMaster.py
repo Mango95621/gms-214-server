@@ -3,4 +3,4 @@
 # Henesys : Bowman Instructional School
 
 sm.setSpeakerID(1012100)
-sm.sendSayOkay("Welcome to the Bowman Instructional School.")
+sm.sendSayOkay("欢迎来到弓箭手指导学校。")

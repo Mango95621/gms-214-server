@@ -7,25 +7,25 @@ mapId = 940021000
 runsADay = 5
 
 if sm.getFieldID() == 940020000:
-    selection = sm.sendSayOkay("Some creeps from Maple World have invaded Grandis. We need to find a way to drive them back.\r\n"
-                               "#L0##bEnter Dimensional Invasion " + str(sm.getEventAmountDone(EventType.DIPQ)) + "/" + str(runsADay) + " Attempted today #l\r\n"
-                               "#L1##bTrade in Dimension Glove fragments\r\n")
+    selection = sm.sendSayOkay("一些来自枫叶世界的坏蛋入侵了格兰蒂斯。我们需要找到方法把他们赶回去。\r\n"
+                               "#L0##b进入维度入侵 " + str(sm.getEventAmountDone(EventType.DIPQ)) + "/" + str(runsADay) + " 今天已尝试 #l\r\n"
+                               "#L1##b兑换维度手套碎片\r\n")
 
     if selection == 0:
         if chr.getLevel() < 120:
-            sm.sendSayOkay("You must be level #b120#k to enter the Dimensional Invasion Party Quest.")
+            sm.sendSayOkay("你必须达到 #b120#k 级才能进入维度入侵组队任务。")
             sm.dispose()
 
         if sm.getEventAmountDone(EventType.DIPQ) >= runsADay:
-            sm.sendSayOkay("You are currently on cooldown for the Dimensional Invasion Party Quest")
+            sm.sendSayOkay("你目前正处于维度入侵组队任务的冷却时间。")
             sm.dispose()
 
         if not sm.getParty() is not None:
-            sm.sendSayOkay("Please create a party before entering.")
+            sm.sendSayOkay("请先创建一个队伍再进入。")
             sm.dispose()
 
         if not sm.canHold(2431127):
-            sm.sendSayOkay("Please make sure you have room in your inventory to receive your rewards at the end of the Party Quest.")
+            sm.sendSayOkay("请确保你的背包有足够的空间来接收组队任务结束时的奖励。")
 
         else:
             sm.addCoolDownInXays(EventType.DIPQ, 1, 1)
@@ -33,27 +33,27 @@ if sm.getFieldID() == 940020000:
             sm.setInstanceTime(60*60)
 
     if selection == 1:
-        selection2 = sm.sendSayOkay("Please select the glove you would like.\r\n"
-                                    "#L0##bDimension Glove\r\n"
-                                    "#L1##bHigh Quality Dimension Glove\r\n")
+        selection2 = sm.sendSayOkay("请选择你想要的手套。\r\n"
+                                    "#L0##b维度手套\r\n"
+                                    "#L1##b高品质维度手套\r\n")
 
         if selection == 0:
-            sm.sendAskYesNo("Would you like to trade your #bDimension Glove fragments#k for a #bDimension Glove#k.")
+            sm.sendAskYesNo("你想用你的 #b维度手套碎片#k 兑换一个 #b维度手套#k 吗？")
 
             if not sm.hasItem(4033605):
-                sm.sendSayOkay("You do not possess a #v4033605##zv4033605#")
+                sm.sendSayOkay("你没有 #v4033605##zv4033605#")
                 sm.dispose()
             if not sm.hasItem(4033604):
-                sm.sendSayOkay("You do not possess a #v4033604##zv4033604#")
+                sm.sendSayOkay("你没有 #v4033604##zv4033604#")
                 sm.dispose()
             if not sm.hasItem(4033603):
-                sm.sendSayOkay("You do not possess a #v4033603##zv4033603#")
+                sm.sendSayOkay("你没有 #v4033603##zv4033603#")
                 sm.dispose()
             if not sm.hasItem(4033602):
-                sm.sendSayOkay("You do not possess a #v4033602##zv4033602#")
+                sm.sendSayOkay("你没有 #v4033602##zv4033602#")
                 sm.dispose()
             if not sm.canHold(1082488):
-                sm.sendSayOkay("Please make room in your EQUIP inventory.")
+                sm.sendSayOkay("请在装备背包里腾出空间。")
                 sm.dispose()
 
             else:
@@ -65,22 +65,22 @@ if sm.getFieldID() == 940020000:
 
 
         if selection == 1:
-            sm.sendAskYesNo("Would you like to trade your #bHigh Quality Dimension#k Glove fragments for a #bHigh Quality Dimension Glove#k.")
+            sm.sendAskYesNo("你想用你的 #b高品质维度手套碎片#k 兑换一个 #b高品质维度手套#k 吗？")
 
             if not sm.hasItem(4033606):
-                sm.sendSayOkay("You do not possess a #v4033606##zv4033606#")
+                sm.sendSayOkay("你没有 #v4033606##zv4033606#")
                 sm.dispose()
             if not sm.hasItem(4033607):
-                sm.sendSayOkay("You do not possess a #v4033607##zv4033607#")
+                sm.sendSayOkay("你没有 #v4033607##zv4033607#")
                 sm.dispose()
             if not sm.hasItem(4033608):
-                sm.sendSayOkay("You do not possess a #v4033608##zv4033608#")
+                sm.sendSayOkay("你没有 #v4033608##zv4033608#")
                 sm.dispose()
             if not sm.hasItem(4033609):
-                sm.sendSayOkay("You do not possess a #v4033609##zv4033609#")
+                sm.sendSayOkay("你没有 #v4033609##zv4033609#")
                 sm.dispose()
             if not sm.canHold(1082488):
-                sm.sendSayOkay("Please make room in your EQUIP inventory.")
+                sm.sendSayOkay("请在装备背包里腾出空间。")
                 sm.dispose()
 
             else:

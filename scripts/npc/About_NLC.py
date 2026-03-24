@@ -1,48 +1,48 @@
- # Icebyrd Slimm: NLC Mayor (9201050) | NLC Town Center (600000000)
+# Icebyrd Slimm: NLC Mayor (9201050) | NLC Town Center (600000000)
  # Quest: Welcome to New Leaf City Quiz (4900)
  # Author: Tiger
 
 while True:
-    selection = sm.sendNext("What up! Name's Icebyrd Slimm, mayor of New Leaf City! Happy to see you accepted my invite. So, what can I do for you?	\r\n#b"
-			"#L0#What is this place? #l\r\n"
-			"#L1#Who is Professor Foxwit? #l\r\n"
-			"#L2#What's a Foxwit Door? #l\r\n"
-			"#L3#Where are the MesoGears? #l\r\n"
-			"#L4#What is the Krakian Jungle? #l\r\n"
-			"#L5#What's a Gear Portal? #l\r\n"
-			"#L6#What do the street signs mean? #l\r\n"
-			"#L7#What's the deal with Jack Masque? #l\r\n"
-			"#L8#Lita Lawless looks like a tough cookie, what's her story?#l\r\n"
-			"#L9#When will new boroughs open up in the city? #l\r\n"
-			"#L10#I want to take the quiz!#l#k")
+    selection = sm.sendNext("嗨！我是冰鸟·斯利姆，新叶城的市长！很高兴你接受了我的邀请。那么，我能为你做些什么？\r\n#b"
+			"#L0#这是什么地方？ #l\r\n"
+			"#L1#福克斯威特教授是谁？ #l\r\n"
+			"#L2#什么是福克斯威特传送门？ #l\r\n"
+			"#L3#梅索齿轮在哪里？ #l\r\n"
+			"#L4#什么是克拉基安丛林？ #l\r\n"
+			"#L5#什么是齿轮传送门？ #l\r\n"
+			"#L6#街标是什么意思？ #l\r\n"
+			"#L7#杰克·马斯基是怎么回事？ #l\r\n"
+			"#L8#莱塔·劳利斯看起来很强硬，她是什么来头？#l\r\n"
+			"#L9#新城区什么时候会开放？ #l\r\n"
+			"#L10#我想参加测验！#l#k")
 
     if selection == 0:
-        sm.sendNext("I've always dreamed of building a city. Not just any city, but one where everyone was welcome. I used to live in Kerning City, so I decided to see if I could create a city. As I went along in finding the means to do so, I encountered many people, some of whom I've come to regard as friends. Like Professor Foxwit-he's our resident genius; saved him from a group of man-eating plants. Jack Masque is an old hunting buddy from Amoria-almost too smooth of a talker for his own good. Lita and I are old friends from Kerning City-she's saved me a few times with that weapon of hers; so I figured she was a perfect choice for Town Sheriff. It took a bit of persuasion, but she came to believe her destiny lies here. About our resident explorer, Barricade came searching for something; he agreed to bring whatever he found to the museum. I'd heard stories about him and his brother when I was still in Kerning City. And Elpam...well, let's just say he's not from around here. At all. We've spoken before, and he seems to mean well, so I've allowed him to stay. I just realized that I've rambled quite a bit! What else would you like to know?")
+        sm.sendNext("我一直梦想着建造一座城市。不只是普通的城市，而是一个所有人都受欢迎的城市。我以前住在凯恩城，所以我想看看能否创建一座城市。在寻找方法的过程中，我遇到了很多人，其中一些我已经把他们当作朋友了。福克斯威特教授——他是我们的天才；我把他从一群食人植物手中救了下来。杰克·马斯基是来自阿莫里亚的老猎友——他说话太油嘴滑舌了。莱塔和我是凯恩城的故交——她用她的武器救过我几次；所以我觉得她是镇长的最佳人选。经过一番劝说，她相信自己的命运在这里。关于我们的本地探险家，巴里卡德来这里寻找东西；他同意把找到的任何东西送到博物馆。我还在凯恩城的时候就听说过他和他哥哥的故事。还有埃尔帕姆……好吧，他完全不是本地人。我们之前谈过，他似乎是好意，所以我就让他留下了。我刚才意识到我说了很多！你还想知道什么？")
     elif selection == 1:
-        sm.sendNext("A pretty spry guy for being 97. He' s a time-traveler I ran into outside the city one day. Old guy had a bit of trouble with some jungle creatures-like they tried to eat him. In return for me saving him, he agreed to build a time museum. I get the feeling that he's come here for another reason, as he's mentioned more than a few times that New Leaf City has an interesting role to play in the future. Maybe you can find out a bit more... ")
+        sm.sendNext("作为一个97岁的老人，他相当精神。他是我有一天在城市外面遇到的时间旅行者。那个老人被一些丛林生物找了点麻烦——它们试图吃掉他。作为我救他的回报，他同意建一个时间博物馆。我有一种感觉，他来这里还有别的理由，因为他不止一次提到新叶城在未来扮演着有趣的角色。也许你能发现更多……")
     elif selection == 2:
-        sm.sendNext("Heh, I asked the same thing when I saw the Professor building them. They're warp points. Pressing Up will warp you to another location. I recommend getting the hang of them, they're our transport system.")
+        sm.sendNext("嘿，我看到教授建造它们时问了同样的问题。它们是传送点。按下向上键会将你传送到另一个位置。我建议尽快掌握它们，因为它们是我们的交通系统。")
     elif selection == 3:
-        sm.sendNext("The MesoGears are beneath Bigger Ben. It's a monster-infested section of Bigger Ben that Barricade discovered. It seems to reside in a separate section of the tower-quite strange if you ask me. I hear he needs a bit of help exploring it, you should see him. Be careful though, the Wolf Spiders in there are no joke.")
+        sm.sendNext("梅索齿轮就在大本钟下面。它是巴里卡德发现的大本钟中怪物出没的区域。它似乎住在塔的另一个区域——如果你问我的话挺奇怪的。我听说他需要一些帮助来探索它，你应该去看看他。小心点，那里的狼蜘蛛可不是开玩笑的。")
     elif selection == 4:
-        sm.sendNext("Ah...well. The Krakian Jungle is located on the outskirts of New Leaf City. Many new and powerful creatures roam those areas, so you'd better be prepared to fight if you head out there. It's at the left end of town. Rumors abound that the Jungle leads to a lost city, but we haven't found anything yet.")
+        sm.sendNext("啊……好吧。克拉基安丛林位于新叶城的郊区。许多新奇而强大的生物在这些区域游荡，所以你最好准备好战斗再出发。它在城镇的左边。丛林通向一座失落的城市的传言层出不穷，但我们还没有找到任何线索。")
     elif selection == 5:
-        sm.sendNext("Well, when John found himself in the MesoGears portion of Bigger Ben, he stood on one and went to another location. However, he could only head back and forth-they don't cycle through like the Foxwit Door. Ancient tech for you.")
+        sm.sendNext("嗯，当约翰发现自己在大本钟的梅索齿轮区域时，他站在一个上面去了另一个地方。然而，他只能来回走——它们不像福克斯威特传送门那样循环。这是古老的技术。")
     elif selection == 6:
-        sm.sendNext("Well, you'll see them just about everywhere. They're areas under construction. The Red lights mean it's not finished, but the Green lights mean it's open. Check back often, we're always building!")
+        sm.sendNext("好吧，你到处都能看到它们。它们是施工中的区域。红灯意味着还没完工，绿灯意味着开放。经常回来看看，我们一直在建设！")
     elif selection == 7:
-        sm.sendNext("Ah, Jack. You know those guys that are too cool for school? The ones who always seem to get away with everything? AND get the girl? Well, that's Jack, but without the girl. He thinks he blew his chance, and began wearing that mask to hide his true identity. My lips are sealed about who he is, but he's from Amoria. He might tell you a bit more if you ask him.")
+        sm.sendNext("啊，杰克。你知道那些太酷而不屑于上学的人吗？那些似乎总能逃脱一切的人？而且还能追到女孩？好吧，那就是杰克，但没有女孩。他觉得自己错过了机会，开始戴面具来隐藏真实身份。我对他的身份守口如瓶，但他来自阿莫里亚。如果你问他，他可能会告诉你更多。")
     elif selection == 8:
-        sm.sendNext("I've known Lita for a while, thought we've just recently rekindled our friendship. I didn't see her for a quite a bit, but I understand why. She trained for a very, very long time as a Thief. Matter of fact, that's how we first met? I was besieged a group of wayward Mushrooms, and she jumped in to help. When it was time to a pick a sheriff, it was a no-brainer. She's made a promise to help others in their training and protect the city, so if you're interested in a bit of civic duty, speak with her. ")
+        sm.sendNext("我认识莱塔有一段时间了，虽然我们最近才重拾友谊。我很长时间没见到她了，但我理解为什么。她作为飞侠接受了非常非常长的训练。事实上，我们就是这样第一次认识的？我被一群流浪蘑菇围攻，她冲进来帮忙。当需要选镇长时，毫无疑问。她承诺帮助他人训练并保护城市，所以如果你对公民职责感兴趣，去和她谈谈。")
     elif selection == 9:
-        sm.sendNext("Soon, my friend. Even though you can't see them, the city developers are hard at work. When they're ready, we'll open them. I know you're looking forward to it and so am I!")
+        sm.sendNext("很快了，朋友。虽然你看不到，但城市开发者们正在努力工作。准备好了之后，我们会开放的。我知道你在期待，我也一样！")
     elif selection == 10:
         if chr.getLevel() >= 15: # TODO: quiz quest
             # If hasn't completed quest 4900?
             # start quest 4900, send "No problem. I'll give you a something nice if you answer them correctly!"
             # if completed send "You've already solved my questions. Enjoy your trip in NLC!!!"
-            sm.sendNext("TODO: Quiz")
+            sm.sendNext("待完成：测验")
             break # Apparently it only ends the loop once you start the quiz
         else:
-            sm.sendNext("Sorry but this quiz is only available for level 15 and above. Please come back to me when you are ready to take this quiz.")
+            sm.sendNext("抱歉，但这个测验只对15级及以上的玩家开放。准备好参加测验时再回来找我。")
             break

@@ -1,6 +1,4 @@
-
-
-# Vote Item NPC \\ Cygnus \\ 9010034 \\ Free Market
+# Vote Item NPC \ Cygnus \ 9010034 \ Free Market
 
 VoteShop = { #[itemid, price, expiration time]
     0 : [5211067, 5, 24],
@@ -28,72 +26,51 @@ votecoinId = 4310195
 secondaryPendantPrice = 20
 
 if sm.sendNext:
-    selection = sm.sendNext("Hello my name is Cygnus, This shop is where you can spend your #bVote Points#k.\r\n"
-                            "\r\n#eYou have#r " + str(sm.getVotePoints()) + " #bVote Points.\r\n#n#b"
-                            "#L0#I'd like to my Trade Vote Points for Vote Coins\r\n"
-                            "#L1#I'd like to my Trade Vote Coins for Vote Points\r\n"
-                            "#L2#I'd like to purchase items from the Vote Shop\r\n"
-                            "#L3#I'd like to purchase a 7 Day Pendant Slot (Character)\r\n")
+    selection = sm.sendNext("你好，我叫赛克斯，这是你可以消费#b投票点数#k的地方。\r\n"
+                            "\r\n#e你有 #r " + str(sm.getVotePoints()) + " #b投票点数。\r\n#n#b"
+                            "#L0#我想用投票点数兑换投票硬币\r\n"
+                            "#L1#我想用投票硬币兑换投票点数\r\n"
+                            "#L2#我想从投票商店购买物品\r\n"
+                            "#L3#我想购买7天副项链槽位（角色）\r\n")
 
     items = []
     if selection == 0:
-        amount = sm.sendAskNumber("#b#eA Vote Coin costs #r(1)#b Vote Point.\r\n"
-                                  "You currently have #e#r" + str(sm.getVotePoints()) + " #bVote Points\r\n"
-                                                                                            "#k#eHow many would you like exchange?", 1, 1, 100)
+        amount = sm.sendAskNumber("#b#e一个投票硬币需要 #r(1)#b 投票点数。\r\n"
+                                  "你目前有 #e#r" + str(sm.getVotePoints()) + " #b投票点数\r\n"
+                                                                                            "#k#e你想兑换多少个？", 1, 1, 100)
         price = amount * votePrice
         if sm.getVotePoints() >= price and chr.canHold(votecoinId, amount):
             sm.deductVotePoints(price)
             sm.giveItem(votecoinId, amount)
             sm.dispose()
         else:
-            sm.sendNext("You do not have enough #bVote points#k or you do not have room in your inventory for this item.")
+            sm.sendNext("你的#b投票点数#k不足，或者你的背包没有足够空间放置这个物品。")
             sm.dispose()
 
     elif selection == 1:
-        amount = sm.sendAskNumber("#b#eA Vote Point costs #r(1)#b Vote Coin.\r\n"
-                                  "You currently have #r" + str(sm.getQuantityOfItem(votecoinId)) + " #bVote Coins.\r\n"
-                                                                                                 "#kHow many would you like exchange?", 1, 1, 100)
+        amount = sm.sendAskNumber("#b#e一个投票点数需要 #r(1)#b 投票硬币。\r\n"
+                                  "你目前有 #r" + str(sm.getQuantityOfItem(votecoinId)) + " #b投票硬币。\r\n"
+                                                                                                 "#k你想兑换多少个？", 1, 1, 100)
         if sm.getQuantityOfItem(votecoinId) >= amount:
             sm.deductVotePoints(votePrice * amount)
             chr.consumeItem(votecoinId, amount);
             sm.dispose()
         else:
-            sm.sendNext("You do not have enough Vote Coins for this exchange.")
+            sm.sendNext("你的投票硬币不足以进行这次兑换。")
             sm.dispose()
 
     elif selection == 2:
         items = VoteShop
     elif selection == 3:
-        answer = sm.sendAskYesNo("Are you sure you want to purchase a permanent secondary pendant slot for #r" + str(secondaryPendantPrice) + "#b Vote Points#k.")
+        answer = sm.sendAskYesNo("你确定要用 #r" + str(secondaryPendantPrice) + "#b 投票点数#k 购买一个永久副项链槽位吗？")
         if answer and sm.getVotePoints() >= secondaryPendantPrice:
             if sm.setSecondaryPendantDateInXDays(7):
                 sm.deductVotePoints(secondaryPendantPrice)
-                sm.sendSayOkay("Please re-log for your secondary pendant slot to take effect.")
+                sm.sendSayOkay("请重新登录以使副项链槽位生效。")
                 sm.dispose()
             else:
-                sm.sendSayOkay("You already own a secondary pendant slot")
+                sm.sendSayOkay("你已经拥有一个副项链槽位了")
                 sm.dispose()
         else:
-            sm.sendNext("You do not have enough #bVote Points#k.")
+            sm.sendNext("你的#b投票点数#k不足。")
             sm.dispose()
-
- #   output = "Choose the item you would like to buy \r\n"
-  #  for x in range (len(items)):
-   #     output += "#b" + su.addSelectItem(x) + su.getItemImg(items[x][0]) + "   " + su.getItemName(items[x][0]) + " #r#e(" + str(items[x][1]) + ") VP#n"
-    #    if items[x][2] >= 24:
-     #       output += " for " + str(items[x][2] / 24) + " Day(s)"
-      #  elif items[x][2] >= 1:
-       #     output += " for " + str(items[x][2] / 1) + " Hour(s)"
-       # output += "\r\n"
-    #selection = sm.sendNext(output)
-    #itemId = items[selection][0]
-    #text = "how many #r" + su.getItemName(itemId) + " #bwould you like to buy?"
-    #amount = sm.sendAskNumber(text, 1, 1, 100)
-    #totalPrice = items[selection][1] * amount
-    #answer = sm.sendAskYesNo("are you sure you wanna buy " + str(amount) + " #b" + su.getItemName(itemId) + " #kfor #r(" + str(totalPrice) + ") VP")
-    #if answer and sm.canHold(itemId, amount) and sm.getVotePoints() >= totalPrice:
-     #   sm.giveItem(itemId, amount, items[selection][2])
-      #  sm.deductVotePoints(totalPrice)
-       # chr.checkAndRemoveExpiredItems();
-    #else:
-     #   sm.sendNext("You do not have enough Vote Points or cannot hold this item")

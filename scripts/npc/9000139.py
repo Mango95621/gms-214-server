@@ -1,1 +1,1 @@
-cm.sendNext("Hewwo")
+cm.sendNext("你好呀")

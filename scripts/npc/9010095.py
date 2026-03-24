@@ -1,1 +1,1 @@
-sm.sendSayOkay("test")
+sm.sendSayOkay("测试")

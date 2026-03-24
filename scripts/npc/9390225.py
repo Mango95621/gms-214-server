@@ -1,2 +1,2 @@
-if sm.sendAskYesNo("Are you sure you want to leave the voyage before it is completed?"):
+if sm.sendAskYesNo("你确定要在完成之前离开这次航海吗？"):
     sm.warpInstanceOut(865000001)

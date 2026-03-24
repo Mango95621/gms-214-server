@@ -3,13 +3,13 @@
 sm.setSpeakerID(9010040)
 
 if sm.sendNext:
-    selection = sm.sendNext("The snowdrop events are happening now!\r\n#b"
-                            "#L0#Get Snowdrop Coins\r\n"
-                            "#L1#Spend Snowdrop Coins\r\n"
-                            "#L2#Spend Event Coins\r\n")
+    selection = sm.sendNext("雪花活动正在进行中！\r\n#b"
+                            "#L0#获取雪花硬币\r\n"
+                            "#L1#消费雪花硬币\r\n"
+                            "#L2#消费活动硬币\r\n")
 
     if selection == 0:
-        selection = sm.sendNext("Here you can find your progress regarding Snowdrop Coin daily challenges. Claim them all by simply clicking on one of the daily lines!\r\n" + chr.getAccount().getDailyStatusToNPC())
+        selection = sm.sendNext("在这里你可以查看雪花硬币每日挑战的进度。只需点击每日任务列表即可领取全部奖励！\r\n" + chr.getAccount().getDailyStatusToNPC())
         if selection == 0:
             #chr.getAccount().completeDaily(0)
             chr.getAccount().claimDailies()

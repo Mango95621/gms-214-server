@@ -64,7 +64,7 @@ def prompt_equips(type, page, limit):
         text += "#b#L9998#上一页\r\n"
 
     if (toIndex) < size:
-        text += "#b#L9999#下一页#l\r\n"
+        text += "#b#L9999#下一页\r\n"
 
     text += "#b#L10000#返回分类#l"
 
@@ -96,12 +96,12 @@ def prompt_search():
 def message_done(item_id, cost, rent):
     buy_text = "购买" if not rent else "租用"
     text = (
-        "你已经 {0} #v{1}# #b#z{1}##k.\r\n\r\n"
-        "#b{2}#k 点券将从您的帐户中扣除.\r\n\r\n"
+        "您已{0} #v{1}# #b#z{1}##k.\r\n\r\n"
+        "#b{2}#k 点券将从您的帐户中扣除\r\n\r\n"
     ).format(buy_text, item_id, cost)
 
     if rent:
-        text += "该物品将于到期 #b{0} 分钟#k.".format(expire_time)
+        text += "该物品将于 #b{0} 分钟#k后到期。".format(expire_time)
 
     return text
 

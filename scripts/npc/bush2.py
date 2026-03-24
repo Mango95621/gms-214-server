@@ -5,19 +5,19 @@
 import random
 
 rewards = [
- [4020007, 2], # Diamond Ore
- [4020008, 2], # Black Crystal Ore
- [4010006, 2], # Gold Ore
- [1032013, 1]  # Red Hearted Earrings
+ [4020007, 2], # 钻石矿石
+ [4020008, 2], # 黑水晶矿石
+ [4010006, 2], # 金矿石
+ [1032013, 1]  # 红心耳环
  ]
 
 if sm.hasQuest(2051):
-    response = sm.sendAskYesNo("Are you sure you want to take #bDouble-Rooted Red Ginseng#k with you?")
+    response = sm.sendAskYesNo("你确定要带走 #b双根红参#k 吗？")
 
     if response:
-         sm.giveItem(4031032, 1) # Double-Rooted Reg Ginseng
-         sm.warp(101000000) # Ellinia
+         sm.giveItem(4031032, 1) # 双根红参
+         sm.warp(101000000) # 魔法密林
 else:
     rand = random.choice(rewards)
     sm.giveItem(rand[0], rand[1])
-    sm.warp(101000000) # Ellinia
+    sm.warp(101000000) # 魔法密林

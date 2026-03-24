@@ -3,19 +3,17 @@
 sm.setSpeakerID(1012100)
 
 if (sm.getJob() != "BOWMAN"):
-    sm.sendSayOkay("lol go away")
+    sm.sendSayOkay("走吧走吧")
 else:
-    message = "Congratulations on reaching level 30! bithc pikc a job\r\n\r\n"
-    message += "#b#L0#Trail of the Hunter#l\r\n"
-    message += "#b#L1#Trail of the Crossbowman#l\r\n"
+    message = "恭喜你达到30级！好了，快选择职业吧\r\n\r\n"
+    message += "#b#L0#猎人之路#l\r\n"
+    message += "#b#L1#弩弓手之路#l\r\n"
 
     choice = sm.sendNext(message)
 
     if choice == 0:
         sm.jobAdvance(310)
-        sm.sendNext("ok you bowman now")
+        sm.sendNext("好了，你现在弓箭手了")
     elif choice == 1:
         sm.jobAdvance(320)
-        sm.sendNext("ok you use bolt now")
-
-
+        sm.sendNext("好了，你现在用弩了")

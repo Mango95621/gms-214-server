@@ -4,8 +4,8 @@ from net.swordie.ms.enums import EventType
 # Mode, Required Level, Map ID, Death Count, Event Type, Cooldown
 
 destinations = [
-    ["Normal", 100, 105200100, 5, EventType.VonBon, 64800000],
-    ["Chaos", 220, 105200500, 5, EventType.CVonBon, 64800000],
+    ["普通", 100, 105200100, 5, EventType.VonBon, 64800000],
+    ["混沌", 220, 105200500, 5, EventType.CVonBon, 64800000],
 ]
 
 runsPerDay = 1
@@ -20,25 +20,25 @@ if sm.getFieldID() == 105200000:
 
     sm.setSpeakerID(1064002)
 
-    dialog = "Do you want to head to the '#bEast Garden#k' to fight \r\n#bVon Bon#k?\r\n"
+    dialog = "你想前往'#b东花园#k'挑战 \r\n#b冯·邦#k 吗？\r\n"
 
     for i in range(len(destinations)):
-        dialog += "#L%d##bGo to the East Garden (%s Mode) #r(Lv. %d+)#b#l\r\n" % (i, destinations[i][0], destinations[i][1])
+        dialog += "#L%d##b前往东花园 (%s 模式) #r(Lv. %d+)#b#l\r\n" % (i, destinations[i][0], destinations[i][1])
 
-    dialog += "#L99#Never mind."
+    dialog += "#L99#算了。"
     response = sm.sendSay(dialog)
 
     if sm.getParty() is None:
-        sm.sendSayOkay("Please create a party before going in.")
+        sm.sendSayOkay("请先创建一个队伍再进去。")
         sm.dispose()
 
     elif not sm.isPartyLeader():
-        sm.sendSayOkay("Please have your party leader talk to me if you wish to face #bVon Bon#k.")
+        sm.sendSayOkay("请让你的队伍队长来和我对话，如果你想挑战 #b冯·邦#k 的话。")
         sm.dispose()
 
     elif sm.partyHasCoolDown(destinations[response][4], runsPerDay):
         timeUntilReset = sm.getTimeUntilEventReset(destinations[response][4])
-        sm.sendNext("You or one of your party member has already attempted facing #bVon Bon#k within the past 18 Hours.\r\n\r\nYou have " + timeUntilReset + " left on your cooldown.")
+        sm.sendNext("你或你的队伍成员在过去18小时内已经尝试挑战过 #b冯·邦#k 了。\r\n\r\n你的冷却时间还剩 " + timeUntilReset + "。")
         sm.dispose()
 
     elif sm.checkParty() and response != 99:
@@ -48,4 +48,4 @@ if sm.getFieldID() == 105200000:
             sm.setInstanceTime(BossConstants.ROOTABYSS_TIME)
             sm.addCooldownTimeForParty(destinations[response][4], destinations[response][5])
         else:
-            sm.sendSayOkay("One or more party members are lacking the prerequisite entry quests, or are below level #b%d#k." % destinations[response][1])
+            sm.sendSayOkay("一个或多个队伍成员缺少前置任务，或等级低于 #b%d#k。" % destinations[response][1])

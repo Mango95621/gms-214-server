@@ -1,3 +1,3 @@
 # Konpei | Near the Hideout
-if sm.sendAskYesNo("Would you like to go to the Hideout?"):
+if sm.sendAskYesNo("你想去藏身处吗？"):
     sm.warp(801040000)
